@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Psq-Ss-0vE">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdmazingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="phr-Xj-VaF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="dTa-mM-fkW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AW1-uy-n31">
+                                <rect key="frame" x="86" y="216" width="202" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pW-Ey-nFu">
+                                <rect key="frame" x="86" y="167" width="202" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.67726293100000001" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="logoadmazingtrans.png" translatesAutoresizingMaskIntoConstraints="NO" id="1mo-wx-thM">
+                                <rect key="frame" x="71" y="49" width="233" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="233" id="Hdn-ef-WBf"/>
+                                    <constraint firstAttribute="height" constant="110" id="fyK-GJ-ZdE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urv-N5-OwN">
+                                <rect key="frame" x="153" y="262" width="70" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Hgf-qB-iFq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="0.1647058824" green="0.70980392160000005" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q9y-24-94H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="idTextField" destination="4pW-Ey-nFu" id="dYb-DG-wfC"/>
+                        <outlet property="psswdTextField" destination="AW1-uy-n31" id="Szp-Yl-6vN"/>
+                        <segue destination="Psq-Ss-0vE" kind="show" identifier="goMainMenu" id="WeT-U3-Zwy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276.5" y="157.5"/>
+        </scene>
+        <!--mainMenu-->
+        <scene sceneID="KNf-W0-gea">
+            <objects>
+                <viewController title="mainMenu" id="Psq-Ss-0vE" customClass="mainMenu" customModule="AdmazingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wDs-cU-DgZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="U3R-iT-dyl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Hv-FP-40d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMw-E1-1qI">
+                                <rect key="frame" x="0.0" y="14" width="375" height="164"/>
+                                <state key="normal" title="Button" image="logoadmazing.png"/>
+                                <connections>
+                                    <segue destination="e5w-2x-nzH" kind="show" id="g9P-6u-SwS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nH5-u7-KQ6">
+                                <rect key="frame" x="-18" y="177" width="410" height="164"/>
+                                <state key="normal" title="Button" image="couponsprueba.png"/>
+                                <connections>
+                                    <segue destination="Bua-Ne-OlU" kind="show" id="0c3-Ri-bc2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejg-21-dwS">
+                                <rect key="frame" x="-18" y="341" width="410" height="164"/>
+                                <state key="normal" title="Button" image="usersprueba.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYC-XT-4r1">
+                                <rect key="frame" x="-18" y="503" width="410" height="164"/>
+                                <state key="normal" title="Button" image="settingsprueba.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3y-Ee-GHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796.5" y="189.5"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="AEQ-r8-Khc">
+            <objects>
+                <viewController id="e5w-2x-nzH" customClass="GPS" customModule="AdmazingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bG7-Fn-4pb"/>
+                        <viewControllerLayoutGuide type="bottom" id="R5e-s4-tMA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0cb-nA-yjK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQU-j3-sXU">
+                                <rect key="frame" x="62" y="146" width="250" height="420"/>
+                                <state key="normal" title="Button" image="gps_green.png"/>
+                                <connections>
+                                    <action selector="gps:" destination="e5w-2x-nzH" eventType="touchUpInside" id="2uM-iT-c5o"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="qD4-8j-oCw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kom-33-Ct2">
+                                <rect key="frame" x="9" y="29" width="45" height="45"/>
+                                <state key="normal" image="home.png"/>
+                                <connections>
+                                    <action selector="goHome:" destination="e5w-2x-nzH" eventType="touchUpInside" id="Nhs-6L-Xx6"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoadmazingtrans.png" translatesAutoresizingMaskIntoConstraints="NO" id="ODJ-DO-bn2">
+                                <rect key="frame" x="110" y="27" width="154" height="50"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95K-ZM-3D7">
+                                <rect key="frame" x="323" y="29" width="45" height="45"/>
+                                <state key="normal" image="settings.png"/>
+                                <connections>
+                                    <action selector="goSettings:" destination="e5w-2x-nzH" eventType="touchUpInside" id="VFR-va-tet"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="TMd-nd-j3I"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="3VC-fg-oEF" kind="show" identifier="goStores" id="FTb-xX-7q4"/>
+                        <segue destination="Psq-Ss-0vE" kind="show" identifier="goHome" id="ypz-Em-8i9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oi3-6M-hHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1325.5" y="98.5"/>
+        </scene>
+        <!--Coupon Book-->
+        <scene sceneID="RVc-PB-ocd">
+            <objects>
+                <viewController id="Bua-Ne-OlU" customClass="CouponBook" customModule="AdmazingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wbg-Ra-fbH"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZMF-uc-zB1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0fL-QB-WdE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="L3r-rd-YpM">
+                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo9-Qj-PWk">
+                                <rect key="frame" x="9" y="29" width="45" height="45"/>
+                                <state key="normal" image="home.png"/>
+                                <connections>
+                                    <segue destination="Psq-Ss-0vE" kind="show" identifier="goHome" id="wYC-LZ-9ad"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql5-Uv-a3e">
+                                <rect key="frame" x="323" y="29" width="45" height="45"/>
+                                <state key="normal" image="settings.png"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoadmazingtrans.png" translatesAutoresizingMaskIntoConstraints="NO" id="NWg-7i-78c">
+                                <rect key="frame" x="110" y="27" width="154" height="50"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Categorias dentro de la cuponera" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0OC-cj-R7P">
+                                <rect key="frame" x="0.0" y="82" width="375" height="30"/>
+                                <color key="textColor" red="0.1647058824" green="0.71764705880000002" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nNc-IU-JD5">
+                                <rect key="frame" x="0.0" y="112" width="375" height="555"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ccell" id="jwV-C3-F3T">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jwV-C3-F3T" id="YB7-tj-iPU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Bua-Ne-OlU" id="h9A-iR-H1M"/>
+                                    <outlet property="delegate" destination="Bua-Ne-OlU" id="tm0-Db-HN4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="categoriesTable" destination="nNc-IU-JD5" id="6oz-0A-Qh1"/>
+                        <segue destination="DQM-PT-e0F" kind="show" identifier="goCoupons" id="4Cy-zt-zDU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rHm-MM-b93" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796.5" y="1097.5"/>
+        </scene>
+        <!--Booked Coupon Show-->
+        <scene sceneID="J49-EB-LSW">
+            <objects>
+                <viewController id="DQM-PT-e0F" customClass="BookedCouponShow" customModule="AdmazingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pT3-o4-Fe9"/>
+                        <viewControllerLayoutGuide type="bottom" id="4pk-8d-O6y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EcE-eL-4kb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="kKV-vj-hqw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoadmazingtrans.png" translatesAutoresizingMaskIntoConstraints="NO" id="wk2-QM-i2W">
+                                <rect key="frame" x="110" y="27" width="154" height="50"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Promociones Exclusivas" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEk-b0-Xge">
+                                <rect key="frame" x="0.0" y="82" width="375" height="30"/>
+                                <color key="textColor" red="0.1647058824" green="0.71764705880000002" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPT-GC-JoF">
+                                <rect key="frame" x="325" y="29" width="45" height="45"/>
+                                <state key="normal" backgroundImage="settings.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6D-4t-Neu">
+                                <rect key="frame" x="7" y="29" width="45" height="45"/>
+                                <state key="normal" backgroundImage="back.png"/>
+                                <connections>
+                                    <segue destination="Bua-Ne-OlU" kind="show" id="cRK-32-h8f"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="km9-4x-oRf">
+                                <rect key="frame" x="0.0" y="113" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="coCell" id="uGV-e0-nRd">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uGV-e0-nRd" id="qgT-WT-Ohy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="DQM-PT-e0F" id="jly-zR-3rM"/>
+                                    <outlet property="delegate" destination="DQM-PT-e0F" id="zuG-bu-vy8"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="couponsTable" destination="km9-4x-oRf" id="x9E-qs-xu4"/>
+                        <segue destination="Ys7-Cx-MaV" kind="show" identifier="goCouponShow" id="MhJ-TI-J9r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Kc-Mk-aQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796.5" y="1880.5"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="oZt-oW-48t">
+            <objects>
+                <viewController id="Xdv-7n-9SO" customClass="Category" customModule="AdmazingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0c3-Tc-1dv"/>
+                        <viewControllerLayoutGuide type="bottom" id="ckq-hd-5G8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TXL-KP-vZE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="IDR-cy-8OY">
+                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD5-fY-Ymx">
+                                <rect key="frame" x="323" y="29" width="45" height="45"/>
+                                <state key="normal" image="settings.png"/>
+                                <connections>
+                                    <action selector="goSettings:" destination="Xdv-7n-9SO" eventType="touchUpInside" id="1nk-gl-BOc"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoadmazingtrans.png" translatesAutoresizingMaskIntoConstraints="NO" id="GSP-pd-Ryc">
+                                <rect key="frame" x="110" y="27" width="154" height="50"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Categorías dentro de &quot;&quot;:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r5b-xA-R6u">
+                                <rect key="frame" x="0.0" y="82" width="375" height="30"/>
+                                <color key="textColor" red="0.1647058824" green="0.71764705880000002" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cVD-qX-XnP">
+                                <rect key="frame" x="0.0" y="112" width="375" height="555"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ccell" rowHeight="83" id="Dn7-Cc-Ss7">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dn7-Cc-Ss7" id="bxV-bd-moe">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xdv-7n-9SO" id="bdE-iH-EKM"/>
+                                    <outlet property="delegate" destination="Xdv-7n-9SO" id="WEh-YM-hp5"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgL-Dp-wZS">
+                                <rect key="frame" x="8" y="29" width="45" height="45"/>
+                                <state key="normal" backgroundImage="back.png"/>
+                                <connections>
+                                    <action selector="goStores:" destination="Xdv-7n-9SO" eventType="touchUpInside" id="qXX-fV-Yrg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="rBa-p6-spT"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="categoriesTable" destination="cVD-qX-XnP" id="zi3-lv-Gql"/>
+                        <outlet property="welcomeLabel" destination="r5b-xA-R6u" id="EYo-Yl-1r0"/>
+                        <segue destination="3VC-fg-oEF" kind="show" identifier="goStores" id="e5F-Ph-fRR"/>
+                        <segue destination="S7V-LG-QFZ" kind="show" identifier="goCoupons" id="lZV-oe-2Eh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XTp-uT-AGr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1325.5" y="1795.5"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="wJ2-5g-g5W">
+            <objects>
+                <viewController id="S7V-LG-QFZ" customClass="Coupons" customModule="AdmazingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ibQ-gG-zCt"/>
+                        <viewControllerLayoutGuide type="bottom" id="EHv-Lo-33W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ira-67-LDJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="efW-nA-9Ka">
+                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoadmazingtrans.png" translatesAutoresizingMaskIntoConstraints="NO" id="sHc-e1-Ga0">
+                                <rect key="frame" x="110" y="27" width="154" height="50"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Promociones Exclusivas" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Qf-nw-J5P">
+                                <rect key="frame" x="0.0" y="82" width="375" height="30"/>
+                                <color key="textColor" red="0.1647058824" green="0.71764705880000002" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uam-yN-wzb">
+                                <rect key="frame" x="325" y="29" width="45" height="45"/>
+                                <state key="normal" backgroundImage="settings.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7N-ii-2dA">
+                                <rect key="frame" x="7" y="29" width="45" height="45"/>
+                                <state key="normal" backgroundImage="back.png"/>
+                                <connections>
+                                    <action selector="goBack:" destination="S7V-LG-QFZ" eventType="touchUpInside" id="jxm-CZ-F6k"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vkK-Ea-BVc">
+                                <rect key="frame" x="0.0" y="111" width="375" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="coCell" id="9Eg-Pq-6mi">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Eg-Pq-6mi" id="vt2-Ad-iug">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="S7V-LG-QFZ" id="Ddd-jk-XRJ"/>
+                                    <outlet property="delegate" destination="S7V-LG-QFZ" id="cKd-ZU-Knj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="4O5-9n-2rv"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="couponsTable" destination="vkK-Ea-BVc" id="h9J-Sx-keU"/>
+                        <segue destination="Xdv-7n-9SO" kind="show" identifier="goCategory" id="rw5-3a-lDa"/>
+                        <segue destination="TxG-nk-I3o" kind="show" identifier="goCouponShow" id="aH9-s3-rrn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aMn-EU-Qaf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1325.5" y="2599.5"/>
+        </scene>
+        <!--Coupon Show-->
+        <scene sceneID="saD-3N-xac">
+            <objects>
+                <viewController id="TxG-nk-I3o" customClass="CouponShow" customModule="AdmazingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pml-b6-FW3"/>
+                        <viewControllerLayoutGuide type="bottom" id="ubY-fG-ZcT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hWY-gi-UMK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="1PG-n9-4fa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoadmazingtrans.png" translatesAutoresizingMaskIntoConstraints="NO" id="J8u-5L-Pwe">
+                                <rect key="frame" x="110" y="27" width="154" height="50"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gs8-Av-eaz">
+                                <rect key="frame" x="325" y="29" width="45" height="45"/>
+                                <state key="normal" backgroundImage="settings.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISC-Yi-Pra">
+                                <rect key="frame" x="7" y="29" width="45" height="45"/>
+                                <state key="normal" backgroundImage="back.png"/>
+                                <connections>
+                                    <action selector="goCoupons:" destination="TxG-nk-I3o" eventType="touchUpInside" id="UcS-iN-WOE"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Promo1" translatesAutoresizingMaskIntoConstraints="NO" id="IBf-pY-ADp">
+                                <rect key="frame" x="0.0" y="107" width="375" height="244"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripción del Producto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyN-3m-vwa">
+                                <rect key="frame" x="20" y="416" width="198" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yA2-lI-6yb">
+                                <rect key="frame" x="20" y="445" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precio Original: S/." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ss2-Ca-Y8Y">
+                                <rect key="frame" x="20" y="530" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Valido hasta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g56-pY-OGi">
+                                <rect key="frame" x="20" y="565" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Valido hasta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJS-x8-vvT">
+                                <rect key="frame" x="20" y="565" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oferta Televisor Sony 32&quot; LED solo por hoy " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oH-3l-SpG">
+                                <rect key="frame" x="7" y="366" width="364" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.1647058824" green="0.70980392160000005" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atK-Je-tkE">
+                                <rect key="frame" x="110" y="617" width="153" height="30"/>
+                                <state key="normal" title="Agregar a la Cuponera"/>
+                                <connections>
+                                    <action selector="addCouponToBook:" destination="TxG-nk-I3o" eventType="touchUpInside" id="nRs-QT-jXk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="couponDescription" destination="8oH-3l-SpG" id="WyC-81-h4x"/>
+                        <outlet property="couponEndDate" destination="eJS-x8-vvT" id="z05-lu-m68"/>
+                        <outlet property="couponImage" destination="IBf-pY-ADp" id="LAG-wH-dkJ"/>
+                        <outlet property="productDescription" destination="yA2-lI-6yb" id="uVC-UA-JoC"/>
+                        <outlet property="productPrice" destination="ss2-Ca-Y8Y" id="1ti-Ig-Mbt"/>
+                        <segue destination="S7V-LG-QFZ" kind="show" identifier="goCoupons" id="RO6-Bk-9Oq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NBA-R6-8X9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1884.5" y="2641.5"/>
+        </scene>
+        <!--Booked Coupons Show-->
+        <scene sceneID="Mo0-SY-JM3">
+            <objects>
+                <viewController id="Ys7-Cx-MaV" customClass="BookedCouponsShow" customModule="AdmazingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4su-aO-kFS"/>
+                        <viewControllerLayoutGuide type="bottom" id="R3W-iw-Tvo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Txw-tu-9Tx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="frn-Ox-sqP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoadmazingtrans.png" translatesAutoresizingMaskIntoConstraints="NO" id="Awk-tV-5De">
+                                <rect key="frame" x="110" y="27" width="154" height="50"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9T-k0-nVt">
+                                <rect key="frame" x="325" y="29" width="45" height="45"/>
+                                <state key="normal" backgroundImage="settings.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbH-N3-jAG">
+                                <rect key="frame" x="7" y="29" width="45" height="45"/>
+                                <state key="normal" backgroundImage="back.png"/>
+                                <connections>
+                                    <action selector="goBookedCoupons:" destination="Ys7-Cx-MaV" eventType="touchUpInside" id="QYW-BD-VgK"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Promo1" translatesAutoresizingMaskIntoConstraints="NO" id="LrH-3F-0X9">
+                                <rect key="frame" x="0.0" y="107" width="375" height="244"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripción del Producto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5V-U8-Rc5">
+                                <rect key="frame" x="20" y="416" width="198" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyx-k2-0D4">
+                                <rect key="frame" x="20" y="445" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precio Original: S/." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAh-df-cVI">
+                                <rect key="frame" x="20" y="530" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Valido hasta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEt-fu-cqN">
+                                <rect key="frame" x="20" y="565" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Valido hasta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fA-sA-VRW">
+                                <rect key="frame" x="20" y="565" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oferta Televisor Sony 32&quot; LED solo por hoy " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGS-LA-swf">
+                                <rect key="frame" x="7" y="366" width="364" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.1647058824" green="0.70980392160000005" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIp-js-zti">
+                                <rect key="frame" x="146" y="617" width="82" height="30"/>
+                                <state key="normal" title="Usar Cupon"/>
+                                <connections>
+                                    <action selector="useCoupon:" destination="Ys7-Cx-MaV" eventType="touchUpInside" id="ZgT-Qp-HPs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="couponDescription" destination="KGS-LA-swf" id="fph-38-WxN"/>
+                        <outlet property="couponEndDate" destination="8fA-sA-VRW" id="BKP-cU-USN"/>
+                        <outlet property="couponImage" destination="LrH-3F-0X9" id="aja-yd-XzN"/>
+                        <outlet property="productDescription" destination="Iyx-k2-0D4" id="NWK-Hx-iNV"/>
+                        <outlet property="productPrice" destination="nAh-df-cVI" id="sJa-Yp-DdM"/>
+                        <segue destination="DQM-PT-e0F" kind="show" identifier="goCouponShow" id="mju-3N-zGq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTk-j3-2g5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796.5" y="2697.5"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="TkR-eH-Z6A">
+            <objects>
+                <viewController id="3VC-fg-oEF" customClass="Stores" customModule="AdmazingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QZr-xy-ULy"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Sy-rN-V8o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wui-MI-N6S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="wkc-sb-V0A">
+                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WL-Pg-oCR">
+                                <rect key="frame" x="9" y="29" width="45" height="45"/>
+                                <state key="normal" image="home.png"/>
+                                <connections>
+                                    <action selector="goHome:" destination="3VC-fg-oEF" eventType="touchUpInside" id="F3F-5U-GQv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uel-ah-yYS">
+                                <rect key="frame" x="323" y="29" width="45" height="45"/>
+                                <state key="normal" image="settings.png"/>
+                                <connections>
+                                    <action selector="goSettings:" destination="3VC-fg-oEF" eventType="touchUpInside" id="cgy-9y-Egu"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoadmazingtrans.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jno-NX-B8g">
+                                <rect key="frame" x="110" y="27" width="154" height="50"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Establecimientos cercanos a ti" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2WY-dJ-qiL">
+                                <rect key="frame" x="0.0" y="82" width="375" height="30"/>
+                                <color key="textColor" red="0.1647058824" green="0.71764705880000002" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y1W-7A-55K">
+                                <rect key="frame" x="0.0" y="112" width="375" height="555"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="83" id="0Kt-tl-AY3">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Kt-tl-AY3" id="P8c-Hp-byM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3VC-fg-oEF" id="b86-je-2us"/>
+                                    <outlet property="delegate" destination="3VC-fg-oEF" id="kwS-aJ-z92"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="zI1-oF-Mjx"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="storesTable" destination="y1W-7A-55K" id="nB0-XD-ocl"/>
+                        <segue destination="Psq-Ss-0vE" kind="show" identifier="goHome" id="Vdb-88-1Aw"/>
+                        <segue destination="Xdv-7n-9SO" kind="show" identifier="goCategories" id="8B8-qQ-ckN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5GO-Kz-5Xm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1325.5" y="1018.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Promo1" width="843" height="403"/>
+        <image name="back.png" width="142" height="142"/>
+        <image name="background.png" width="900" height="506"/>
+        <image name="couponsprueba.png" width="558" height="189"/>
+        <image name="gps_green.png" width="621" height="938"/>
+        <image name="home.png" width="142" height="142"/>
+        <image name="logoadmazing.png" width="522" height="181"/>
+        <image name="logoadmazingtrans.png" width="1747" height="768"/>
+        <image name="settings.png" width="142" height="142"/>
+        <image name="settingsprueba.png" width="559" height="189"/>
+        <image name="usersprueba.png" width="559" height="189"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wYC-LZ-9ad"/>
+        <segue reference="cRK-32-h8f"/>
+        <segue reference="mju-3N-zGq"/>
+        <segue reference="e5F-Ph-fRR"/>
+        <segue reference="rw5-3a-lDa"/>
+        <segue reference="RO6-Bk-9Oq"/>
+    </inferredMetricsTieBreakers>
+</document>

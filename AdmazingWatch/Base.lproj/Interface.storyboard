@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ncT-Uv-Pac">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--main-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="main" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AdmazingWatch" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="GPS" id="ZTc-aq-bOL">
+                            <color key="backgroundColor" red="0.1647058824" green="0.70980392160000005" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="15"/>
+                            <connections>
+                                <segue destination="QzB-Bu-TFE" kind="push" id="eb0-Ne-v3O"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Último Cupón" id="mR4-Zm-OKQ">
+                            <color key="backgroundColor" red="1" green="0.44188198070000001" blue="0.43635973389999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="15"/>
+                            <connections>
+                                <segue destination="CLR-bN-F8Z" kind="push" id="It9-lN-gl3"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Usar Último Cupón" id="3qS-zt-soL">
+                            <color key="backgroundColor" red="0.40384509019999998" green="0.64972773299999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="15"/>
+                            <connections>
+                                <segue destination="AuC-bb-FVx" kind="push" id="qyW-0K-6P6"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Configuraciones" id="XD4-1d-txB">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.82373708769999998" green="0.83225995990000001" blue="0.83994391030000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="15"/>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="449" y="349"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="AdmazingWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="zdc-yj-R4W">
+            <objects>
+                <controller id="ncT-Uv-Pac">
+                    <items>
+                        <button width="1" alignment="center" verticalAlignment="center" backgroundImage="logoadmazingtrans.png" id="XvQ-at-fre">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="jTi-BG-fTD"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="177" y="344"/>
+        </scene>
+        <!--gps-->
+        <scene sceneID="w4D-Nc-zqq">
+            <objects>
+                <controller identifier="gps" id="QzB-Bu-TFE">
+                    <items>
+                        <button width="100" height="141" alignment="center" verticalAlignment="center" backgroundImage="gps_green.png" id="m57-ri-OPw">
+                            <connections>
+                                <action selector="gps" destination="QzB-Bu-TFE" id="4xH-Lm-dZJ"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="449" y="16"/>
+        </scene>
+        <!--promoViewWatch-->
+        <scene sceneID="lFt-5B-lq7">
+            <objects>
+                <controller identifier="promoViewWatch" id="CLR-bN-F8Z">
+                    <items>
+                        <imageView width="140" height="93" alignment="left" image="Promo1" id="R7n-yP-WyH"/>
+                        <label alignment="left" text="Televisor Sony 32 inchs LED solo por hoy a S/:1499" numberOfLines="8" id="LlH-1q-bO8">
+                            <color key="textColor" red="0.1647058824" green="0.70980392160000005" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="13"/>
+                        </label>
+                        <label alignment="left" text="Label" numberOfLines="10" id="3RS-UI-ONS">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <button width="1" alignment="left" title="Usar Cupón" id="tzd-7c-vL3">
+                            <color key="backgroundColor" red="0.1647058824" green="0.71764705880000002" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="731" y="15.25"/>
+        </scene>
+        <!--QRView-->
+        <scene sceneID="Q76-vJ-ZLc">
+            <objects>
+                <controller identifier="QRView" id="AuC-bb-FVx">
+                    <items>
+                        <label width="136" alignment="left" text="Exito!" textAlignment="center" id="lch-0M-9g3">
+                            <color key="textColor" red="0.1647058824" green="0.70980392160000005" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                        <label width="136" alignment="left" text="Su código QR se generó con éxito!" textAlignment="center" numberOfLines="2" id="Uge-aO-2pB">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <imageView width="100" height="100" alignment="center" image="qr2.jpg" id="tp2-2o-6X4"/>
+                        <button width="1" alignment="left" title="Aceptar" id="3qW-NS-Zrn">
+                            <color key="backgroundColor" red="0.1647058824" green="0.70980392160000005" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="742" y="396.25"/>
+        </scene>
+    </scenes>
+</document>

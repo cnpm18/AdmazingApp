@@ -56,6 +56,42 @@
 		F91FABBD1D1880ED0096937A /* BookedCouponsShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FABBB1D1880ED0096937A /* BookedCouponsShow.swift */; };
 		F91FABBF1D1881430096937A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91FABBE1D1881430096937A /* CoreLocation.framework */; };
 		F91FABC21D189FA60096937A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91FABC01D189FA60096937A /* Main.storyboard */; };
+		F99496F91D18A3F80007FE29 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99496F71D18A3F80007FE29 /* Interface.storyboard */; };
+		F99496FB1D18A3F80007FE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F99496FA1D18A3F80007FE29 /* Assets.xcassets */; };
+		F99497021D18A3F80007FE29 /* AdmazingWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F99497011D18A3F80007FE29 /* AdmazingWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F99497091D18A3F80007FE29 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99497081D18A3F80007FE29 /* InterfaceController.swift */; };
+		F994970B1D18A3F80007FE29 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F994970A1D18A3F80007FE29 /* ExtensionDelegate.swift */; };
+		F994970D1D18A3F80007FE29 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F994970C1D18A3F80007FE29 /* NotificationController.swift */; };
+		F994970F1D18A3F80007FE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F994970E1D18A3F80007FE29 /* Assets.xcassets */; };
+		F99497131D18A3F80007FE29 /* AdmazingWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F99496F51D18A3F80007FE29 /* AdmazingWatch.app */; };
+		F994971D1D18A40F0007FE29 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F994971C1D18A40F0007FE29 /* CoreLocation.framework */; };
+		F994971E1D18A7D80007FE29 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB661D187B3F0096937A /* back.png */; };
+		F994971F1D18A7D80007FE29 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB671D187B3F0096937A /* background.png */; };
+		F99497201D18A7D80007FE29 /* couponsprueba.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB691D187B3F0096937A /* couponsprueba.png */; };
+		F99497211D18A7D80007FE29 /* gps_green.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB6A1D187B3F0096937A /* gps_green.png */; };
+		F99497221D18A7D80007FE29 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB6B1D187B3F0096937A /* home.png */; };
+		F99497231D18A7D80007FE29 /* logoadmazing.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB6C1D187B3F0096937A /* logoadmazing.png */; };
+		F99497241D18A7D80007FE29 /* logoadmazingtrans.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB6D1D187B3F0096937A /* logoadmazingtrans.png */; };
+		F99497251D18A7D80007FE29 /* qr1.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB6E1D187B3F0096937A /* qr1.png */; };
+		F99497261D18A7D80007FE29 /* qr2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB6F1D187B3F0096937A /* qr2.jpg */; };
+		F99497271D18A7D80007FE29 /* qr3.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB701D187B3F0096937A /* qr3.png */; };
+		F99497281D18A7D80007FE29 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB711D187B3F0096937A /* settings.png */; };
+		F99497291D18A7D80007FE29 /* settingsprueba.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB721D187B3F0096937A /* settingsprueba.png */; };
+		F994972A1D18A7D80007FE29 /* usersprueba.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB731D187B3F0096937A /* usersprueba.png */; };
+		F994972B1D18A7D90007FE29 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB661D187B3F0096937A /* back.png */; };
+		F994972C1D18A7D90007FE29 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB671D187B3F0096937A /* background.png */; };
+		F994972D1D18A7D90007FE29 /* couponsprueba.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB691D187B3F0096937A /* couponsprueba.png */; };
+		F994972E1D18A7D90007FE29 /* gps_green.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB6A1D187B3F0096937A /* gps_green.png */; };
+		F994972F1D18A7D90007FE29 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB6B1D187B3F0096937A /* home.png */; };
+		F99497301D18A7D90007FE29 /* logoadmazing.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB6C1D187B3F0096937A /* logoadmazing.png */; };
+		F99497311D18A7D90007FE29 /* logoadmazingtrans.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB6D1D187B3F0096937A /* logoadmazingtrans.png */; };
+		F99497321D18A7D90007FE29 /* qr1.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB6E1D187B3F0096937A /* qr1.png */; };
+		F99497331D18A7D90007FE29 /* qr2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB6F1D187B3F0096937A /* qr2.jpg */; };
+		F99497341D18A7D90007FE29 /* qr3.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB701D187B3F0096937A /* qr3.png */; };
+		F99497351D18A7D90007FE29 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB711D187B3F0096937A /* settings.png */; };
+		F99497361D18A7D90007FE29 /* settingsprueba.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB721D187B3F0096937A /* settingsprueba.png */; };
+		F99497371D18A7D90007FE29 /* usersprueba.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB731D187B3F0096937A /* usersprueba.png */; };
+		F99497391D18A9770007FE29 /* GPSWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99497381D18A9770007FE29 /* GPSWatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +109,46 @@
 			remoteGlobalIDString = F91FAB331D18785D0096937A;
 			remoteInfo = AdmazingApp;
 		};
+		F99497031D18A3F80007FE29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F91FAB2C1D18785D0096937A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F99497001D18A3F80007FE29;
+			remoteInfo = "AdmazingWatch Extension";
+		};
+		F99497111D18A3F80007FE29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F91FAB2C1D18785D0096937A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F99496F41D18A3F80007FE29;
+			remoteInfo = AdmazingWatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F99497191D18A3F80007FE29 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F99497021D18A3F80007FE29 /* AdmazingWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F994971B1D18A3F80007FE29 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F99497131D18A3F80007FE29 /* AdmazingWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F91FAB341D18785D0096937A /* AdmazingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdmazingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +165,7 @@
 		F91FAB591D18785D0096937A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F91FAB661D187B3F0096937A /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		F91FAB671D187B3F0096937A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		F91FAB681D187B3F0096937A /* categoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = categoryCell.xib; sourceTree = "<group>"; };
+		F91FAB681D187B3F0096937A /* categoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = categoryCell.xib; path = AdmazingApp/categoryCell.xib; sourceTree = "<group>"; };
 		F91FAB691D187B3F0096937A /* couponsprueba.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = couponsprueba.png; sourceTree = "<group>"; };
 		F91FAB6A1D187B3F0096937A /* gps_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gps_green.png; sourceTree = "<group>"; };
 		F91FAB6B1D187B3F0096937A /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
@@ -131,6 +206,19 @@
 		F91FABBB1D1880ED0096937A /* BookedCouponsShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookedCouponsShow.swift; sourceTree = "<group>"; };
 		F91FABBE1D1881430096937A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F91FABC11D189FA60096937A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F99496F51D18A3F80007FE29 /* AdmazingWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdmazingWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F99496F81D18A3F80007FE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F99496FA1D18A3F80007FE29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F99496FC1D18A3F80007FE29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F99497011D18A3F80007FE29 /* AdmazingWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AdmazingWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F99497071D18A3F80007FE29 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F99497081D18A3F80007FE29 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		F994970A1D18A3F80007FE29 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		F994970C1D18A3F80007FE29 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		F994970E1D18A3F80007FE29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F99497101D18A3F80007FE29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F994971C1D18A40F0007FE29 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		F99497381D18A9770007FE29 /* GPSWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSWatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,12 +244,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F99496FE1D18A3F80007FE29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F994971D1D18A40F0007FE29 /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		F91FAB2B1D18785D0096937A = {
 			isa = PBXGroup;
 			children = (
+				F994971C1D18A40F0007FE29 /* CoreLocation.framework */,
 				F91FABBE1D1881430096937A /* CoreLocation.framework */,
 				F91FAB821D187B600096937A /* CurrentClasses */,
 				F91FAB9D1D187C580096937A /* xib */,
@@ -169,6 +266,8 @@
 				F91FAB361D18785D0096937A /* AdmazingApp */,
 				F91FAB4B1D18785D0096937A /* AdmazingAppTests */,
 				F91FAB561D18785D0096937A /* AdmazingAppUITests */,
+				F99496F61D18A3F80007FE29 /* AdmazingWatch */,
+				F99497051D18A3F80007FE29 /* AdmazingWatch Extension */,
 				F91FAB351D18785D0096937A /* Products */,
 				F91FAB651D187ADF0096937A /* Pictures */,
 			);
@@ -180,6 +279,8 @@
 				F91FAB341D18785D0096937A /* AdmazingApp.app */,
 				F91FAB481D18785D0096937A /* AdmazingAppTests.xctest */,
 				F91FAB531D18785D0096937A /* AdmazingAppUITests.xctest */,
+				F99496F51D18A3F80007FE29 /* AdmazingWatch.app */,
+				F99497011D18A3F80007FE29 /* AdmazingWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,7 +320,6 @@
 			children = (
 				F91FAB661D187B3F0096937A /* back.png */,
 				F91FAB671D187B3F0096937A /* background.png */,
-				F91FAB681D187B3F0096937A /* categoryCell.xib */,
 				F91FAB691D187B3F0096937A /* couponsprueba.png */,
 				F91FAB6A1D187B3F0096937A /* gps_green.png */,
 				F91FAB6B1D187B3F0096937A /* home.png */,
@@ -268,6 +368,7 @@
 			children = (
 				F91FAB9E1D187C760096937A /* categoryCellView.xib */,
 				F91FAB9F1D187C760096937A /* couponCellView.xib */,
+				F91FAB681D187B3F0096937A /* categoryCell.xib */,
 				F91FABA01D187C760096937A /* storeCellView.xib */,
 			);
 			name = xib;
@@ -301,6 +402,38 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		F99496F61D18A3F80007FE29 /* AdmazingWatch */ = {
+			isa = PBXGroup;
+			children = (
+				F99496F71D18A3F80007FE29 /* Interface.storyboard */,
+				F99496FA1D18A3F80007FE29 /* Assets.xcassets */,
+				F99496FC1D18A3F80007FE29 /* Info.plist */,
+			);
+			path = AdmazingWatch;
+			sourceTree = "<group>";
+		};
+		F99497051D18A3F80007FE29 /* AdmazingWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F99497081D18A3F80007FE29 /* InterfaceController.swift */,
+				F99497381D18A9770007FE29 /* GPSWatch.swift */,
+				F994970A1D18A3F80007FE29 /* ExtensionDelegate.swift */,
+				F994970C1D18A3F80007FE29 /* NotificationController.swift */,
+				F994970E1D18A3F80007FE29 /* Assets.xcassets */,
+				F99497101D18A3F80007FE29 /* Info.plist */,
+				F99497061D18A3F80007FE29 /* Supporting Files */,
+			);
+			path = "AdmazingWatch Extension";
+			sourceTree = "<group>";
+		};
+		F99497061D18A3F80007FE29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F99497071D18A3F80007FE29 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -311,10 +444,12 @@
 				F91FAB301D18785D0096937A /* Sources */,
 				F91FAB311D18785D0096937A /* Frameworks */,
 				F91FAB321D18785D0096937A /* Resources */,
+				F994971B1D18A3F80007FE29 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F99497121D18A3F80007FE29 /* PBXTargetDependency */,
 			);
 			name = AdmazingApp;
 			productName = AdmazingApp;
@@ -357,6 +492,40 @@
 			productReference = F91FAB531D18785D0096937A /* AdmazingAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		F99496F41D18A3F80007FE29 /* AdmazingWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F994971A1D18A3F80007FE29 /* Build configuration list for PBXNativeTarget "AdmazingWatch" */;
+			buildPhases = (
+				F99496F31D18A3F80007FE29 /* Resources */,
+				F99497191D18A3F80007FE29 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F99497041D18A3F80007FE29 /* PBXTargetDependency */,
+			);
+			name = AdmazingWatch;
+			productName = AdmazingWatch;
+			productReference = F99496F51D18A3F80007FE29 /* AdmazingWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F99497001D18A3F80007FE29 /* AdmazingWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F99497181D18A3F80007FE29 /* Build configuration list for PBXNativeTarget "AdmazingWatch Extension" */;
+			buildPhases = (
+				F99496FD1D18A3F80007FE29 /* Sources */,
+				F99496FE1D18A3F80007FE29 /* Frameworks */,
+				F99496FF1D18A3F80007FE29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AdmazingWatch Extension";
+			productName = "AdmazingWatch Extension";
+			productReference = F99497011D18A3F80007FE29 /* AdmazingWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -378,6 +547,12 @@
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = F91FAB331D18785D0096937A;
 					};
+					F99496F41D18A3F80007FE29 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					F99497001D18A3F80007FE29 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 				};
 			};
 			buildConfigurationList = F91FAB2F1D18785D0096937A /* Build configuration list for PBXProject "AdmazingApp" */;
@@ -396,6 +571,8 @@
 				F91FAB331D18785D0096937A /* AdmazingApp */,
 				F91FAB471D18785D0096937A /* AdmazingAppTests */,
 				F91FAB521D18785D0096937A /* AdmazingAppUITests */,
+				F99496F41D18A3F80007FE29 /* AdmazingWatch */,
+				F99497001D18A3F80007FE29 /* AdmazingWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -439,6 +616,49 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F99496F31D18A3F80007FE29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F99497271D18A7D80007FE29 /* qr3.png in Resources */,
+				F994972A1D18A7D80007FE29 /* usersprueba.png in Resources */,
+				F99497241D18A7D80007FE29 /* logoadmazingtrans.png in Resources */,
+				F99497211D18A7D80007FE29 /* gps_green.png in Resources */,
+				F99497261D18A7D80007FE29 /* qr2.jpg in Resources */,
+				F99497251D18A7D80007FE29 /* qr1.png in Resources */,
+				F99497291D18A7D80007FE29 /* settingsprueba.png in Resources */,
+				F99497201D18A7D80007FE29 /* couponsprueba.png in Resources */,
+				F99497221D18A7D80007FE29 /* home.png in Resources */,
+				F99496FB1D18A3F80007FE29 /* Assets.xcassets in Resources */,
+				F994971F1D18A7D80007FE29 /* background.png in Resources */,
+				F99496F91D18A3F80007FE29 /* Interface.storyboard in Resources */,
+				F99497281D18A7D80007FE29 /* settings.png in Resources */,
+				F994971E1D18A7D80007FE29 /* back.png in Resources */,
+				F99497231D18A7D80007FE29 /* logoadmazing.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F99496FF1D18A3F80007FE29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F99497361D18A7D90007FE29 /* settingsprueba.png in Resources */,
+				F99497351D18A7D90007FE29 /* settings.png in Resources */,
+				F994972B1D18A7D90007FE29 /* back.png in Resources */,
+				F99497331D18A7D90007FE29 /* qr2.jpg in Resources */,
+				F994972E1D18A7D90007FE29 /* gps_green.png in Resources */,
+				F99497371D18A7D90007FE29 /* usersprueba.png in Resources */,
+				F994972F1D18A7D90007FE29 /* home.png in Resources */,
+				F99497341D18A7D90007FE29 /* qr3.png in Resources */,
+				F994972C1D18A7D90007FE29 /* background.png in Resources */,
+				F99497311D18A7D90007FE29 /* logoadmazingtrans.png in Resources */,
+				F994972D1D18A7D90007FE29 /* couponsprueba.png in Resources */,
+				F99497321D18A7D90007FE29 /* qr1.png in Resources */,
+				F99497301D18A7D90007FE29 /* logoadmazing.png in Resources */,
+				F994970F1D18A3F80007FE29 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +714,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F99496FD1D18A3F80007FE29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F994970D1D18A3F80007FE29 /* NotificationController.swift in Sources */,
+				F994970B1D18A3F80007FE29 /* ExtensionDelegate.swift in Sources */,
+				F99497391D18A9770007FE29 /* GPSWatch.swift in Sources */,
+				F99497091D18A3F80007FE29 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -506,6 +737,16 @@
 			isa = PBXTargetDependency;
 			target = F91FAB331D18785D0096937A /* AdmazingApp */;
 			targetProxy = F91FAB541D18785D0096937A /* PBXContainerItemProxy */;
+		};
+		F99497041D18A3F80007FE29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F99497001D18A3F80007FE29 /* AdmazingWatch Extension */;
+			targetProxy = F99497031D18A3F80007FE29 /* PBXContainerItemProxy */;
+		};
+		F99497121D18A3F80007FE29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F99496F41D18A3F80007FE29 /* AdmazingWatch */;
+			targetProxy = F99497111D18A3F80007FE29 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -524,6 +765,14 @@
 				F91FABC11D189FA60096937A /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F99496F71D18A3F80007FE29 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F99496F81D18A3F80007FE29 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -680,6 +929,66 @@
 			};
 			name = Release;
 		};
+		F99497141D18A3F80007FE29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = AdmazingWatch_Extension;
+				INFOPLIST_FILE = AdmazingWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = Cristopher.AdmazingApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		F99497151D18A3F80007FE29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = AdmazingWatch_Extension;
+				INFOPLIST_FILE = AdmazingWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = Cristopher.AdmazingApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		F99497161D18A3F80007FE29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "AdmazingWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Cristopher.AdmazingApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		F99497171D18A3F80007FE29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "AdmazingWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Cristopher.AdmazingApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -718,6 +1027,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F99497181D18A3F80007FE29 /* Build configuration list for PBXNativeTarget "AdmazingWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F99497161D18A3F80007FE29 /* Debug */,
+				F99497171D18A3F80007FE29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F994971A1D18A3F80007FE29 /* Build configuration list for PBXNativeTarget "AdmazingWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F99497141D18A3F80007FE29 /* Debug */,
+				F99497151D18A3F80007FE29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

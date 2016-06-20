@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>AdmazingWatch (Notification).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>AdmazingWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>F91FAB521D18785D0096937A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F99496F41D18A3F80007FE29</key>
 		<dict>
 			<key>primary</key>
 			<true/>

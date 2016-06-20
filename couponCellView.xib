@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="coCell" rowHeight="149" id="TZP-u2-VoZ" customClass="couponCell" customModule="Admazing" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TZP-u2-VoZ" id="3mn-Lh-2VV">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Promo1" translatesAutoresizingMaskIntoConstraints="NO" id="BW3-IF-E0Z">
+                        <rect key="frame" x="43" y="40" width="218" height="108"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="cHG-Dh-x3D">
+                        <rect key="frame" x="283" y="40" width="37" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="WCt-a9-yYg"/>
+                            <constraint firstAttribute="width" constant="37" id="gyM-uh-Vvn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TV 42&quot; Sony Promoción solo por 24 horas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oI-3Q-3NY">
+                        <rect key="frame" x="4" y="0.0" width="313" height="35"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="cHG-Dh-x3D" secondAttribute="trailing" constant="-8" id="bdL-Kt-sG3"/>
+                    <constraint firstItem="cHG-Dh-x3D" firstAttribute="centerY" secondItem="3mn-Lh-2VV" secondAttribute="centerY" id="nfB-Gw-grF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="couponDescription" destination="9oI-3Q-3NY" id="3K2-sr-hv2"/>
+                <outlet property="couponImage" destination="BW3-IF-E0Z" id="6tL-Z8-F4k"/>
+                <outlet property="icon" destination="cHG-Dh-x3D" id="m1T-ym-ICd"/>
+            </connections>
+            <point key="canvasLocation" x="504" y="247.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Promo1" width="843" height="403"/>
+        <image name="icon_arrow" width="128" height="128"/>
+    </resources>
+</document>

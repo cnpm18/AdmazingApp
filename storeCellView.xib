@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="83" id="P0X-Db-ZYY" customClass="storeCell" customModule="Admazing" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P0X-Db-ZYY" id="tdj-ge-pjL">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Falabella" translatesAutoresizingMaskIntoConstraints="NO" id="1cD-mJ-y2u">
+                        <rect key="frame" x="8" y="0.0" width="43" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="43" id="bs2-pu-3Ke"/>
+                            <constraint firstAttribute="width" constant="50" id="oDl-5w-N5X"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="ECf-Gc-mjc">
+                        <rect key="frame" x="277" y="0.0" width="43" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="43" id="PMy-qa-oq0"/>
+                            <constraint firstAttribute="height" constant="43" id="WSe-4q-ag5"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbj-C6-Aqq">
+                        <rect key="frame" x="115" y="11" width="91" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1cD-mJ-y2u" firstAttribute="centerY" secondItem="tdj-ge-pjL" secondAttribute="centerY" id="1rG-5h-vUc"/>
+                    <constraint firstItem="Tbj-C6-Aqq" firstAttribute="centerY" secondItem="tdj-ge-pjL" secondAttribute="centerY" id="O5g-BA-aoW"/>
+                    <constraint firstItem="Tbj-C6-Aqq" firstAttribute="centerX" secondItem="tdj-ge-pjL" secondAttribute="centerX" id="d7u-dI-yC3"/>
+                    <constraint firstItem="ECf-Gc-mjc" firstAttribute="top" secondItem="tdj-ge-pjL" secondAttribute="topMargin" constant="-8" id="sQY-0J-Car"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ECf-Gc-mjc" secondAttribute="trailing" constant="-8" id="u7I-Il-XAX"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ECf-Gc-mjc" secondAttribute="bottom" constant="-8" id="xdv-w3-gcg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="icon" destination="ECf-Gc-mjc" id="jhE-uW-47q"/>
+                <outlet property="storeLogo" destination="1cD-mJ-y2u" id="PvY-xy-7OC"/>
+                <outlet property="storeName" destination="Tbj-C6-Aqq" id="MLY-by-SM3"/>
+            </connections>
+            <point key="canvasLocation" x="232" y="164"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Falabella" width="90" height="90"/>
+        <image name="icon_arrow.png" width="128" height="128"/>
+    </resources>
+</document>

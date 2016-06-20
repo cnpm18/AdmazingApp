@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="XML-gX-2tq" customClass="storeCell" customModule="Admazing" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XML-gX-2tq" id="wZ2-fm-Mch">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Hogar" translatesAutoresizingMaskIntoConstraints="NO" id="yBb-Ql-6ED">
+                        <rect key="frame" x="8" y="0.0" width="43" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="3Hw-Jt-bDP"/>
+                            <constraint firstAttribute="height" constant="43" id="SRc-XL-Ui6"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mez-Ae-hcB">
+                        <rect key="frame" x="277" y="0.0" width="43" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="43" id="TKi-f7-kYD"/>
+                            <constraint firstAttribute="height" constant="43" id="h1e-nl-Dt0"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Category Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpR-87-Srh">
+                        <rect key="frame" x="86" y="11" width="120" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="Mez-Ae-hcB" secondAttribute="bottom" constant="-8" id="IEQ-PB-Z2g"/>
+                    <constraint firstItem="UpR-87-Srh" firstAttribute="centerY" secondItem="wZ2-fm-Mch" secondAttribute="centerY" id="OOX-U4-SLt"/>
+                    <constraint firstItem="yBb-Ql-6ED" firstAttribute="centerY" secondItem="wZ2-fm-Mch" secondAttribute="centerY" id="Plz-Ug-lWJ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Mez-Ae-hcB" secondAttribute="trailing" constant="-8" id="Vv3-ts-B9O"/>
+                    <constraint firstItem="Mez-Ae-hcB" firstAttribute="top" secondItem="wZ2-fm-Mch" secondAttribute="topMargin" constant="-8" id="Zaa-Ay-PkY"/>
+                    <constraint firstItem="UpR-87-Srh" firstAttribute="centerX" secondItem="wZ2-fm-Mch" secondAttribute="centerX" id="rHs-g7-hFk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="icon" destination="Mez-Ae-hcB" id="1mw-tJ-ow3"/>
+                <outlet property="storeLogo" destination="yBb-Ql-6ED" id="w4b-JZ-fdX"/>
+                <outlet property="storeName" destination="UpR-87-Srh" id="tOz-It-1cp"/>
+            </connections>
+            <point key="canvasLocation" x="330" y="183"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Hogar" width="180" height="180"/>
+        <image name="icon_arrow.png" width="128" height="128"/>
+    </resources>
+</document>

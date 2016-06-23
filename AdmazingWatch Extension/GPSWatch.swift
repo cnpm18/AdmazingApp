@@ -13,7 +13,7 @@ import WatchKit
 import MapKit
 
 
-class GPSWatch: WKInterfaceController, CLLocationManagerDelegate {
+class GPSWatch: WKInterfaceController, CLLocationManagerDelegate{
     
     
     
@@ -26,8 +26,8 @@ class GPSWatch: WKInterfaceController, CLLocationManagerDelegate {
     
     @IBAction func gps() {
         getLocation()
-        print(r_latitude)
-        print(r_longitude)
+        print("latitude: \(r_latitude)")
+        print("longitude: \(r_longitude)")
         
         pushControllerWithName("main", context: nil)
 
@@ -40,8 +40,19 @@ class GPSWatch: WKInterfaceController, CLLocationManagerDelegate {
         manager.requestWhenInUseAuthorization()
         manager.requestLocation()
         
-        r_latitude = String(manager.location!.coordinate.latitude)
-        r_longitude = String(manager.location!.coordinate.longitude)
+        
+        if manager.location == nil {
+            r_latitude = "51.50998"
+            r_longitude = "-0.1337"
+            
+        }
+        else{
+            r_latitude = String(manager.location!.coordinate.latitude)
+            r_longitude = String(manager.location!.coordinate.longitude)
+            
+        }
+        
+        pushControllerWithName("main", context: "")
         
     }
     

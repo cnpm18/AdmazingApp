@@ -82,7 +82,7 @@
         <!--gps-->
         <scene sceneID="w4D-Nc-zqq">
             <objects>
-                <controller identifier="gps" id="QzB-Bu-TFE">
+                <controller identifier="gps" id="QzB-Bu-TFE" customClass="GPSWatch" customModule="AdmazingWatch_Extension">
                     <items>
                         <button width="100" height="141" alignment="center" verticalAlignment="center" backgroundImage="gps_green.png" id="m57-ri-OPw">
                             <connections>

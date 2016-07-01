@@ -97,6 +97,8 @@ class Stores: UIViewController , UITableViewDelegate, UITableViewDataSource{
         unpackedLatitude=unpackedLatitude.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         unpackedLongitude=unpackedLongitude.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         
+        
+        
         location.setLatitude(unpackedLatitude)
         location.setLongitude(unpackedLongitude)
         

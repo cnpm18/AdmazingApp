@@ -56,6 +56,8 @@
 		F91FABBD1D1880ED0096937A /* BookedCouponsShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FABBB1D1880ED0096937A /* BookedCouponsShow.swift */; };
 		F91FABBF1D1881430096937A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91FABBE1D1881430096937A /* CoreLocation.framework */; };
 		F91FABC21D189FA60096937A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91FABC01D189FA60096937A /* Main.storyboard */; };
+		F990DDBD1D22E2AB0000E3EE /* serverConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F990DDBC1D22E2AB0000E3EE /* serverConnection.swift */; };
+		F990DDBF1D22E9580000E3EE /* loginConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F990DDBE1D22E9580000E3EE /* loginConnection.swift */; };
 		F99496F91D18A3F80007FE29 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99496F71D18A3F80007FE29 /* Interface.storyboard */; };
 		F99496FB1D18A3F80007FE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F99496FA1D18A3F80007FE29 /* Assets.xcassets */; };
 		F99497021D18A3F80007FE29 /* AdmazingWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F99497011D18A3F80007FE29 /* AdmazingWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -206,6 +208,8 @@
 		F91FABBB1D1880ED0096937A /* BookedCouponsShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookedCouponsShow.swift; sourceTree = "<group>"; };
 		F91FABBE1D1881430096937A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F91FABC11D189FA60096937A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F990DDBC1D22E2AB0000E3EE /* serverConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serverConnection.swift; sourceTree = "<group>"; };
+		F990DDBE1D22E9580000E3EE /* loginConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginConnection.swift; sourceTree = "<group>"; };
 		F99496F51D18A3F80007FE29 /* AdmazingWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdmazingWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99496F81D18A3F80007FE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		F99496FA1D18A3F80007FE29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 				F91FAB821D187B600096937A /* CurrentClasses */,
 				F91FAB9D1D187C580096937A /* xib */,
 				F91FABA41D187CB10096937A /* View */,
+				F990DDBA1D22E26E0000E3EE /* Connection */,
 				F91FAB361D18785D0096937A /* AdmazingApp */,
 				F91FAB4B1D18785D0096937A /* AdmazingAppTests */,
 				F91FAB561D18785D0096937A /* AdmazingAppUITests */,
@@ -400,6 +405,15 @@
 				F91FABA81D187D4E0096937A /* storeCell.swift */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		F990DDBA1D22E26E0000E3EE /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				F990DDBC1D22E2AB0000E3EE /* serverConnection.swift */,
+				F990DDBE1D22E9580000E3EE /* loginConnection.swift */,
+			);
+			name = Connection;
 			sourceTree = "<group>";
 		};
 		F99496F61D18A3F80007FE29 /* AdmazingWatch */ = {
@@ -670,6 +684,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F91FABBD1D1880ED0096937A /* BookedCouponsShow.swift in Sources */,
+				F990DDBF1D22E9580000E3EE /* loginConnection.swift in Sources */,
 				F91FAB3A1D18785D0096937A /* ViewController.swift in Sources */,
 				F91FAB9B1D187C260096937A /* zonaComercialModel.swift in Sources */,
 				F91FABAF1D1880230096937A /* Category.swift in Sources */,
@@ -691,6 +706,7 @@
 				F91FABB21D1880310096937A /* GPS.swift in Sources */,
 				F91FABAB1D187D4E0096937A /* storeCell.swift in Sources */,
 				F91FAB8E1D187BBC0096937A /* currentLog.swift in Sources */,
+				F990DDBD1D22E2AB0000E3EE /* serverConnection.swift in Sources */,
 				F91FAB8A1D187BBC0096937A /* currentCategory.swift in Sources */,
 				F91FABA91D187D4E0096937A /* categoryCell.swift in Sources */,
 				F91FABAA1D187D4E0096937A /* couponCell.swift in Sources */,
@@ -1035,6 +1051,7 @@
 				F99497171D18A3F80007FE29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F994971A1D18A3F80007FE29 /* Build configuration list for PBXNativeTarget "AdmazingWatch" */ = {
 			isa = XCConfigurationList;
@@ -1043,6 +1060,7 @@
 				F99497151D18A3F80007FE29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

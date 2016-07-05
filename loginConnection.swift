@@ -32,7 +32,6 @@ class loginConnection: serverConnection {
     
     override func parser(parser: NSXMLParser, foundCharacters string: String) {
         if currentElementName == "resultado" {
-            print(string)
             returnData(string)//from string to bool
             
         }

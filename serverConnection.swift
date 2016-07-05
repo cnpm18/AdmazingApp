@@ -20,8 +20,6 @@ class serverConnection: NSObject, NSURLConnectionDelegate, NSXMLParserDelegate {
         
         let soapMessage = "<?xml version='1.0' encoding='utf-8'?><soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:adm='http://admazing.com/'><soapenv:Header/><soapenv:Body>\(body)</soapenv:Body></soapenv:Envelope>"
         
-        
-        print(soapMessage)
         return soapMessage
         
     }
@@ -43,13 +41,22 @@ class serverConnection: NSObject, NSURLConnectionDelegate, NSXMLParserDelegate {
         theRequest.addValue("text/xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
         theRequest.addValue(String(msgLength), forHTTPHeaderField: "Content-Length")
         theRequest.HTTPMethod = "POST"
-        theRequest.HTTPBody = soapMessage.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) // or false
-        let connection = NSURLConnection(request: theRequest, delegate: self, startImmediately: true)
-        
-        connection!.start()
-        
-        if (connection == true) {
-            var mutableData : Void = NSMutableData.initialize()
+        theRequest.HTTPBody = soapMessage.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        let response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil
+        do{
+            
+            let data = try NSURLConnection.sendSynchronousRequest(theRequest, returningResponse: response)
+            
+            let encodedData = NSString(data: data, encoding: NSUTF8StringEncoding)
+            let xmlParser = NSXMLParser(data: data)
+            xmlParser.delegate = self
+            xmlParser.parse()
+            xmlParser.shouldResolveExternalEntities = true
+ 
+            
+        }catch let error as NSError
+        {
+            print(error.localizedDescription)
         }
         
         
@@ -67,34 +74,11 @@ class serverConnection: NSObject, NSURLConnectionDelegate, NSXMLParserDelegate {
     
     
     
-    func connection(connection: NSURLConnection!, didReceiveResponse response: NSURLResponse!) {
-        mutableData.length = 0;
-    }
-    
-    func connection(connection: NSURLConnection!, didReceiveData data: NSData!) {
-        mutableData.appendData(data)
-    }
-    
-    
-    func connectionDidFinishLoading(connection: NSURLConnection!) {
-        
-        
-        
-        let response = NSString(data: mutableData, encoding: NSUTF8StringEncoding)
-        
-        let xmlParser = NSXMLParser(data: mutableData)
-        xmlParser.delegate = self
-        xmlParser.parse()
-        xmlParser.shouldResolveExternalEntities = true
-         
-    }
-    
-    
     
     
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         currentElementName = elementName
-    }
+            }
     
     func parser(parser: NSXMLParser, foundCharacters string: String) {
             }

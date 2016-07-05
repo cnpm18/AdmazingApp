@@ -28,7 +28,6 @@ class ViewController: UIViewController {
     @IBAction func logIn(sender: AnyObject) {
         
         let rpta = sendToServer()
-        print("rpta: \(rpta)")
         if(rpta == true){
             
             saveCurrentLog()
@@ -36,7 +35,7 @@ class ViewController: UIViewController {
             
             
             
-        }/*
+        }
         else{
             let alert = UIAlertController(title: "Alert", message: "Datos Incorrectos", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
@@ -45,7 +44,7 @@ class ViewController: UIViewController {
             self.idTextField.text = ""
             self.psswdTextField.text = ""
             
-        }*/
+        }
     }
     
     
@@ -90,10 +89,8 @@ class ViewController: UIViewController {
         
         connection.setr_userName(id)
         connection.setr_password(pwd)
-        connection.getResponse()//makes all the connection
-        
+        connection.getResponse()
         response = connection.getResult()
-        print("response: \(response)")
         return response
     }
     

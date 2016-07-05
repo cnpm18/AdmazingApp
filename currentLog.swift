@@ -23,7 +23,7 @@ class currentLog{
         return self.password
     }
     
-    func setIdPromocion(r_userName: String){
+    func setUserName(r_userName: String){
         self.userName = r_userName
         
     }

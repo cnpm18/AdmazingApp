@@ -2,39 +2,49 @@
 //  gpsConnection.swift
 //  AdmazingApp
 //
-//  Created by Cristopher Nunez Del Prado on 28/06/16.
+//  Created by Cristopher Nunez Del Prado on 5/07/16.
 //  Copyright © 2016 Cristopher Nunez Del Prado. All rights reserved.
 //
 
 import Foundation
-
 class gpsConnection: serverConnection {
+    var r_latitude: String = ""
+    var r_longitude: String = ""
     var r_userName: String = ""
-    var r_password: String = ""
     var result: Bool = false
+    var comercialArea: String = ""
     
     
     
+    func setr_latitude( latitude: String ){
+        r_latitude = latitude
+        
+    }
+    func setr_longitde( longitude: String ){
+        r_longitude = longitude
+        
+    }
     func setr_userName( userName: String ){
         r_userName = userName
         
     }
-    func setr_password( password: String ){
-        r_password = password
-        
-    }
     func getResponse(){
-        r_userName = substractOptional(r_userName)
-        r_password = substractOptional(r_password)
-        var body = "<adm:iniciarSesionRequest><idUsuario>\(r_userName)</idUsuario><password>\(r_password)</password></adm:iniciarSesionRequest>"
+        
+        var body = "<adm:saveAccesoRequest><idUsuario>\(r_userName)</idUsuario><latitud>\(r_latitude)</latitud><longitud>\(r_longitude)</longitud></adm:saveAccesoRequest>"
         createConnection(body)
+        
     }
     
     override func parser(parser: NSXMLParser, foundCharacters string: String) {
         if currentElementName == "resultado" {
-            print(string)
-            returnData(string)
+            returnData(string)//from string to bool
+            
         }
+        if currentElementName == "nombreZonaComercial" {
+            self.comercialArea = string
+            
+        }
+        
         
     }
     
@@ -50,11 +60,9 @@ class gpsConnection: serverConnection {
         
     }
     func getResult()->Bool{
+        
         return self.result
     }
-    
-    
-    
     
     
     

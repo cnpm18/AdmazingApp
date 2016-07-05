@@ -20,6 +20,7 @@ class GPS: UIViewController, CLLocationManagerDelegate {
     var r_latitude = String("none")
     var r_longitude = String("none")
     var closeMall = String("none")
+    var log = currentLog(r_userName: "",r_password: "")
     override func viewDidLoad() {
         
         
@@ -35,6 +36,7 @@ class GPS: UIViewController, CLLocationManagerDelegate {
 
     @IBAction func gps(sender: AnyObject) {
         super.viewDidLoad()
+        loadCurrentLog()
         manager = CLLocationManager()
         manager.requestAlwaysAuthorization()
         manager.delegate = self
@@ -43,10 +45,10 @@ class GPS: UIViewController, CLLocationManagerDelegate {
         manager.requestLocation()
         r_latitude = String(manager.location!.coordinate.latitude)
         r_longitude = String(manager.location!.coordinate.longitude)
- 
         
-        let rpta = fakeSendToServer()
-        if(rpta == true){
+        
+        closeMall = sendToServer()
+        if(closeMall != ""){
             fillCurrentLocation()
             saveCurrentLocation()
             
@@ -93,6 +95,8 @@ class GPS: UIViewController, CLLocationManagerDelegate {
         let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
         
         let location:CLLocationCoordinate2D = (manager.location?.coordinate)!
+        print("latitude \(manager.location?.coordinate.latitude)")
+        print("longitude \(manager.location?.coordinate.longitude)")
         
         
         
@@ -130,6 +134,29 @@ class GPS: UIViewController, CLLocationManagerDelegate {
             return false
         }
     }
+    func sendToServer() -> String{//-----Real
+        
+        let idUser: String
+        let lat: String
+        let long: String
+        idUser = log.userName
+        lat = r_latitude
+        long = r_longitude
+        var connection = gpsConnection()
+        
+        
+        connection.setr_userName(idUser)
+        connection.setr_latitude(lat)
+        connection.setr_longitde(long)
+        connection.getResponse()
+        if connection.getResult(){
+            return connection.comercialArea
+        }
+        else{
+            return ""
+            
+        }
+    }
 
     @IBAction func goSettings(sender: AnyObject) {
     }
@@ -148,6 +175,24 @@ class GPS: UIViewController, CLLocationManagerDelegate {
         
         location.setLatitude(r_latitude)
         location.setLongitude(r_longitude)
+    }
+    func loadCurrentLog(){
+        
+        var storeDataEncoded: [NSData] = userDefaults.objectForKey("currentLog") as! [NSData]
+        
+        var unpackedUserName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[0] as NSData) as! String
+        var unpackedPassword: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[1] as NSData) as! String
+        
+        unpackedUserName=unpackedUserName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        unpackedPassword=unpackedPassword.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        log.setUserName(unpackedUserName)
+        log.setPassword(unpackedPassword)
+        
+        print ("loaded user \(log.userName)")
+        print ("loaded pwd \(log.password)")
+        
+        
     }
 
 }

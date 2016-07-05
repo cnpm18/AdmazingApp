@@ -29,7 +29,10 @@ class ViewController: UIViewController {
         
         let rpta = sendToServer()
         if(rpta == true){
-            
+            log.userName=getIdFromAct()
+            log.userName=log.userName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            log.password=getPwdFromAct()
+            log.password=log.password.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
             saveCurrentLog()
             performSegueWithIdentifier("goMainMenu", sender: self)
             
@@ -98,6 +101,7 @@ class ViewController: UIViewController {
     func saveCurrentLog(){
         let encodedUserId = NSKeyedArchiver.archivedDataWithRootObject(log.userName)
         let encodedPassword = NSKeyedArchiver.archivedDataWithRootObject(log.password)
+        
         
         
         var encodedArray: [NSData] = [encodedUserId, encodedPassword]

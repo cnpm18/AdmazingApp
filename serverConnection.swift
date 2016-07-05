@@ -20,6 +20,7 @@ class serverConnection: NSObject, NSURLConnectionDelegate, NSXMLParserDelegate {
         
         let soapMessage = "<?xml version='1.0' encoding='utf-8'?><soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:adm='http://admazing.com/'><soapenv:Header/><soapenv:Body>\(body)</soapenv:Body></soapenv:Envelope>"
         
+        print(soapMessage)
         return soapMessage
         
     }

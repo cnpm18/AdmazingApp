@@ -57,6 +57,7 @@
 		F91FABBF1D1881430096937A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91FABBE1D1881430096937A /* CoreLocation.framework */; };
 		F91FABC21D189FA60096937A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91FABC01D189FA60096937A /* Main.storyboard */; };
 		F94CB4DA1D2C28ED00C84DD9 /* gpsConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94CB4D91D2C28ED00C84DD9 /* gpsConnection.swift */; };
+		F98267F61D2EC89100245A22 /* categoryConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98267F51D2EC89100245A22 /* categoryConnection.swift */; };
 		F990DDBD1D22E2AB0000E3EE /* serverConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F990DDBC1D22E2AB0000E3EE /* serverConnection.swift */; };
 		F990DDBF1D22E9580000E3EE /* loginConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F990DDBE1D22E9580000E3EE /* loginConnection.swift */; };
 		F99496F91D18A3F80007FE29 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99496F71D18A3F80007FE29 /* Interface.storyboard */; };
@@ -95,6 +96,7 @@
 		F99497361D18A7D90007FE29 /* settingsprueba.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB721D187B3F0096937A /* settingsprueba.png */; };
 		F99497371D18A7D90007FE29 /* usersprueba.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB731D187B3F0096937A /* usersprueba.png */; };
 		F99497391D18A9770007FE29 /* GPSWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99497381D18A9770007FE29 /* GPSWatch.swift */; };
+		F9A296F21D2D76C200603AE4 /* storesConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A296F11D2D76C200603AE4 /* storesConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +212,7 @@
 		F91FABBE1D1881430096937A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F91FABC11D189FA60096937A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F94CB4D91D2C28ED00C84DD9 /* gpsConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gpsConnection.swift; sourceTree = "<group>"; };
+		F98267F51D2EC89100245A22 /* categoryConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryConnection.swift; sourceTree = "<group>"; };
 		F990DDBC1D22E2AB0000E3EE /* serverConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serverConnection.swift; sourceTree = "<group>"; };
 		F990DDBE1D22E9580000E3EE /* loginConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginConnection.swift; sourceTree = "<group>"; };
 		F99496F51D18A3F80007FE29 /* AdmazingWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdmazingWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +228,7 @@
 		F99497101D18A3F80007FE29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F994971C1D18A40F0007FE29 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		F99497381D18A9770007FE29 /* GPSWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSWatch.swift; sourceTree = "<group>"; };
+		F9A296F11D2D76C200603AE4 /* storesConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storesConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +419,8 @@
 				F990DDBC1D22E2AB0000E3EE /* serverConnection.swift */,
 				F990DDBE1D22E9580000E3EE /* loginConnection.swift */,
 				F94CB4D91D2C28ED00C84DD9 /* gpsConnection.swift */,
+				F9A296F11D2D76C200603AE4 /* storesConnection.swift */,
+				F98267F51D2EC89100245A22 /* categoryConnection.swift */,
 			);
 			name = Connection;
 			sourceTree = "<group>";
@@ -705,6 +711,7 @@
 				F91FAB9A1D187C260096937A /* UsuarioModel.swift in Sources */,
 				F91FAB981D187C260096937A /* promocionModel.swift in Sources */,
 				F91FABBC1D1880ED0096937A /* BookedCouponShow.swift in Sources */,
+				F9A296F21D2D76C200603AE4 /* storesConnection.swift in Sources */,
 				F91FABB31D1880310096937A /* Stores.swift in Sources */,
 				F91FABB21D1880310096937A /* GPS.swift in Sources */,
 				F91FABAB1D187D4E0096937A /* storeCell.swift in Sources */,
@@ -714,6 +721,7 @@
 				F91FABA91D187D4E0096937A /* categoryCell.swift in Sources */,
 				F91FABAA1D187D4E0096937A /* couponCell.swift in Sources */,
 				F94CB4DA1D2C28ED00C84DD9 /* gpsConnection.swift in Sources */,
+				F98267F61D2EC89100245A22 /* categoryConnection.swift in Sources */,
 				F91FABB51D1880A70096937A /* Coupons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

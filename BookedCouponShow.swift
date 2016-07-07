@@ -14,7 +14,7 @@ class BookedCouponShow: UIViewController , UITableViewDelegate, UITableViewDataS
     var tableData = [promocionModel]()
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var coupon = currentCoupon()
-    var category = currentCategory(r_currentCategoryName: "",r_currentCategoryIconName: "",r_currentCategoryIndex: 0)
+    var category = currentCategory(r_currentCategoryID: "",r_currentCategoryName: "",r_currentCategoryIconName: "",r_currentCategoryIndex: 0)
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCurrentCategory()

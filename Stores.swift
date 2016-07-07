@@ -11,16 +11,17 @@ import UIKit
 class Stores: UIViewController , UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var storesTable: UITableView!
 
-    //var tableData:  [String] = ["Falabella","Ripley", "Nike", "Adidas"]
+    
     var tableData = [tiendaModel]()
     var store = currentStore(r_currentStoreName: "",r_currentStoreIconName: "",r_currentStoreIndex: 0)
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var location = currentLocation(r_latitude: "",r_longitude: "")
+    var log = currentLog(r_userName: "",r_password: "")
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadCurrentLog()
         loadCurrentLocation()
-        if fakeSendToServer(){
-            self.fillArray()
+        if sendToServer(){
             let nib = UINib(nibName: "storeCellView" , bundle: nil)
             //self.storesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
             self.storesTable.registerNib(nib, forCellReuseIdentifier: "cell")
@@ -29,14 +30,7 @@ class Stores: UIViewController , UITableViewDelegate, UITableViewDataSource{
         
 
     }
-    func fillArray(){
-       tableData.append(tiendaModel(r_codigoTienda: "T001",r_nombreTienda: "Falabella"))
-        tableData.append(tiendaModel(r_codigoTienda: "T002",r_nombreTienda: "Ripley"))
-        tableData.append(tiendaModel(r_codigoTienda: "T003",r_nombreTienda: "Nike"))
-        tableData.append(tiendaModel(r_codigoTienda: "T004",r_nombreTienda: "Adidas"))
-        
-    }
-        
+            
 
     func tableView(storesTable: UITableView, numberOfRowsInSection section:
         Int) -> Int
@@ -50,8 +44,8 @@ class Stores: UIViewController , UITableViewDelegate, UITableViewDataSource{
         // Sets the text of the Label in the Table View Cell
         
         self.storesTable.rowHeight = 85
-        aCell.storeName.text =  tableData[indexPath.row].getNombretienda()
-        aCell.storeLogo.image =  UIImage(named: tableData[indexPath.row].getNombretienda())
+        aCell.storeName.text =  tableData[indexPath.row].razonSocial
+        aCell.storeLogo.image =  UIImage(named: tableData[indexPath.row].razonSocial)
         aCell.icon.image = UIImage(named: "icon_arrow" ) //UIImage(named: tableData[indexPath.row])
 
         
@@ -79,8 +73,8 @@ class Stores: UIViewController , UITableViewDelegate, UITableViewDataSource{
         userDefaults.synchronize()
     }
     func fillCurrentStore(index:Int){
-        store.setCurrentStoreIconName(tableData[index].getNombretienda())
-        store.setCurrentStoreName(tableData[index].getNombretienda())
+        store.setCurrentStoreIconName(tableData[index].razonSocial)
+        store.setCurrentStoreName(tableData[index].razonSocial)
         store.setCurrentStoreIndex(index)
         
     }
@@ -117,11 +111,52 @@ class Stores: UIViewController , UITableViewDelegate, UITableViewDataSource{
             return false
         }
     }
+    func sendToServer()->Bool{
+        let idUser: String
+        let lat: String
+        let long: String
+        idUser = log.userName
+        var connection = storesConnection()
+        
+        
+        connection.setr_userName(idUser)
+        connection.getResponse()
+        tableData=connection.getResult()
+        if tableData.count>0{
+            return true
+        }
+        else{
+            return false
+            
+        }
+        
+
+    }
 
 
     @IBAction func goHome(sender: AnyObject) {
          performSegueWithIdentifier("goHome", sender: self)
     }
+    
+    func loadCurrentLog(){
+        
+        var storeDataEncoded: [NSData] = userDefaults.objectForKey("currentLog") as! [NSData]
+        
+        var unpackedUserName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[0] as NSData) as! String
+        var unpackedPassword: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[1] as NSData) as! String
+        
+        unpackedUserName=unpackedUserName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        unpackedPassword=unpackedPassword.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        log.setUserName(unpackedUserName)
+        log.setPassword(unpackedPassword)
+        
+        print ("loaded user \(log.userName)")
+        print ("loaded pwd \(log.password)")
+        
+        
+    }
+
     
     
     

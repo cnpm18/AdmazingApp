@@ -12,7 +12,7 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource 
     @IBOutlet weak var categoriesTable: UITableView!
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var store = currentStore(r_currentStoreName: "",r_currentStoreIconName: "",r_currentStoreIndex: 0)
-    var category = currentCategory(r_currentCategoryName: "",r_currentCategoryIconName: "",r_currentCategoryIndex: 0)
+    var category = currentCategory(r_currentCategoryID: "", r_currentCategoryName: "",r_currentCategoryIconName: "",r_currentCategoryIndex: 0)
     
     
     var tableData = [categoriaModel]()

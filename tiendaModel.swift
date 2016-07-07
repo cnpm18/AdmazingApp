@@ -10,24 +10,31 @@ import Foundation
 
 class tiendaModel{
     var codigoTienda: String
-    var nombreTienda: String
+    var idZonaComercial: String
+    var razonSocial: String
+    var email: String
+    var telefono: String
     
-    init(r_codigoTienda: String, r_nombreTienda: String) {
+    init(r_codigoTienda: String, idZonaComercial: String, r_nombreTienda: String, email:String, telefono: String) {
         self.codigoTienda=r_codigoTienda
-        self.nombreTienda=r_nombreTienda
+        self.razonSocial=r_nombreTienda
+        self.email=email
+        self.telefono=telefono
+        self.idZonaComercial=idZonaComercial
+        
     }
     
     func getCodigoTienda() -> String {
         return self.codigoTienda
     }
     func getNombretienda() -> String {
-        return self.nombreTienda
+        return self.razonSocial
     }
     func setCodigoTienda(r_codigoTienda: String){
         self.codigoTienda = r_codigoTienda
     }
     func setNombreTienda(r_nombreTienda: String){
-        self.nombreTienda = r_nombreTienda
+        self.razonSocial = r_nombreTienda
     }
     
     

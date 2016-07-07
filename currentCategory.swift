@@ -9,11 +9,13 @@
 import Foundation
 
 class currentCategory{
+    var currentCategoryID: String
     var currentCategoryName: String
     var currentCategoryIconName: String
     var currentCategoryIndex: Int
-    init(r_currentCategoryName:String,r_currentCategoryIconName:String,r_currentCategoryIndex:Int)
+    init(r_currentCategoryID: String, r_currentCategoryName:String,r_currentCategoryIconName:String,r_currentCategoryIndex:Int)
     {
+        self.currentCategoryID=r_currentCategoryID
         self.currentCategoryName = r_currentCategoryName
         self.currentCategoryIconName = r_currentCategoryIconName
         self.currentCategoryIndex = r_currentCategoryIndex
@@ -42,12 +44,14 @@ class currentCategory{
         
     }
     init(coder aDecoder: NSCoder!) {
+        self.currentCategoryID = aDecoder.decodeObjectForKey("currentCategoryID") as! String
         self.currentCategoryName = aDecoder.decodeObjectForKey("currentCategoryName") as! String
         self.currentCategoryIconName = aDecoder.decodeObjectForKey("currentCategoryIconName") as! String
         self.currentCategoryIndex = aDecoder.decodeObjectForKey("currentCategoryIndex") as! Int
     }
     
     func initWithCoder(aDecoder: NSCoder) -> currentCategory {
+        self.currentCategoryID = aDecoder.decodeObjectForKey("currentCategoryID") as! String
         self.currentCategoryName = aDecoder.decodeObjectForKey("currentCategoryName") as! String
         self.currentCategoryIconName = aDecoder.decodeObjectForKey("currentCategoryIconName") as! String
         self.currentCategoryIndex = aDecoder.decodeObjectForKey("currentCategoryIndex") as! Int
@@ -56,6 +60,7 @@ class currentCategory{
     }
     
     func encodeWithCoder(aCoder: NSCoder!) {
+        aCoder.encodeObject(currentCategoryID, forKey: "currentCategoryID")
         aCoder.encodeObject(currentCategoryName, forKey: "currentCategoryName")
         aCoder.encodeObject(currentCategoryIconName, forKey: "currentCategoryIconName")
         aCoder.encodeObject(currentCategoryIndex, forKey: "currentCategoryIndex")

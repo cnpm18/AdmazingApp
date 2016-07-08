@@ -33,12 +33,6 @@
 		F91FAB8D1D187BBC0096937A /* currentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FAB871D187BBC0096937A /* currentLocation.swift */; };
 		F91FAB8E1D187BBC0096937A /* currentLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FAB881D187BBC0096937A /* currentLog.swift */; };
 		F91FAB8F1D187BBC0096937A /* currentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FAB891D187BBC0096937A /* currentStore.swift */; };
-		F91FAB961D187C260096937A /* categoriaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FAB901D187C260096937A /* categoriaModel.swift */; };
-		F91FAB971D187C260096937A /* cuponeraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FAB911D187C260096937A /* cuponeraModel.swift */; };
-		F91FAB981D187C260096937A /* promocionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FAB921D187C260096937A /* promocionModel.swift */; };
-		F91FAB991D187C260096937A /* tiendaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FAB931D187C260096937A /* tiendaModel.swift */; };
-		F91FAB9A1D187C260096937A /* UsuarioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FAB941D187C260096937A /* UsuarioModel.swift */; };
-		F91FAB9B1D187C260096937A /* zonaComercialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FAB951D187C260096937A /* zonaComercialModel.swift */; };
 		F91FABA11D187C760096937A /* categoryCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB9E1D187C760096937A /* categoryCellView.xib */; };
 		F91FABA21D187C760096937A /* couponCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB9F1D187C760096937A /* couponCellView.xib */; };
 		F91FABA31D187C760096937A /* storeCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F91FABA01D187C760096937A /* storeCellView.xib */; };
@@ -58,6 +52,7 @@
 		F91FABC21D189FA60096937A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91FABC01D189FA60096937A /* Main.storyboard */; };
 		F94CB4DA1D2C28ED00C84DD9 /* gpsConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94CB4D91D2C28ED00C84DD9 /* gpsConnection.swift */; };
 		F98267F61D2EC89100245A22 /* categoryConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98267F51D2EC89100245A22 /* categoryConnection.swift */; };
+		F98267F81D2ED70D00245A22 /* categoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98267F71D2ED70D00245A22 /* categoryModel.swift */; };
 		F990DDBD1D22E2AB0000E3EE /* serverConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F990DDBC1D22E2AB0000E3EE /* serverConnection.swift */; };
 		F990DDBF1D22E9580000E3EE /* loginConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F990DDBE1D22E9580000E3EE /* loginConnection.swift */; };
 		F99496F91D18A3F80007FE29 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99496F71D18A3F80007FE29 /* Interface.storyboard */; };
@@ -97,6 +92,11 @@
 		F99497371D18A7D90007FE29 /* usersprueba.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB731D187B3F0096937A /* usersprueba.png */; };
 		F99497391D18A9770007FE29 /* GPSWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99497381D18A9770007FE29 /* GPSWatch.swift */; };
 		F9A296F21D2D76C200603AE4 /* storesConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A296F11D2D76C200603AE4 /* storesConnection.swift */; };
+		F9BCC9291D2F343800D41030 /* couponBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCC9281D2F343800D41030 /* couponBookModel.swift */; };
+		F9BCC92B1D2F344400D41030 /* promotionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCC92A1D2F344400D41030 /* promotionModel.swift */; };
+		F9BCC92D1D2F399E00D41030 /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCC92C1D2F399E00D41030 /* userModel.swift */; };
+		F9BCC92F1D2F39AC00D41030 /* storeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCC92E1D2F39AC00D41030 /* storeModel.swift */; };
+		F9BCC9311D2F3A2700D41030 /* commercialAreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCC9301D2F3A2700D41030 /* commercialAreaModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,12 +188,6 @@
 		F91FAB871D187BBC0096937A /* currentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = currentLocation.swift; sourceTree = "<group>"; };
 		F91FAB881D187BBC0096937A /* currentLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = currentLog.swift; sourceTree = "<group>"; };
 		F91FAB891D187BBC0096937A /* currentStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = currentStore.swift; sourceTree = "<group>"; };
-		F91FAB901D187C260096937A /* categoriaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoriaModel.swift; sourceTree = "<group>"; };
-		F91FAB911D187C260096937A /* cuponeraModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cuponeraModel.swift; sourceTree = "<group>"; };
-		F91FAB921D187C260096937A /* promocionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = promocionModel.swift; sourceTree = "<group>"; };
-		F91FAB931D187C260096937A /* tiendaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tiendaModel.swift; sourceTree = "<group>"; };
-		F91FAB941D187C260096937A /* UsuarioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioModel.swift; sourceTree = "<group>"; };
-		F91FAB951D187C260096937A /* zonaComercialModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = zonaComercialModel.swift; sourceTree = "<group>"; };
 		F91FAB9E1D187C760096937A /* categoryCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = categoryCellView.xib; sourceTree = "<group>"; };
 		F91FAB9F1D187C760096937A /* couponCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = couponCellView.xib; sourceTree = "<group>"; };
 		F91FABA01D187C760096937A /* storeCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = storeCellView.xib; sourceTree = "<group>"; };
@@ -213,6 +207,7 @@
 		F91FABC11D189FA60096937A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F94CB4D91D2C28ED00C84DD9 /* gpsConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gpsConnection.swift; sourceTree = "<group>"; };
 		F98267F51D2EC89100245A22 /* categoryConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryConnection.swift; sourceTree = "<group>"; };
+		F98267F71D2ED70D00245A22 /* categoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryModel.swift; sourceTree = "<group>"; };
 		F990DDBC1D22E2AB0000E3EE /* serverConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serverConnection.swift; sourceTree = "<group>"; };
 		F990DDBE1D22E9580000E3EE /* loginConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginConnection.swift; sourceTree = "<group>"; };
 		F99496F51D18A3F80007FE29 /* AdmazingWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdmazingWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +224,11 @@
 		F994971C1D18A40F0007FE29 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		F99497381D18A9770007FE29 /* GPSWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSWatch.swift; sourceTree = "<group>"; };
 		F9A296F11D2D76C200603AE4 /* storesConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storesConnection.swift; sourceTree = "<group>"; };
+		F9BCC9281D2F343800D41030 /* couponBookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = couponBookModel.swift; sourceTree = "<group>"; };
+		F9BCC92A1D2F344400D41030 /* promotionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = promotionModel.swift; sourceTree = "<group>"; };
+		F9BCC92C1D2F399E00D41030 /* userModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
+		F9BCC92E1D2F39AC00D41030 /* storeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storeModel.swift; sourceTree = "<group>"; };
+		F9BCC9301D2F3A2700D41030 /* commercialAreaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commercialAreaModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,12 +364,12 @@
 		F91FAB831D187B700096937A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F91FAB901D187C260096937A /* categoriaModel.swift */,
-				F91FAB911D187C260096937A /* cuponeraModel.swift */,
-				F91FAB921D187C260096937A /* promocionModel.swift */,
-				F91FAB931D187C260096937A /* tiendaModel.swift */,
-				F91FAB941D187C260096937A /* UsuarioModel.swift */,
-				F91FAB951D187C260096937A /* zonaComercialModel.swift */,
+				F98267F71D2ED70D00245A22 /* categoryModel.swift */,
+				F9BCC9281D2F343800D41030 /* couponBookModel.swift */,
+				F9BCC92A1D2F344400D41030 /* promotionModel.swift */,
+				F9BCC92E1D2F39AC00D41030 /* storeModel.swift */,
+				F9BCC92C1D2F399E00D41030 /* userModel.swift */,
+				F9BCC9301D2F3A2700D41030 /* commercialAreaModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -692,24 +692,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BCC9291D2F343800D41030 /* couponBookModel.swift in Sources */,
+				F9BCC92F1D2F39AC00D41030 /* storeModel.swift in Sources */,
 				F91FABBD1D1880ED0096937A /* BookedCouponsShow.swift in Sources */,
 				F990DDBF1D22E9580000E3EE /* loginConnection.swift in Sources */,
 				F91FAB3A1D18785D0096937A /* ViewController.swift in Sources */,
-				F91FAB9B1D187C260096937A /* zonaComercialModel.swift in Sources */,
 				F91FABAF1D1880230096937A /* Category.swift in Sources */,
 				F91FAB8B1D187BBC0096937A /* currentCoupon.swift in Sources */,
 				F91FAB8D1D187BBC0096937A /* currentLocation.swift in Sources */,
 				F91FAB381D18785D0096937A /* AppDelegate.swift in Sources */,
-				F91FAB971D187C260096937A /* cuponeraModel.swift in Sources */,
 				F91FABB71D1880D10096937A /* CouponShow.swift in Sources */,
 				F91FAB8C1D187BBC0096937A /* currentCouponBook.swift in Sources */,
-				F91FAB991D187C260096937A /* tiendaModel.swift in Sources */,
 				F91FABB91D1880DE0096937A /* couponBook.swift in Sources */,
-				F91FAB961D187C260096937A /* categoriaModel.swift in Sources */,
+				F9BCC92B1D2F344400D41030 /* promotionModel.swift in Sources */,
 				F91FABAD1D187E200096937A /* mainMenu.swift in Sources */,
 				F91FAB8F1D187BBC0096937A /* currentStore.swift in Sources */,
-				F91FAB9A1D187C260096937A /* UsuarioModel.swift in Sources */,
-				F91FAB981D187C260096937A /* promocionModel.swift in Sources */,
 				F91FABBC1D1880ED0096937A /* BookedCouponShow.swift in Sources */,
 				F9A296F21D2D76C200603AE4 /* storesConnection.swift in Sources */,
 				F91FABB31D1880310096937A /* Stores.swift in Sources */,
@@ -719,8 +716,11 @@
 				F990DDBD1D22E2AB0000E3EE /* serverConnection.swift in Sources */,
 				F91FAB8A1D187BBC0096937A /* currentCategory.swift in Sources */,
 				F91FABA91D187D4E0096937A /* categoryCell.swift in Sources */,
+				F9BCC92D1D2F399E00D41030 /* userModel.swift in Sources */,
+				F9BCC9311D2F3A2700D41030 /* commercialAreaModel.swift in Sources */,
 				F91FABAA1D187D4E0096937A /* couponCell.swift in Sources */,
 				F94CB4DA1D2C28ED00C84DD9 /* gpsConnection.swift in Sources */,
+				F98267F81D2ED70D00245A22 /* categoryModel.swift in Sources */,
 				F98267F61D2EC89100245A22 /* categoryConnection.swift in Sources */,
 				F91FABB51D1880A70096937A /* Coupons.swift in Sources */,
 			);

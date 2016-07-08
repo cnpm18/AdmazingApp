@@ -12,13 +12,13 @@ class storesConnection: serverConnection {
     
     var r_userName: String = ""
     var result: Bool = false
-    var stores: [tiendaModel] = []
+    var stores: [storeModel] = []
     
-    var codigoTienda: String = ""
-    var razonSocial: String = ""
+    var idStore: String = ""
+    var nameStore: String = ""
     var email: String = ""
-    var telefono: String = ""
-    var idZonaComercial: String = ""
+    var phoneNumber: String = ""
+    var idCommercialArea: String = ""
     
     
     
@@ -40,26 +40,26 @@ class storesConnection: serverConnection {
         print(string)
             switch currentElementName {
             case "codigo":
-                self.codigoTienda = self.codigoTienda + string
-                print(codigoTienda)
+                self.idStore = self.idStore + string
+                print(idStore)
                 
             case "zonacomercial":
-                self.idZonaComercial = self.idZonaComercial + string
-                print(idZonaComercial)
+                self.idCommercialArea = self.idCommercialArea + string
+                print(idCommercialArea)
                 
             
             case "razonsocial":
-                self.razonSocial = self.razonSocial + string
-                print(razonSocial)
+                self.nameStore = self.nameStore + string
+                print(nameStore)
                 
             case "email":
                 self.email = self.email + string
                 print(email)
                 
             case "telefono":
-                self.telefono = self.telefono + string
+                self.phoneNumber = self.phoneNumber + string
                 fillObject()
-                print(telefono)
+                print(phoneNumber)
                 
             
             default: break
@@ -70,13 +70,15 @@ class storesConnection: serverConnection {
     }
     
     func fillObject(){
-        stores.append(tiendaModel(r_codigoTienda: self.codigoTienda,idZonaComercial: self.idZonaComercial,r_nombreTienda: self.razonSocial,email: self.email,telefono: self.telefono))
         
-        self.codigoTienda=""
-        self.razonSocial=""
+        stores.append(storeModel(r_idStore: idStore, r_idCommercialArea: idCommercialArea, r_nameStore: nameStore, r_email: email, r_phoneNumber: phoneNumber))
+       
+        
+        self.idStore=""
+        self.nameStore=""
         self.email=""
-        self.telefono=""
-        self.idZonaComercial=""
+        self.phoneNumber=""
+        self.idCommercialArea=""
         
     }
     
@@ -91,7 +93,7 @@ class storesConnection: serverConnection {
         
         
     }
-    func getResult()->[tiendaModel]{
+    func getResult()->[storeModel]{
         
         return self.stores
     }

@@ -20,13 +20,13 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
         performSegueWithIdentifier("goStores", sender: self)
         
     }
-         var tableData = [categoriaModel]()
+         var tableData = [categoryModel]()
    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCurrentStore()
         if fakeSendToServer(){
-            self.fillArray()
+            //self.fillArray()
             var nib = UINib(nibName: "categoryCellView" , bundle: nil)
             //self.storesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
             self.categoriesTable.registerNib(nib, forCellReuseIdentifier: "ccell")
@@ -52,12 +52,12 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
         return self.tableData.count
 
     }
-    func fillArray(){
-        tableData.append(categoriaModel(r_idCategoria: "C001",r_nombreCategoria: "Electro"))
-        tableData.append(categoriaModel(r_idCategoria: "C002",r_nombreCategoria: "Hogar"))
-        tableData.append(categoriaModel(r_idCategoria: "C003",r_nombreCategoria: "Calzado"))
+    /*func fillArray(){
+        tableData.append(categoriaModel(r_idCategory: "C001",r_namecategory: "Electro"))
+        tableData.append(categoriaModel(r_idCategory: "C002",r_namecategory: "Hogar"))
+        tableData.append(categoriaModel(r_idCategory: "C003",r_namecategory: "Calzado"))
         
-    }
+    }*/
     func loadCurrentStore(){
     
         var storeDataEncoded: [NSData] = userDefaults.objectForKey("currentStore") as! [NSData]
@@ -81,8 +81,8 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
         let cCell: categoryCell = self.categoriesTable.dequeueReusableCellWithIdentifier("ccell") as! categoryCell
         // Sets the text of the Label in the Table View Cell
         self.categoriesTable.rowHeight = 85
-        cCell.categoryName.text =  tableData[indexPath.row].getNombreCategoria()
-        cCell.categoryLogo.image =  UIImage(named: tableData[indexPath.row].getNombreCategoria())
+        cCell.categoryName.text =  tableData[indexPath.row].nameCategory
+        cCell.categoryLogo.image =  UIImage(named: tableData[indexPath.row].nameCategory)
 
         cCell.icon.image = UIImage(named: "icon_arrow" ) //UIImage(named: tableData[indexPath.row])
         
@@ -109,8 +109,8 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
         userDefaults.synchronize()
     }
     func fillCurrentCategory(index:Int){
-        category.setCurrentCategoryIconName(tableData[index].getNombreCategoria())
-        category.setCurrentCategoryName(tableData[index].getNombreCategoria())
+        category.setCurrentCategoryIconName(tableData[index].nameCategory)
+        category.setCurrentCategoryName(tableData[index].nameCategory)
         category.setCurrentCategoryIndex(index)
     }
     func fakeSendToServer() -> Bool{

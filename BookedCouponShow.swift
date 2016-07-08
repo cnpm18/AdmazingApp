@@ -11,7 +11,7 @@ import UIKit
 class BookedCouponShow: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var couponsTable: UITableView!
-    var tableData = [promocionModel]()
+    var tableData = [promotionModel]()
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var coupon = currentCoupon()
     var category = currentCategory(r_currentCategoryID: "",r_currentCategoryName: "",r_currentCategoryIconName: "",r_currentCategoryIndex: 0)
@@ -19,7 +19,7 @@ class BookedCouponShow: UIViewController , UITableViewDelegate, UITableViewDataS
         super.viewDidLoad()
         loadCurrentCategory()
         if fakeSendToServer(){
-            fillArray()
+            //fillArray()
             var nib = UINib(nibName: "couponCellView" , bundle: nil)
             //self.storesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
             self.couponsTable.registerNib(nib, forCellReuseIdentifier: "coCell")
@@ -40,11 +40,11 @@ class BookedCouponShow: UIViewController , UITableViewDelegate, UITableViewDataS
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func fillArray(){
+    /*func fillArray(){
         tableData.append(promocionModel(r_idPromocion: "Promo1",r_categoria: self.category.getCurrentCategoryName(),r_descripcion: "Televisor Sny 32 inchs LED solo por hoy a S/:1499"))
         tableData.append(promocionModel(r_idPromocion: "Promo2",r_categoria: self.category.getCurrentCategoryName(),r_descripcion: "Play Station 3 con juego de regalo solo por hoy a S/.899"))
         tableData.append(promocionModel(r_idPromocion: "Promo3",r_categoria: self.category.getCurrentCategoryName(),r_descripcion: "Celular LG Optimus L5 solo por hoy a S/.499"))
-    }
+    }*/
     
     func loadCurrentCategory(){
         
@@ -74,8 +74,8 @@ class BookedCouponShow: UIViewController , UITableViewDelegate, UITableViewDataS
         let coCell: couponCell = self.couponsTable.dequeueReusableCellWithIdentifier("coCell") as! couponCell
         // Sets the text of the Label in the Table View Cell
         self.couponsTable.rowHeight = 150
-        coCell.couponDescription.text =  tableData[indexPath.row].descripcion
-        coCell.couponImage.image =  UIImage(named: tableData[indexPath.row].idPromocion)
+        coCell.couponDescription.text =  tableData[indexPath.row].description
+        coCell.couponImage.image =  UIImage(named: tableData[indexPath.row].idPromotion)
         coCell.icon.image = UIImage(named: "icon_arrow" ) //UIImage(named: tableData[indexPath.row])
         
         
@@ -118,8 +118,8 @@ class BookedCouponShow: UIViewController , UITableViewDelegate, UITableViewDataS
         userDefaults.synchronize()
     }
     func fillCurrentCoupon(index:Int){
-        coupon.setCurrentCouponName(tableData[index].getIdPromocion())
-        coupon.setCurrentCouponIconName(tableData[index].getIdPromocion())
+        coupon.setCurrentCouponName(tableData[index].idPromotion)
+        coupon.setCurrentCouponIconName(tableData[index].idPromotion)
         coupon.setCurrentCouponIndex(index)
         
     }

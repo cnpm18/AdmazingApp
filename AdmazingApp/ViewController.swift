@@ -27,8 +27,8 @@ class ViewController: UIViewController {
     }
     @IBAction func logIn(sender: AnyObject) {
         
-        let rpta = sendToServer()
-        if(rpta == true){
+        let answer = sendToServer()
+        if(answer == true){
             log.userName=getIdFromAct()
             log.userName=log.userName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
             log.password=getPwdFromAct()

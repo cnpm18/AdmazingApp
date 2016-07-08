@@ -12,7 +12,7 @@ class Stores: UIViewController , UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var storesTable: UITableView!
 
     
-    var tableData = [tiendaModel]()
+    var tableData = [storeModel]()
     var store = currentStore(r_currentStoreName: "",r_currentStoreIconName: "",r_currentStoreIndex: 0)
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var location = currentLocation(r_latitude: "",r_longitude: "")
@@ -44,8 +44,8 @@ class Stores: UIViewController , UITableViewDelegate, UITableViewDataSource{
         // Sets the text of the Label in the Table View Cell
         
         self.storesTable.rowHeight = 85
-        aCell.storeName.text =  tableData[indexPath.row].razonSocial
-        aCell.storeLogo.image =  UIImage(named: tableData[indexPath.row].razonSocial)
+        aCell.storeName.text =  tableData[indexPath.row].nameStore
+        aCell.storeLogo.image =  UIImage(named: tableData[indexPath.row].nameStore)
         aCell.icon.image = UIImage(named: "icon_arrow" ) //UIImage(named: tableData[indexPath.row])
 
         
@@ -73,8 +73,8 @@ class Stores: UIViewController , UITableViewDelegate, UITableViewDataSource{
         userDefaults.synchronize()
     }
     func fillCurrentStore(index:Int){
-        store.setCurrentStoreIconName(tableData[index].razonSocial)
-        store.setCurrentStoreName(tableData[index].razonSocial)
+        store.setCurrentStoreIconName(tableData[index].nameStore)
+        store.setCurrentStoreName(tableData[index].nameStore)
         store.setCurrentStoreIndex(index)
         
     }

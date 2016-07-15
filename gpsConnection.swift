@@ -61,7 +61,8 @@ class gpsConnection: serverConnection {
     }
     func getResult()->Bool{
         
-        return self.result
+        //return self.result
+        return true
     }
     
     

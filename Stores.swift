@@ -13,7 +13,7 @@ class Stores: UIViewController , UITableViewDelegate, UITableViewDataSource{
 
     
     var tableData = [storeModel]()
-    var store = currentStore(r_currentStoreName: "",r_currentStoreIconName: "",r_currentStoreIndex: 0)
+    var store = currentStore(r_currentStoreId: "", r_currentStoreName: "",r_currentStoreIconName: "",r_currentStoreIndex: 0)
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var location = currentLocation(r_latitude: "",r_longitude: "")
     var log = currentLog(r_userName: "",r_password: "")
@@ -63,16 +63,18 @@ class Stores: UIViewController , UITableViewDelegate, UITableViewDataSource{
 
     }
     func saveCurrentStore(){
+        let encodedStoreId = NSKeyedArchiver.archivedDataWithRootObject(store.currentStoreId)
         let encodedStoreName = NSKeyedArchiver.archivedDataWithRootObject(store.currentStoreName)
         let encodedStoreIconName = NSKeyedArchiver.archivedDataWithRootObject(store.currentStoreIconName)
         let encodedStoreIndex = NSKeyedArchiver.archivedDataWithRootObject(store.currentStoreIndex)
         
-        var encodedArray: [NSData] = [encodedStoreName, encodedStoreIconName, encodedStoreIndex]
+        var encodedArray: [NSData] = [encodedStoreId, encodedStoreName, encodedStoreIconName, encodedStoreIndex]
         
         userDefaults.setObject(encodedArray, forKey: "currentStore")
         userDefaults.synchronize()
     }
     func fillCurrentStore(index:Int){
+        store.setCurrentStoreId(tableData[index].idStore)
         store.setCurrentStoreIconName(tableData[index].nameStore)
         store.setCurrentStoreName(tableData[index].nameStore)
         store.setCurrentStoreIndex(index)

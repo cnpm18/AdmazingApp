@@ -14,7 +14,7 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var welcomeLabel: UITextField!
     @IBOutlet weak var categoriesTable: UITableView!
     let userDefaults = NSUserDefaults.standardUserDefaults()
-    var store = currentStore(r_currentStoreName: "",r_currentStoreIconName: "",r_currentStoreIndex: 0)
+    var store = currentStore(r_currentStoreId: "", r_currentStoreName: "",r_currentStoreIconName: "",r_currentStoreIndex: 0)
     var category = currentCategory(r_currentCategoryID: "", r_currentCategoryName: "",r_currentCategoryIconName: "",r_currentCategoryIndex: 0)
     @IBAction func goStores(sender: AnyObject) {
         performSegueWithIdentifier("goStores", sender: self)
@@ -59,15 +59,21 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
         
     }*/
     func loadCurrentStore(){
+        
     
         var storeDataEncoded: [NSData] = userDefaults.objectForKey("currentStore") as! [NSData]
         
-        var unpackedName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[0] as NSData) as! String
-        var unpackediconName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[1] as NSData) as! String
-        var unpackedindex: Int = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[2] as NSData) as! Int
+        var unpackedId: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[0] as NSData) as! String
+        var unpackedName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[1] as NSData) as! String
+        var unpackediconName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[2] as NSData) as! String
+        var unpackedindex: Int = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[3] as NSData) as! Int
+        
+        unpackedId=unpackedId.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+
         unpackedName=unpackedName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         unpackediconName=unpackediconName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         
+        store.setCurrentStoreId(unpackedId)
         store.setCurrentStoreName(unpackedName)
         store.setCurrentStoreIconName(unpackediconName)
         store.setCurrentStoreIndex(unpackedindex)
@@ -129,7 +135,7 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
         var idStore: String
         
         var connection = categoryConnection()
-        idStore = store.currentStoreName
+        idStore = store.currentStoreId
         
         connection.setr_idStore(idStore)
         connection.getResponse()

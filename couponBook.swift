@@ -11,7 +11,7 @@ import UIKit
 class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var categoriesTable: UITableView!
     let userDefaults = NSUserDefaults.standardUserDefaults()
-    var store = currentStore(r_currentStoreName: "",r_currentStoreIconName: "",r_currentStoreIndex: 0)
+    var store = currentStore(r_currentStoreId: "", r_currentStoreName: "",r_currentStoreIconName: "",r_currentStoreIndex: 0)
     var category = currentCategory(r_currentCategoryID: "", r_currentCategoryName: "",r_currentCategoryIconName: "",r_currentCategoryIndex: 0)
     
     
@@ -19,14 +19,14 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadCurrentStore()
+        
         if fakeSendToServer(){
             //self.fillArray()
             var nib = UINib(nibName: "categoryCellView" , bundle: nil)
             //self.storesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
             self.categoriesTable.registerNib(nib, forCellReuseIdentifier: "ccell")
             
-            loadCurrentStore()
+            
             //currentStore.removeAtIndex(currentStore.endIndex.predecessor())
             
             
@@ -56,21 +56,6 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource 
         tableData.append(categoriaModel(r_idCategoria: "C003",r_nombreCategoria: "Calzado"))
         
     }*/
-    func loadCurrentStore(){
-        
-        var storeDataEncoded: [NSData] = userDefaults.objectForKey("currentStore") as! [NSData]
-        
-        var unpackedName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[0] as NSData) as! String
-        var unpackediconName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[1] as NSData) as! String
-        var unpackedindex: Int = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[2] as NSData) as! Int
-        unpackedName=unpackedName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        unpackediconName=unpackediconName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        
-        store.setCurrentStoreName(unpackedName)
-        store.setCurrentStoreIconName(unpackediconName)
-        store.setCurrentStoreIndex(unpackedindex)
-        
-    }
     
     
     func tableView(categoriesTable: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell

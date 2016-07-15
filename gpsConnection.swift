@@ -30,17 +30,17 @@ class gpsConnection: serverConnection {
     }
     func getResponse(){
         
-        var body = "<adm:saveAccesoRequest><idUsuario>\(r_userName)</idUsuario><latitud>\(r_latitude)</latitud><longitud>\(r_longitude)</longitud></adm:saveAccesoRequest>"
+        var body = "<adm:saveAccessRequest><idUser>\(r_userName)</idUser><latitude>\(r_latitude)</latitude><longitude>\(r_longitude)</longitude></adm:saveAccessRequest>"
         createConnection(body)
         
     }
     
     override func parser(parser: NSXMLParser, foundCharacters string: String) {
-        if currentElementName == "resultado" {
+        if currentElementName == "result" {
             returnData(string)//from string to bool
             
         }
-        if currentElementName == "nombreZonaComercial" {
+        if currentElementName == "nameCommercialArea" {
             self.comercialArea = string
             
         }

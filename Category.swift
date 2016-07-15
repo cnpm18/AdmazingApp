@@ -20,12 +20,12 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
         performSegueWithIdentifier("goStores", sender: self)
         
     }
-         var tableData = [categoryModel]()
+    var tableData = [categoryModel]()
    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCurrentStore()
-        if fakeSendToServer(){
+        if sendToServer(){
             //self.fillArray()
             var nib = UINib(nibName: "categoryCellView" , bundle: nil)
             //self.storesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -125,5 +125,25 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
             return false
         }
     }
+    func sendToServer()->Bool{
+        var idStore: String
+        
+        var connection = categoryConnection()
+        idStore = store.currentStoreName
+        
+        connection.setr_idStore(idStore)
+        connection.getResponse()
+        tableData=connection.getResult()
+        if tableData.count>0{
+            return true
+        }
+        else{
+            return false
+            
+        }
+        
+        
+    }
+
 
 }

@@ -25,13 +25,13 @@ class loginConnection: serverConnection {
     func getResponse(){
         r_userName = substractOptional(r_userName)
         r_password = substractOptional(r_password)
-        var body = "<adm:iniciarSesionRequest><idUsuario>\(r_userName)</idUsuario><password>\(r_password)</password></adm:iniciarSesionRequest>"
+        var body = "<adm:logInRequest><idUser>\(r_userName)</idUser><password>\(r_password)</password></adm:logInRequest>"
         createConnection(body)
         
     }
     
     override func parser(parser: NSXMLParser, foundCharacters string: String) {
-        if currentElementName == "resultado" {
+        if currentElementName == "result" {
             returnData(string)//from string to bool
             
         }

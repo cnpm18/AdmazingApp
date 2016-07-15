@@ -9,20 +9,25 @@
 import Foundation
 
 
-/*class categoryConnection: serverConnection {
+class categoryConnection: serverConnection {
     
-    var idStore: String = ""
+    var r_idStore: String = ""
     var result: Bool = false
-    var categories: [categoriaModel] = []
+    var categories: [categoryModel] = []
     
     
-    func setr_userName( userName: String ){
-        r_userName = userName
+    
+    var idCategory: String = ""
+    var nameCategory: String = ""
+    
+    
+    func setr_idStore( idStore: String ){
+        r_idStore = idStore
         
     }
     func getResponse(){
         
-        let body = "<adm:getByIdCategoriaRequest><idTienda>EP000001</idTienda></adm:getByIdCategoriaRequest>"
+        let body = "<adm:getByIdCategoryRequest><idStore>\(r_idStore)</idStore></adm:getByIdCategoryRequest>"
         createConnection(body)
         
     }
@@ -32,27 +37,14 @@ import Foundation
         print("entro!")
         print(string)
         switch currentElementName {
-        case "codigo":
-            self.codigoTienda = self.codigoTienda + string
-            print(codigoTienda)
+        case "idCategory":
+            self.idCategory = self.idCategory + string
+            print(idCategory)
             
-        case "zonacomercial":
-            self.idZonaComercial = self.idZonaComercial + string
-            print(idZonaComercial)
-            
-            
-        case "razonsocial":
-            self.razonSocial = self.razonSocial + string
-            print(razonSocial)
-            
-        case "email":
-            self.email = self.email + string
-            print(email)
-            
-        case "telefono":
-            self.telefono = self.telefono + string
+        case "description":
+            self.nameCategory = self.nameCategory + string
+            print(nameCategory)
             fillObject()
-            print(telefono)
             
             
         default: break
@@ -63,13 +55,12 @@ import Foundation
     }
     
     func fillObject(){
-        stores.append(tiendaModel(r_codigoTienda: self.codigoTienda,idZonaComercial: self.idZonaComercial,r_nombreTienda: self.razonSocial,email: self.email,telefono: self.telefono))
+        categories.append(categoryModel(r_idCategory: idCategory,r_nameCategory: nameCategory))
         
-        self.codigoTienda=""
-        self.razonSocial=""
-        self.email=""
-        self.telefono=""
-        self.idZonaComercial=""
+        self.idCategory = ""
+        self.nameCategory = ""
+        
+        
         
     }
     
@@ -84,11 +75,11 @@ import Foundation
         
         
     }
-    func getResult()->[tiendaModel]{
+    func getResult()->[categoryModel]{
         
-        return self.stores
+        return self.categories
     }
     
     
     
-}*/
+}

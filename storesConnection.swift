@@ -29,7 +29,7 @@ class storesConnection: serverConnection {
     }
     func getResponse(){
         
-        let body = "<adm:getAllTiendabyZonaComercialRequest><idUsuario>\(r_userName)</idUsuario></adm:getAllTiendabyZonaComercialRequest>"
+        let body = "<adm:getAllStoresbyCommercialAreaRequest><idUser>\(r_userName)</idUser></adm:getAllStoresbyCommercialAreaRequest>"
         createConnection(body)
         
     }
@@ -39,16 +39,16 @@ class storesConnection: serverConnection {
         print("entro!")
         print(string)
             switch currentElementName {
-            case "codigo":
+            case "idStore":
                 self.idStore = self.idStore + string
                 print(idStore)
                 
-            case "zonacomercial":
+            case "idCommercialArea":
                 self.idCommercialArea = self.idCommercialArea + string
                 print(idCommercialArea)
                 
             
-            case "razonsocial":
+            case "nameStore":
                 self.nameStore = self.nameStore + string
                 print(nameStore)
                 
@@ -56,7 +56,7 @@ class storesConnection: serverConnection {
                 self.email = self.email + string
                 print(email)
                 
-            case "telefono":
+            case "phoneNumber":
                 self.phoneNumber = self.phoneNumber + string
                 fillObject()
                 print(phoneNumber)

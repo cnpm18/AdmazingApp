@@ -54,12 +54,12 @@ class Stores: UIViewController , UITableViewDelegate, UITableViewDataSource{
     func tableView(storesTable: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //print("Row \(indexPath.row) selected")
         
-        if indexPath.row==0{
             fillCurrentStore(indexPath.row)
+        print(indexPath.row)
             saveCurrentStore()//NSUserDefaults.standardUserDefaults().setObject(store, forKey: "currentStore")
             performSegueWithIdentifier("goCategories", sender: self)
             
-        }
+        
 
     }
     func saveCurrentStore(){
@@ -72,6 +72,7 @@ class Stores: UIViewController , UITableViewDelegate, UITableViewDataSource{
         
         userDefaults.setObject(encodedArray, forKey: "currentStore")
         userDefaults.synchronize()
+        
     }
     func fillCurrentStore(index:Int){
         store.setCurrentStoreId(tableData[index].idStore)

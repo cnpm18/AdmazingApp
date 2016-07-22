@@ -25,6 +25,7 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCurrentStore()
+        welcomeLabel.text = "Categorías dentro de  \(store.currentStoreName):"
         if sendToServer(){
             //self.fillArray()
             var nib = UINib(nibName: "categoryCellView" , bundle: nil)
@@ -33,7 +34,7 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
             
             loadCurrentStore()
             //currentStore.removeAtIndex(currentStore.endIndex.predecessor())
-            welcomeLabel.text = "Categorías dentro de  \(store.currentStoreName):"
+            
             
             // Do any additional setup after loading the view.
         }
@@ -96,12 +97,12 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
         return cCell
     }
     func tableView(categoriesTable: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row==0{
+        
             fillCurrentCategory(indexPath.row)
             saveCurrentCategory()
             performSegueWithIdentifier("goCoupons", sender: self)
             
-        }
+        
         
     }
     func saveCurrentCategory(){

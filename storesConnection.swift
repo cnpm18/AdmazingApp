@@ -36,30 +36,27 @@ class storesConnection: serverConnection {
     
     override func parser(parser: NSXMLParser, foundCharacters string: String) {
         
-        print("entro!")
-        print(string)
+        
             switch currentElementName {
             case "idStore":
                 self.idStore = self.idStore + string
-                print(idStore)
+               
                 
             case "idCommercialArea":
                 self.idCommercialArea = self.idCommercialArea + string
-                print(idCommercialArea)
                 
             
             case "nameStore":
                 self.nameStore = self.nameStore + string
-                print(nameStore)
                 
             case "email":
                 self.email = self.email + string
-                print(email)
+                
                 
             case "phoneNumber":
                 self.phoneNumber = self.phoneNumber + string
                 fillObject()
-                print(phoneNumber)
+                
                 
             
             default: break

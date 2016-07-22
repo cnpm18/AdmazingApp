@@ -34,16 +34,15 @@ class categoryConnection: serverConnection {
     
     override func parser(parser: NSXMLParser, foundCharacters string: String) {
         
-        print("entro!")
-        print(string)
+        
         switch currentElementName {
         case "idCategory":
             self.idCategory = self.idCategory + string
-            print(idCategory)
+           
             
         case "description":
             self.nameCategory = self.nameCategory + string
-            print(nameCategory)
+           
             fillObject()
             
             

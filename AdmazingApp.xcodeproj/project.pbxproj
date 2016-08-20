@@ -112,6 +112,9 @@
 		F9BCC92D1D2F399E00D41030 /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCC92C1D2F399E00D41030 /* userModel.swift */; };
 		F9BCC92F1D2F39AC00D41030 /* storeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCC92E1D2F39AC00D41030 /* storeModel.swift */; };
 		F9BCC9311D2F3A2700D41030 /* commercialAreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCC9301D2F3A2700D41030 /* commercialAreaModel.swift */; };
+		F9DA57BD1D68133E0024E143 /* currentProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DA57BC1D68133E0024E143 /* currentProduct.swift */; };
+		F9EDE6D11D6557A00026A9C8 /* couponsConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EDE6D01D6557A00026A9C8 /* couponsConnection.swift */; };
+		F9EDE6D31D656E9D0026A9C8 /* promotionModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EDE6D21D656E9D0026A9C8 /* promotionModelWatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,6 +247,9 @@
 		F9BCC92C1D2F399E00D41030 /* userModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
 		F9BCC92E1D2F39AC00D41030 /* storeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storeModel.swift; sourceTree = "<group>"; };
 		F9BCC9301D2F3A2700D41030 /* commercialAreaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commercialAreaModel.swift; sourceTree = "<group>"; };
+		F9DA57BC1D68133E0024E143 /* currentProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = currentProduct.swift; sourceTree = "<group>"; };
+		F9EDE6D01D6557A00026A9C8 /* couponsConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = couponsConnection.swift; sourceTree = "<group>"; };
+		F9EDE6D21D656E9D0026A9C8 /* promotionModelWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = promotionModelWatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +371,7 @@
 				F91FAB831D187B700096937A /* Models */,
 				F91FAB841D187BBC0096937A /* currentCategory.swift */,
 				F91FAB851D187BBC0096937A /* currentCoupon.swift */,
+				F9DA57BC1D68133E0024E143 /* currentProduct.swift */,
 				F91FAB861D187BBC0096937A /* currentCouponBook.swift */,
 				F91FAB871D187BBC0096937A /* currentLocation.swift */,
 				F91FAB881D187BBC0096937A /* currentLog.swift */,
@@ -434,6 +441,7 @@
 				F94CB4D91D2C28ED00C84DD9 /* gpsConnection.swift */,
 				F9A296F11D2D76C200603AE4 /* storesConnection.swift */,
 				F98267F51D2EC89100245A22 /* categoryConnection.swift */,
+				F9EDE6D01D6557A00026A9C8 /* couponsConnection.swift */,
 			);
 			name = Connection;
 			sourceTree = "<group>";
@@ -460,6 +468,7 @@
 				F994970E1D18A3F80007FE29 /* Assets.xcassets */,
 				F99497101D18A3F80007FE29 /* Info.plist */,
 				F99497061D18A3F80007FE29 /* Supporting Files */,
+				F9EDE6D21D656E9D0026A9C8 /* promotionModelWatch.swift */,
 			);
 			path = "AdmazingWatch Extension";
 			sourceTree = "<group>";
@@ -711,6 +720,7 @@
 				F91FABB71D1880D10096937A /* CouponShow.swift in Sources */,
 				F91FAB8C1D187BBC0096937A /* currentCouponBook.swift in Sources */,
 				F91FABB91D1880DE0096937A /* couponBook.swift in Sources */,
+				F9DA57BD1D68133E0024E143 /* currentProduct.swift in Sources */,
 				F91FABAD1D187E200096937A /* mainMenu.swift in Sources */,
 				F91FAB8F1D187BBC0096937A /* currentStore.swift in Sources */,
 				F91FABBC1D1880ED0096937A /* BookedCouponShow.swift in Sources */,
@@ -722,6 +732,7 @@
 				F990DDBD1D22E2AB0000E3EE /* serverConnection.swift in Sources */,
 				F91FAB8A1D187BBC0096937A /* currentCategory.swift in Sources */,
 				F91FABA91D187D4E0096937A /* categoryCell.swift in Sources */,
+				F9EDE6D11D6557A00026A9C8 /* couponsConnection.swift in Sources */,
 				F9BCC92D1D2F399E00D41030 /* userModel.swift in Sources */,
 				F9BCC9311D2F3A2700D41030 /* commercialAreaModel.swift in Sources */,
 				F91FABAA1D187D4E0096937A /* couponCell.swift in Sources */,
@@ -774,6 +785,7 @@
 				F9090BF31D415FAE002A4F3A /* promotionModel.swift in Sources */,
 				F994970B1D18A3F80007FE29 /* ExtensionDelegate.swift in Sources */,
 				F99497391D18A9770007FE29 /* GPSWatch.swift in Sources */,
+				F9EDE6D31D656E9D0026A9C8 /* promotionModelWatch.swift in Sources */,
 				F9090C001D415FE2002A4F3A /* commercialAreaModel.swift in Sources */,
 				F9090C0C1D415FFB002A4F3A /* categoryModel.swift in Sources */,
 				F9090C031D415FEC002A4F3A /* userModel.swift in Sources */,

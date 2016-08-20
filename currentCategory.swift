@@ -43,6 +43,10 @@ class currentCategory{
         self.currentCategoryIndex = r_currentCategoryIndex
         
     }
+    func setCurrentCategoryID(r_currentCategoryID: String){
+        self.currentCategoryID = r_currentCategoryID
+        
+    }
     init(coder aDecoder: NSCoder!) {
         self.currentCategoryID = aDecoder.decodeObjectForKey("currentCategoryID") as! String
         self.currentCategoryName = aDecoder.decodeObjectForKey("currentCategoryName") as! String

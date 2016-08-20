@@ -11,9 +11,10 @@ import UIKit
 class couponCell: UITableViewCell {
 
     
-    @IBOutlet weak var couponDescription: UILabel!
-    @IBOutlet weak var couponImage: UIImageView!
-    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var promoDescription: UILabel!
+    @IBOutlet weak var promoImage: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

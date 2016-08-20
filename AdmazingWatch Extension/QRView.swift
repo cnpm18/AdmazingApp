@@ -14,8 +14,7 @@ class QRView: WKInterfaceController {
 
     @IBOutlet var qrCode: WKInterfaceImage!
     
-    @IBAction func acceptButton() {
-    }
+    
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -56,6 +55,12 @@ class QRView: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    @IBAction func acceptButton() {
+        pushControllerWithName("main", context: nil)
+        
+        
     }
 
 }

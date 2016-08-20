@@ -109,8 +109,9 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
         let encodedCategoryName = NSKeyedArchiver.archivedDataWithRootObject(category.currentCategoryName)
         let encodedCategoryIconName = NSKeyedArchiver.archivedDataWithRootObject(category.currentCategoryIconName)
         let encodedCategoryIndex = NSKeyedArchiver.archivedDataWithRootObject(category.currentCategoryIndex)
+        let encodedCategoryId = NSKeyedArchiver.archivedDataWithRootObject(category.currentCategoryID)
         
-        var encodedArray: [NSData] = [encodedCategoryName, encodedCategoryIconName, encodedCategoryIndex]
+        var encodedArray: [NSData] = [encodedCategoryName, encodedCategoryIconName, encodedCategoryIndex, encodedCategoryId]
         
         userDefaults.setObject(encodedArray, forKey: "currentCategory")
         userDefaults.synchronize()
@@ -119,6 +120,8 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
         category.setCurrentCategoryIconName(tableData[index].nameCategory)
         category.setCurrentCategoryName(tableData[index].nameCategory)
         category.setCurrentCategoryIndex(index)
+        category.setCurrentCategoryID(tableData[index].idCategory)
+        
     }
     func fakeSendToServer() -> Bool{
         

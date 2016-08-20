@@ -121,6 +121,9 @@
                         <button width="1" alignment="left" title="Usar Cupón" id="tzd-7c-vL3">
                             <color key="backgroundColor" red="0.1647058824" green="0.71764705880000002" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                            <connections>
+                                <action selector="usePromotion" destination="CLR-bN-F8Z" id="MWk-QZ-oeH"/>
+                            </connections>
                         </button>
                     </items>
                     <connections>

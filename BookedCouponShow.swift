@@ -74,22 +74,22 @@ class BookedCouponShow: UIViewController , UITableViewDelegate, UITableViewDataS
         let coCell: couponCell = self.couponsTable.dequeueReusableCellWithIdentifier("coCell") as! couponCell
         // Sets the text of the Label in the Table View Cell
         self.couponsTable.rowHeight = 150
-        coCell.couponDescription.text =  tableData[indexPath.row].description
+        /*coCell.couponDescription.text =  tableData[indexPath.row].description
         coCell.couponImage.image =  UIImage(named: tableData[indexPath.row].idPromotion)
         coCell.icon.image = UIImage(named: "icon_arrow" ) //UIImage(named: tableData[indexPath.row])
-        
+        */
         
         return coCell
     }
     func tableView(couponsTable: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row==0{
-            fillCurrentCoupon(indexPath.row)
+            /*fillCurrentCoupon(indexPath.row)
             saveCurrentCoupon()
             performSegueWithIdentifier("goCouponShow", sender: self)
             
             //NSUserDefaults.standardUserDefaults().setObject(tableData[indexPath.row], forKey: "currentCategory")
             //performSegueWithIdentifier("goCoupons", sender: self)
-            
+            */
         }
         
     }
@@ -106,7 +106,7 @@ class BookedCouponShow: UIViewController , UITableViewDelegate, UITableViewDataS
             return false
         }
     }
-    
+    /*
     func saveCurrentCoupon(){
         let encodedCcouponName = NSKeyedArchiver.archivedDataWithRootObject(coupon.getCurrentCouponName())
         let encodedCouponIconName = NSKeyedArchiver.archivedDataWithRootObject(coupon.getCurrentCouponIconName())
@@ -122,7 +122,7 @@ class BookedCouponShow: UIViewController , UITableViewDelegate, UITableViewDataS
         coupon.setCurrentCouponIconName(tableData[index].idPromotion)
         coupon.setCurrentCouponIndex(index)
         
-    }
+    }*/
 
 
 }

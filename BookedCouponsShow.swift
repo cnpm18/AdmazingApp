@@ -44,9 +44,7 @@ class BookedCouponsShow: UIViewController  {
         unpackedName=unpackedName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         unpackediconName=unpackediconName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         
-        coupon.setCurrentCouponName(unpackedName)
-        coupon.setCurrentCouponIconName(unpackediconName)
-        coupon.setCurrentCouponIndex(unpackedindex)
+       
         
     }
 

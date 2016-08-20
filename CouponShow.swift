@@ -26,8 +26,8 @@ class CouponShow: UIViewController  {
         // Allocates a Table View Cell
         
         // Sets the text of the Label in the Table View Cell
-        couponImage.image = UIImage(named: coupon.currentCouponIconName)
-        couponDescription.text = coupon.currentCouponDescription
+        //couponImage.image = UIImage(named: coupon.currentCouponIconName)
+        //couponDescription.text = coupon.currentCouponDescription
         
         //coCell.couponImage.image =  UIImage(named: tableData[indexPath.row].idPromocion)
         //coCell.icon.image = UIImage(named: "icon_arrow" ) //UIImage(named: tableData[indexPath.row])
@@ -61,12 +61,12 @@ class CouponShow: UIViewController  {
         unpackedDescription=unpackedDescription.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         
         
-        
+        /*
         coupon.setCurrentCouponName(unpackedName)
         coupon.setCurrentCouponIconName(unpackediconName)
         coupon.setCurrentCouponDescription(unpackedDescription)
         coupon.setCurrentCouponIndex(unpackedindex)
-        
+        */
     }
 
 }

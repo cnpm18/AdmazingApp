@@ -9,70 +9,61 @@
 import Foundation
 
 class currentCoupon{
-    var currentCouponName: String
-    var currentCouponIconName: String
-    var currentCouponDescription: String
-    var currentCouponIndex: Int
-    init()
-    {
-        self.currentCouponName = ""
-        self.currentCouponIconName = ""
-        self.currentCouponDescription = ""
-        self.currentCouponIndex = 0
-    }
-    
-    func getCurrentCouponName() -> String{
-        return self.currentCouponName
-    }
-    func getCurrentCouponIconName() -> String{
-        return self.currentCouponIconName
-    }
-    func getCurrentCouponIndex() -> Int{
-        return self.currentCouponIndex
-    }
-    func getCurrentCouponDescription() -> String{
-        return self.currentCouponDescription
-    }
-    
-    func setCurrentCouponName(r_currentCouponName: String){
-        self.currentCouponName = r_currentCouponName
-        
-    }
-    func setCurrentCouponIconName(r_currentCouponIconName: String){
-        self.currentCouponIconName = r_currentCouponIconName
-        
-    }
-    func setCurrentCouponIndex(r_currentCouponIndex: Int){
-        self.currentCouponIndex = r_currentCouponIndex
-        
-    }
-    func setCurrentCouponDescription(r_currentCouponDescription: String){
-        self.currentCouponDescription = r_currentCouponDescription
-        
-    }
+    var idPromotion: String = ""
+    var idCategory: String = ""
+    var idTypePromotion: String = ""
+    var idStore: String = ""
+    var promodescription: String = ""
+    var startDate: String = ""
+    var endDate: String = ""
+    var imagePromotion: String = ""
+    var idProduct: String = ""
 
+    init(){
+    }
+    
+    
     
     
     init(coder aDecoder: NSCoder!) {
-        self.currentCouponName = aDecoder.decodeObjectForKey("currentCouponName") as! String
-        self.currentCouponIconName = aDecoder.decodeObjectForKey("currentCouponIconName") as! String
-        self.currentCouponDescription = aDecoder.decodeObjectForKey("currentCouponDescription") as! String
-        self.currentCouponIndex = aDecoder.decodeObjectForKey("currentCouponIndex") as! Int
+        self.idPromotion=aDecoder.decodeObjectForKey("idPromotion")as! String
+        self.idCategory=aDecoder.decodeObjectForKey("idCategory")as! String
+        self.idTypePromotion=aDecoder.decodeObjectForKey("idTypePromotion")as! String
+        self.idStore=aDecoder.decodeObjectForKey("idStore")as! String
+        self.promodescription=aDecoder.decodeObjectForKey("promodescription")as! String
+        self.startDate=aDecoder.decodeObjectForKey("startDate")as! String
+        self.endDate=aDecoder.decodeObjectForKey("endDate")as! String
+        self.imagePromotion=aDecoder.decodeObjectForKey("imagePromotion")as! String
+        self.idProduct=aDecoder.decodeObjectForKey("idProduct")as! String
+        
     }
     
     func initWithCoder(aDecoder: NSCoder) -> currentCoupon {
-        self.currentCouponName = aDecoder.decodeObjectForKey("currentCouponName") as! String
-        self.currentCouponIconName = aDecoder.decodeObjectForKey("currentCouponIconName") as! String
-        self.currentCouponDescription = aDecoder.decodeObjectForKey("currentCouponDescription") as! String
-        self.currentCouponIndex = aDecoder.decodeObjectForKey("currentCouponIndex") as! Int
+        self.idPromotion=aDecoder.decodeObjectForKey("idPromotion")as! String
+        self.idCategory=aDecoder.decodeObjectForKey("idCategory")as! String
+        self.idTypePromotion=aDecoder.decodeObjectForKey("idTypePromotion")as! String
+        self.idStore=aDecoder.decodeObjectForKey("idStore")as! String
+        self.promodescription=aDecoder.decodeObjectForKey("promodescription")as! String
+        self.startDate=aDecoder.decodeObjectForKey("startDate")as! String
+        self.endDate=aDecoder.decodeObjectForKey("endDate")as! String
+        self.imagePromotion=aDecoder.decodeObjectForKey("imagePromotion")as! String
+        self.idProduct=aDecoder.decodeObjectForKey("idProduct")as! String
+
+        
         return self
     }
     
     func encodeWithCoder(aCoder: NSCoder!) {
-        aCoder.encodeObject(currentCouponName, forKey: "currentCouponName")
-        aCoder.encodeObject(currentCouponIconName, forKey: "currentCouponIconName")
-        aCoder.encodeObject(currentCouponDescription, forKey: "currentCouponDescription")
-        aCoder.encodeObject(currentCouponIndex, forKey: "currentCouponIndex")
+        aCoder.encodeObject(idPromotion, forKey: "idPromotion")
+        aCoder.encodeObject(idCategory, forKey: "idCategory")
+        aCoder.encodeObject(idTypePromotion, forKey: "idTypePromotion")
+        aCoder.encodeObject(idStore, forKey: "idStore")
+        aCoder.encodeObject(promodescription, forKey: "promodescription")
+        aCoder.encodeObject(startDate, forKey: "startDate")
+        aCoder.encodeObject(endDate, forKey: "endDate")
+        aCoder.encodeObject(imagePromotion, forKey: "imagePromotion")
+        aCoder.encodeObject(idProduct, forKey: "idProduct")
+        
     }
 
 }

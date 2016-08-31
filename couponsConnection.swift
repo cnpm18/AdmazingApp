@@ -68,7 +68,7 @@ class couponsConnection: serverConnection {
         case "idCategory":
             self.idCategory = self.idCategory + string
             
-        case "idTypePromotion":
+        case "typePromotion":
             self.idTypePromotion = self.idTypePromotion + string
             
             

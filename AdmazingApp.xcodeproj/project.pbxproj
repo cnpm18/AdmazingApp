@@ -73,8 +73,12 @@
 		F91FABBF1D1881430096937A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91FABBE1D1881430096937A /* CoreLocation.framework */; };
 		F91FABC21D189FA60096937A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91FABC01D189FA60096937A /* Main.storyboard */; };
 		F94CB4DA1D2C28ED00C84DD9 /* gpsConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94CB4D91D2C28ED00C84DD9 /* gpsConnection.swift */; };
+		F96DEF971D764F9600763C8F /* categoryPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96DEF961D764F9600763C8F /* categoryPreferencesView.xib */; };
+		F96DEF991D7650CE00763C8F /* categoryPreferencesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96DEF981D7650CE00763C8F /* categoryPreferencesCell.swift */; };
+		F96DEF9D1D76528400763C8F /* PreferencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96DEF9C1D76528400763C8F /* PreferencesManager.swift */; };
 		F98267F61D2EC89100245A22 /* categoryConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98267F51D2EC89100245A22 /* categoryConnection.swift */; };
 		F98267F81D2ED70D00245A22 /* categoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98267F71D2ED70D00245A22 /* categoryModel.swift */; };
+		F98BDB821D74B1080052A6B4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98BDB811D74B1080052A6B4 /* Settings.swift */; };
 		F990DDBD1D22E2AB0000E3EE /* serverConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F990DDBC1D22E2AB0000E3EE /* serverConnection.swift */; };
 		F990DDBF1D22E9580000E3EE /* loginConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F990DDBE1D22E9580000E3EE /* loginConnection.swift */; };
 		F99496F91D18A3F80007FE29 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99496F71D18A3F80007FE29 /* Interface.storyboard */; };
@@ -225,8 +229,12 @@
 		F91FABBE1D1881430096937A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F91FABC11D189FA60096937A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F94CB4D91D2C28ED00C84DD9 /* gpsConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gpsConnection.swift; sourceTree = "<group>"; };
+		F96DEF961D764F9600763C8F /* categoryPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = categoryPreferencesView.xib; sourceTree = "<group>"; };
+		F96DEF981D7650CE00763C8F /* categoryPreferencesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryPreferencesCell.swift; sourceTree = "<group>"; };
+		F96DEF9C1D76528400763C8F /* PreferencesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesManager.swift; sourceTree = "<group>"; };
 		F98267F51D2EC89100245A22 /* categoryConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryConnection.swift; sourceTree = "<group>"; };
 		F98267F71D2ED70D00245A22 /* categoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryModel.swift; sourceTree = "<group>"; };
+		F98BDB811D74B1080052A6B4 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F990DDBC1D22E2AB0000E3EE /* serverConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serverConnection.swift; sourceTree = "<group>"; };
 		F990DDBE1D22E9580000E3EE /* loginConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginConnection.swift; sourceTree = "<group>"; };
 		F99496F51D18A3F80007FE29 /* AdmazingWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdmazingWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -397,10 +405,11 @@
 		F91FAB9D1D187C580096937A /* xib */ = {
 			isa = PBXGroup;
 			children = (
-				F91FAB9E1D187C760096937A /* categoryCellView.xib */,
 				F91FAB9F1D187C760096937A /* couponCellView.xib */,
 				F91FAB681D187B3F0096937A /* categoryCell.xib */,
 				F91FABA01D187C760096937A /* storeCellView.xib */,
+				F91FAB9E1D187C760096937A /* categoryCellView.xib */,
+				F96DEF961D764F9600763C8F /* categoryPreferencesView.xib */,
 			);
 			name = xib;
 			sourceTree = "<group>";
@@ -418,6 +427,8 @@
 				F91FABB81D1880DE0096937A /* couponBook.swift */,
 				F91FABBA1D1880ED0096937A /* BookedCouponShow.swift */,
 				F91FABBB1D1880ED0096937A /* BookedCouponsShow.swift */,
+				F98BDB811D74B1080052A6B4 /* Settings.swift */,
+				F96DEF9C1D76528400763C8F /* PreferencesManager.swift */,
 				F91FABA51D187CBE0096937A /* Cell */,
 			);
 			name = View;
@@ -429,6 +440,7 @@
 				F91FABA61D187D4E0096937A /* categoryCell.swift */,
 				F91FABA71D187D4E0096937A /* couponCell.swift */,
 				F91FABA81D187D4E0096937A /* storeCell.swift */,
+				F96DEF981D7650CE00763C8F /* categoryPreferencesCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -630,6 +642,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F91FAB7B1D187B3F0096937A /* logoadmazingtrans.png in Resources */,
+				F96DEF971D764F9600763C8F /* categoryPreferencesView.xib in Resources */,
 				F91FAB771D187B3F0096937A /* couponsprueba.png in Resources */,
 				F91FAB7A1D187B3F0096937A /* logoadmazing.png in Resources */,
 				F91FAB741D187B3F0096937A /* back.png in Resources */,
@@ -711,6 +724,8 @@
 				F9BCC92F1D2F39AC00D41030 /* storeModel.swift in Sources */,
 				F91FABBD1D1880ED0096937A /* BookedCouponsShow.swift in Sources */,
 				F990DDBF1D22E9580000E3EE /* loginConnection.swift in Sources */,
+				F96DEF991D7650CE00763C8F /* categoryPreferencesCell.swift in Sources */,
+				F98BDB821D74B1080052A6B4 /* Settings.swift in Sources */,
 				F91FAB3A1D18785D0096937A /* ViewController.swift in Sources */,
 				F9090BF71D415FC7002A4F3A /* promotionModel.swift in Sources */,
 				F91FABAF1D1880230096937A /* Category.swift in Sources */,
@@ -722,6 +737,7 @@
 				F91FABB91D1880DE0096937A /* couponBook.swift in Sources */,
 				F9DA57BD1D68133E0024E143 /* currentProduct.swift in Sources */,
 				F91FABAD1D187E200096937A /* mainMenu.swift in Sources */,
+				F96DEF9D1D76528400763C8F /* PreferencesManager.swift in Sources */,
 				F91FAB8F1D187BBC0096937A /* currentStore.swift in Sources */,
 				F91FABBC1D1880ED0096937A /* BookedCouponShow.swift in Sources */,
 				F9A296F21D2D76C200603AE4 /* storesConnection.swift in Sources */,

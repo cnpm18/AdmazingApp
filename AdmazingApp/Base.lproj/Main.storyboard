@@ -889,11 +889,11 @@
         <image name="usersprueba.png" width="559" height="189"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FTb-xX-7q4"/>
-        <segue reference="9LQ-QW-XeJ"/>
-        <segue reference="8B8-qQ-ckN"/>
-        <segue reference="4Cy-zt-zDU"/>
+        <segue reference="wYC-LZ-9ad"/>
         <segue reference="cRK-32-h8f"/>
-        <segue reference="RO6-Bk-9Oq"/>
+        <segue reference="4Cy-zt-zDU"/>
+        <segue reference="lZV-oe-2Eh"/>
+        <segue reference="rw5-3a-lDa"/>
+        <segue reference="e5F-Ph-fRR"/>
     </inferredMetricsTieBreakers>
 </document>

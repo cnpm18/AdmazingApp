@@ -14,7 +14,7 @@ class CouponShow: UIViewController  {
      var coupon = currentCoupon()
     var product = currentProduct()
     
-    
+    var log = currentLog(r_userName: "",r_password: "")
     @IBOutlet weak var couponImage: UIImageView!
     @IBOutlet weak var couponDescription: UILabel!
     @IBOutlet weak var productDescription: UILabel!
@@ -26,7 +26,7 @@ class CouponShow: UIViewController  {
         
         loadCurrentCoupon()
         loadCurrentProduct()
-        
+        loadCurrentLog()
         
        
         
@@ -45,13 +45,38 @@ class CouponShow: UIViewController  {
     }
     
     @IBAction func addCouponToBook(sender: AnyObject) {
-        let  alert = UIAlertController(title: "Succes", message: "Esta promoción fue incluída en su cuponera!", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in self.performSegueWithIdentifier("goCoupons", sender: self)}))
-         self.presentViewController(alert, animated: true, completion: nil)
         
+        if sendToServer(){
+            let  alert = UIAlertController(title: "Succes", message: "Esta promoción fue incluída en su cuponera!", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in self.performSegueWithIdentifier("goCoupons", sender: self)}))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        else{
+            
+                let  alert = UIAlertController(title: "Alert!", message: "Esta promoción ya se encuentra dentro de su cuponera!", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
-    
+    func sendToServer() -> Bool{
+        let idUser: String
+        let idPromotion: String
+        let response: Bool
+        idUser = log.getUserName()
+        idPromotion = coupon.idPromotion
+        //id = getIdFromAct()
+        //pwd = getPwdFromAct()
+        var connection = saveCouponConnection()
+        
+        
+        connection.setr_idUser(idUser)
+        connection.setr_idPromotion(idPromotion)
+        connection.getResponse()
+        response = connection.getResult()
+        return response
+    }
+
     @IBAction func goCoupons(sender: AnyObject) {
          performSegueWithIdentifier("goCoupons", sender: self)
     }
@@ -91,6 +116,7 @@ class CouponShow: UIViewController  {
         coupon.idProduct=idProduct
     }
     
+    
     func loadCurrentProduct(){
         
         
@@ -124,6 +150,22 @@ class CouponShow: UIViewController  {
         
         
     }
+    
+    func loadCurrentLog(){
+        
+        var storeDataEncoded: [NSData] = userDefaults.objectForKey("currentLog") as! [NSData]
+        
+        var unpackedUserName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[0] as NSData) as! String
+        var unpackedPassword: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[1] as NSData) as! String
+        
+        unpackedUserName=unpackedUserName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        unpackedPassword=unpackedPassword.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        log.setUserName(unpackedUserName)
+        log.setPassword(unpackedPassword)
+        
+        
+    }
 
     
     
@@ -133,6 +175,8 @@ class CouponShow: UIViewController  {
         return fixedString
         
     }
+    
+    
     
 
 }

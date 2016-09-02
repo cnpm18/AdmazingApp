@@ -52,7 +52,7 @@ class couponsConnection: serverConnection {
     }
     func getResponse(){
         
-        let body = "<adm:getPromotionDetailedRequest><idStore>\(r_idStore)</idStore><idCategory>\(r_idCategory)</idCategory></adm:getPromotionDetailedRequest>"
+        let body = "<adm:getByIdPromotionRequest><idStore>\(r_idStore)</idStore><idCategory>\(r_idCategory)</idCategory></adm:getByIdPromotionRequest>"
         createConnection(body)
         
     }

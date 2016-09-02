@@ -43,27 +43,36 @@ class GPS: UIViewController, CLLocationManagerDelegate {
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.requestLocation()
-        r_latitude = String(manager.location!.coordinate.latitude)
-        r_longitude = String(manager.location!.coordinate.longitude)
-        
-        
-        closeMall = sendToServer()
-        if(closeMall != ""){
-            fillCurrentLocation()
-            saveCurrentLocation()
+        if manager.location != nil{
+            r_latitude = String(manager.location!.coordinate.latitude)
+            r_longitude = String(manager.location!.coordinate.longitude)
             
-            let  alert = UIAlertController(title: "Succes", message: "latitude: \(r_latitude), longitude: \(r_longitude), Se encuentra en el centro comercial \(closeMall)", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in self.performSegueWithIdentifier("goStores", sender: self)}))
-            self.presentViewController(alert, animated: true, completion: nil)
+            
+            closeMall = sendToServer()
+            if(closeMall != ""){
+                fillCurrentLocation()
+                saveCurrentLocation()
+                
+                let  alert = UIAlertController(title: "Succes", message: "latitude: \(r_latitude), longitude: \(r_longitude), Se encuentra en el centro comercial \(closeMall)", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in self.performSegueWithIdentifier("goStores", sender: self)}))
+                self.presentViewController(alert, animated: true, completion: nil)
+                
+            }
+            else{
+                let alert = UIAlertController(title: "Alert", message: "No se encuentra cerca a una zona comercial establecida", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+                
+            }
+
             
         }
         else{
-            let alert = UIAlertController(title: "Alert", message: "No se encuentra cerca a una zona comercial establecida", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Crash", message: "No se puede encontrar la señal de GPS", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
-            
         }
-
+        
         
         
         
@@ -188,9 +197,6 @@ class GPS: UIViewController, CLLocationManagerDelegate {
         
         log.setUserName(unpackedUserName)
         log.setPassword(unpackedPassword)
-        
-        print ("loaded user \(log.userName)")
-        print ("loaded pwd \(log.password)")
         
         
     }

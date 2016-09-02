@@ -13,14 +13,14 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource 
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var store = currentStore(r_currentStoreId: "", r_currentStoreName: "",r_currentStoreIconName: "",r_currentStoreIndex: 0)
     var category = currentCategory(r_currentCategoryID: "", r_currentCategoryName: "",r_currentCategoryIconName: "",r_currentCategoryIndex: 0)
-    
-    
+    var log = currentLog(r_userName: "",r_password: "")
     var tableData = [categoryModel]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if fakeSendToServer(){
+        loadCurrentStore()
+        if sendToServer(){
             //self.fillArray()
             var nib = UINib(nibName: "categoryCellView" , bundle: nil)
             //self.storesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -41,6 +41,45 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource 
         
     }
     
+    func loadCurrentLog(){
+        
+        var storeDataEncoded: [NSData] = userDefaults.objectForKey("currentLog") as! [NSData]
+        
+        var unpackedUserName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[0] as NSData) as! String
+        var unpackedPassword: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[1] as NSData) as! String
+        
+        unpackedUserName=unpackedUserName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        unpackedPassword=unpackedPassword.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        log.setUserName(unpackedUserName)
+        log.setPassword(unpackedPassword)
+        
+    }
+    
+    func loadCurrentStore(){
+        
+        
+        var storeDataEncoded: [NSData] = userDefaults.objectForKey("currentStore") as! [NSData]
+        
+        var unpackedId: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[0] as NSData) as! String
+        var unpackedName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[1] as NSData) as! String
+        var unpackediconName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[2] as NSData) as! String
+        var unpackedindex: Int = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[3] as NSData) as! Int
+        
+        unpackedId=unpackedId.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        unpackedName=unpackedName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        unpackediconName=unpackediconName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        store.setCurrentStoreId(unpackedId)
+        store.setCurrentStoreName(unpackedName)
+        store.setCurrentStoreIconName(unpackediconName)
+        store.setCurrentStoreIndex(unpackedindex)
+        
+    }
+
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -50,13 +89,7 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource 
         return self.tableData.count
         
     }
-    /*func fillArray(){
-        tableData.append(categoriaModel(r_idCategoria: "C001",r_nombreCategoria: "Electro"))
-        tableData.append(categoriaModel(r_idCategoria: "C002",r_nombreCategoria: "Hogar"))
-        tableData.append(categoriaModel(r_idCategoria: "C003",r_nombreCategoria: "Calzado"))
         
-    }*/
-    
     
     func tableView(categoriesTable: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
@@ -85,8 +118,9 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource 
         let encodedCategoryName = NSKeyedArchiver.archivedDataWithRootObject(category.currentCategoryName)
         let encodedCategoryIconName = NSKeyedArchiver.archivedDataWithRootObject(category.currentCategoryIconName)
         let encodedCategoryIndex = NSKeyedArchiver.archivedDataWithRootObject(category.currentCategoryIndex)
+        let encodedCategoryId = NSKeyedArchiver.archivedDataWithRootObject(category.currentCategoryID)
         
-        var encodedArray: [NSData] = [encodedCategoryName, encodedCategoryIconName, encodedCategoryIndex]
+        var encodedArray: [NSData] = [encodedCategoryName, encodedCategoryIconName, encodedCategoryIndex, encodedCategoryId]
         
         userDefaults.setObject(encodedArray, forKey: "currentCategory")
         userDefaults.synchronize()
@@ -95,6 +129,8 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource 
         category.setCurrentCategoryIconName(tableData[index].nameCategory)
         category.setCurrentCategoryName(tableData[index].nameCategory)
         category.setCurrentCategoryIndex(index)
+        category.setCurrentCategoryID(tableData[index].idCategory)
+        
     }
     func fakeSendToServer() -> Bool{
         
@@ -107,6 +143,26 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource 
         else{
             return false
         }
+    }
+    
+    func sendToServer()->Bool{
+        var idStore: String
+        
+        var connection = categoryConnection()
+        idStore = store.currentStoreId
+        
+        connection.setr_idStore(idStore)
+        connection.getResponse()
+        tableData=connection.getResult()
+        if tableData.count>0{
+            return true
+        }
+        else{
+            return false
+            
+        }
+        
+        
     }
 
     

@@ -24,16 +24,21 @@ class Coupons: UIViewController , UITableViewDelegate, UITableViewDataSource {
         loadCurrentCategory()
         loadCurrentStore()
         if sendToServer(){
-            //fillArray()
+            
             var nib = UINib(nibName: "couponCellView" , bundle: nil)
             //self.storesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
             self.couponsTable.registerNib(nib, forCellReuseIdentifier: "coCell")
             
-
             
         }
         else{
-            goBack(self)
+            print("111")
+            let  alert = UIAlertController(title: ":(", message: "Lo sentimos, esta categoría aún no cuenta con promociones", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            print("222")
+            self.presentViewController(alert, animated: true, completion: nil)
+            print("333")
+            
             
         }
         

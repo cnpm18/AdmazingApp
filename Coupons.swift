@@ -19,34 +19,52 @@ class Coupons: UIViewController , UITableViewDelegate, UITableViewDataSource {
     var product = currentProduct()
     var category = currentCategory(r_currentCategoryID: "", r_currentCategoryName: "",r_currentCategoryIconName: "",r_currentCategoryIndex: 0)
     var store = currentStore(r_currentStoreId: "", r_currentStoreName: "",r_currentStoreIconName: "",r_currentStoreIndex: 0)
+    var confirmation = false
+    var  alert = UIAlertController()
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCurrentCategory()
         loadCurrentStore()
-        if sendToServer(){
-            
-            var nib = UINib(nibName: "couponCellView" , bundle: nil)
-            //self.storesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-            self.couponsTable.registerNib(nib, forCellReuseIdentifier: "coCell")
-            
-            
-        }
-        else{
-            print("111")
-            let  alert = UIAlertController(title: ":(", message: "Lo sentimos, esta categoría aún no cuenta con promociones", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            print("222")
-            self.presentViewController(alert, animated: true, completion: nil)
-            print("333")
-            
-            
-        }
+        confirmation=sendToServer()
+        fillTable(confirmation)
         
+            
         
-        loadCurrentCategory()
         //currentStore.removeAtIndex(currentStore.endIndex.predecessor())
         
     }
+    override func viewDidAppear(true: Bool) {
+        if confirmation == false{
+            showAlert(alert)
+        }
+        
+        
+    }
+    func fillTable(confirmation:Bool){
+        
+        if confirmation == true{
+        
+            var nib = UINib(nibName: "couponCellView" , bundle: nil)
+            //self.storesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+            self.couponsTable.registerNib(nib, forCellReuseIdentifier: "coCell")
+        
+        
+        }
+        else{
+            
+            alert = UIAlertController(title: ":(", message: "Lo sentimos, esta categoría aún no cuenta con promociones", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in self.performSegueWithIdentifier("goCategory", sender: self)}))
+            
+            
+        
+        
+        }
+    }
+    
+    func showAlert(alert: UIAlertController){
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

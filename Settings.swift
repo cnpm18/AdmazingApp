@@ -45,10 +45,28 @@ class Settings: UIViewController {
         loadCurrentLog()
         userTextView.text = userTextView.text! + " " + log.getUserName()
         
+        var usePreferences  = userDefaults.boolForKey("usePreferences")
+        if usePreferences == true{
+            switchPreferencesView.setOn(true, animated: true)
+        }
+        else{
+            //Nothing stored in NSUserDefaults yet. Set a value.
+            switchPreferencesView.setOn(false, animated: true)
+        }
+        
         
     }
 
     
+    @IBAction func usePreferences(sender: AnyObject) {
+        if switchPreferencesView.on{
+            userDefaults.setValue(true, forKey: "usePreferences")
+                    }
+        else{
+            userDefaults.setValue(false, forKey: "usePreferences")
+            
+        }
+    }
     @IBAction func updatePreferences(sender: AnyObject) {
     }
 }

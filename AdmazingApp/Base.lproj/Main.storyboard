@@ -745,9 +745,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RzH-73-UP3">
-                                <rect key="frame" x="299" y="159" width="51" height="31"/>
-                            </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wxq-J8-8Cw">
                                 <rect key="frame" x="299" y="204" width="51" height="31"/>
                             </switch>
@@ -787,14 +784,20 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jn0-hy-BCu">
+                                <rect key="frame" x="299" y="154" width="51" height="31"/>
+                                <connections>
+                                    <action selector="usePreferences:" destination="qN5-X9-2vP" eventType="valueChanged" id="AZy-Sk-wHP"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="tOU-xU-JmP"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="switchAletsView" destination="wxq-J8-8Cw" id="18b-Kz-6JW"/>
-                        <outlet property="switchPreferencesView" destination="RzH-73-UP3" id="hlR-kM-6uC"/>
+                        <outlet property="switchAletsView" destination="wxq-J8-8Cw" id="bAr-AD-PgW"/>
+                        <outlet property="switchPreferencesView" destination="jn0-hy-BCu" id="jRB-vg-EDX"/>
                         <outlet property="userTextView" destination="Ubn-gr-3UK" id="hS1-MI-co3"/>
                     </connections>
                 </viewController>

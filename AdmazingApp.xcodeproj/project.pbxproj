@@ -33,6 +33,7 @@
 		F9090C0C1D415FFB002A4F3A /* categoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98267F71D2ED70D00245A22 /* categoryModel.swift */; };
 		F9145AA61D7B46F90038CA06 /* getAllPreferedCategoriesConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9145AA51D7B46F90038CA06 /* getAllPreferedCategoriesConnection.swift */; };
 		F9145AA81D7B49080038CA06 /* categoryPreferenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9145AA71D7B49080038CA06 /* categoryPreferenceModel.swift */; };
+		F9145AAA1D7B54D20038CA06 /* categoryByPreferenceConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9145AA91D7B54D20038CA06 /* categoryByPreferenceConnection.swift */; };
 		F916E4991D77CCB800981870 /* saveCouponConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F916E4981D77CCB800981870 /* saveCouponConnection.swift */; };
 		F91E95C91D4033440053B951 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E95C81D4033440053B951 /* QRView.swift */; };
 		F91FAB381D18785D0096937A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FAB371D18785D0096937A /* AppDelegate.swift */; };
@@ -188,6 +189,7 @@
 		F9090BF11D415F54002A4F3A /* promotionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = promotionModel.swift; sourceTree = "<group>"; };
 		F9145AA51D7B46F90038CA06 /* getAllPreferedCategoriesConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getAllPreferedCategoriesConnection.swift; sourceTree = "<group>"; };
 		F9145AA71D7B49080038CA06 /* categoryPreferenceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryPreferenceModel.swift; sourceTree = "<group>"; };
+		F9145AA91D7B54D20038CA06 /* categoryByPreferenceConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryByPreferenceConnection.swift; sourceTree = "<group>"; };
 		F916E4981D77CCB800981870 /* saveCouponConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = saveCouponConnection.swift; sourceTree = "<group>"; };
 		F91E95C81D4033440053B951 /* QRView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		F91FAB341D18785D0096937A /* AdmazingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdmazingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -464,6 +466,7 @@
 				F94CB4D91D2C28ED00C84DD9 /* gpsConnection.swift */,
 				F9A296F11D2D76C200603AE4 /* storesConnection.swift */,
 				F98267F51D2EC89100245A22 /* categoryConnection.swift */,
+				F9145AA91D7B54D20038CA06 /* categoryByPreferenceConnection.swift */,
 				F9EDE6D01D6557A00026A9C8 /* couponsConnection.swift */,
 				F916E4981D77CCB800981870 /* saveCouponConnection.swift */,
 				F9910F2F1D7A73CD0050F682 /* deletePreferenceConnection.swift */,
@@ -748,6 +751,7 @@
 				F91FABAF1D1880230096937A /* Category.swift in Sources */,
 				F91FAB8B1D187BBC0096937A /* currentCoupon.swift in Sources */,
 				F91FAB8D1D187BBC0096937A /* currentLocation.swift in Sources */,
+				F9145AAA1D7B54D20038CA06 /* categoryByPreferenceConnection.swift in Sources */,
 				F9910F2E1D7A56C20050F682 /* savePreferencesConnection.swift in Sources */,
 				F91FAB381D18785D0096937A /* AppDelegate.swift in Sources */,
 				F91FABB71D1880D10096937A /* CouponShow.swift in Sources */,

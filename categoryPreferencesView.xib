@@ -18,7 +18,7 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AQu-Va-ZjV">
                         <rect key="frame" x="8" y="0.0" width="51" height="48"/>
                     </imageView>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3de-c6-xpa">
+                    <switch opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3de-c6-xpa">
                         <rect key="frame" x="263" y="8" width="51" height="31"/>
                         <color key="onTintColor" red="0.40384509019999998" green="0.64972773299999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </switch>

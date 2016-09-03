@@ -15,6 +15,7 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var categoriesTable: UITableView!
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var store = currentStore(r_currentStoreId: "", r_currentStoreName: "",r_currentStoreIconName: "",r_currentStoreIndex: 0)
+    var log = currentLog(r_userName: "",r_password: "")
     var category = currentCategory(r_currentCategoryID: "", r_currentCategoryName: "",r_currentCategoryIconName: "",r_currentCategoryIndex: 0)
     @IBAction func goStores(sender: AnyObject) {
         performSegueWithIdentifier("goStores", sender: self)
@@ -25,6 +26,7 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCurrentStore()
+        loadCurrentLog()
         welcomeLabel.text = "Categorías dentro de  \(store.currentStoreName):"
         if sendToServer(){
             //self.fillArray()
@@ -78,6 +80,21 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
         store.setCurrentStoreName(unpackedName)
         store.setCurrentStoreIconName(unpackediconName)
         store.setCurrentStoreIndex(unpackedindex)
+        
+    }
+    func loadCurrentLog(){
+        
+        var storeDataEncoded: [NSData] = userDefaults.objectForKey("currentLog") as! [NSData]
+        
+        var unpackedUserName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[0] as NSData) as! String
+        var unpackedPassword: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[1] as NSData) as! String
+        
+        unpackedUserName=unpackedUserName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        unpackedPassword=unpackedPassword.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        log.setUserName(unpackedUserName)
+        log.setPassword(unpackedPassword)
+        
         
     }
 
@@ -138,18 +155,39 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
     func sendToServer()->Bool{
         var idStore: String
         
-        var connection = categoryConnection()
-        idStore = store.currentStoreId
         
-        connection.setr_idStore(idStore)
-        connection.getResponse()
-        tableData=connection.getResult()
-        if tableData.count>0{
-            return true
+        
+        var usePreferences  = userDefaults.boolForKey("usePreferences")
+        if usePreferences == true{
+            var connection = getCategoryByPreference()
+            idStore = store.currentStoreId
+            
+            connection.setr_idStore(idStore)
+            connection.setr_idUser(log.userName)
+            connection.getResponse()
+            tableData=connection.getResult()
+            if tableData.count>0{
+                return true
+            }
+            else{
+                return false
+                
+            }
         }
         else{
-            return false
+            var connection = categoryConnection()
+            idStore = store.currentStoreId
             
+            connection.setr_idStore(idStore)
+            connection.getResponse()
+            tableData=connection.getResult()
+            if tableData.count>0{
+                return true
+            }
+            else{
+                return false
+                
+            }
         }
         
         

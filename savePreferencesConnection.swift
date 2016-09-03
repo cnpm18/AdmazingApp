@@ -1,33 +1,31 @@
 //
-//  saveCouponConnection.swift
+//  savePreferencesConnection.swift
 //  AdmazingApp
 //
-//  Created by Cristopher Nunez Del Prado on 31/08/16.
+//  Created by Cristopher Nunez Del Prado on 2/09/16.
 //  Copyright © 2016 Cristopher Nunez Del Prado. All rights reserved.
-//
-
-
+/**/
 
 import Foundation
-class saveCouponConnection: serverConnection {
-    var r_idUser: String = ""
-    var r_idPromotion: String = ""
+class savePreferencesConnection: serverConnection {
+    var r_userName: String = ""
+    var r_idCategory: String = ""
     var result: Bool = false
     
     
     
-    func setr_idUser( idUser: String ){
-        r_idUser = idUser
+    func setr_userName( userName: String ){
+        r_userName = userName
         
     }
-    func setr_idPromotion( idPromotion: String ){
-        r_idPromotion = idPromotion
+    func setr_idCategory( idCategory: String ){
+        r_idCategory = idCategory
         
     }
     func getResponse(){
-        r_idUser = substractOptional(r_idUser)
-        r_idPromotion = substractOptional(r_idPromotion)
-        var body = "<adm:savePreferenceRequest><idUser>\(r_idUser)</idUser><idPromotion>\(r_idPromotion)</idPromotion></adm:savePreferenceRequest>"
+        r_userName = substractOptional(r_userName)
+        r_idCategory = substractOptional(r_idCategory)
+        var body = "<adm:savePreferenceRequest><idUser>\(r_userName)</idUser><idCategory>\(r_idCategory)</idCategory></adm:savePreferenceRequest>"
         createConnection(body)
         
     }

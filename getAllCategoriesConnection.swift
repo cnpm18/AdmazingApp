@@ -1,17 +1,15 @@
 //
-//  categoryConnection.swift
+//  getAllCategoriesConnection.swift
 //  AdmazingApp
 //
-//  Created by Cristopher Nunez Del Prado on 7/07/16.
+//  Created by Cristopher Nunez Del Prado on 2/09/16.
 //  Copyright © 2016 Cristopher Nunez Del Prado. All rights reserved.
 //
 
 import Foundation
-
-
-class categoryConnection: serverConnection {
+class getAllCategoriesConnection: serverConnection {
     
-    var r_idStore: String = ""
+    
     var result: Bool = false
     var categories: [categoryModel] = []
     
@@ -21,13 +19,10 @@ class categoryConnection: serverConnection {
     var nameCategory: String = ""
     
     
-    func setr_idStore( idStore: String ){
-        r_idStore = idStore
-        
-    }
+    
     func getResponse(){
         
-        let body = "<adm:getByIdCategoryRequest><idStore>\(r_idStore)</idStore></adm:getByIdCategoryRequest>"
+        let body = "<adm:getAllCategoriesRequest/>"
         createConnection(body)
         
     }
@@ -38,13 +33,11 @@ class categoryConnection: serverConnection {
         switch currentElementName {
         case "idCategory":
             self.idCategory = self.idCategory + string
-            self.idCategory = removeWhitespace(self.idCategory)
             
-           
             
         case "description":
             self.nameCategory = self.nameCategory + string
-           
+            
             fillObject()
             
             
@@ -79,11 +72,6 @@ class categoryConnection: serverConnection {
     func getResult()->[categoryModel]{
         
         return self.categories
-    }
-    func removeWhitespace(string: String) -> String {
-        var returnString: String
-        returnString=string.stringByReplacingOccurrencesOfString(" ", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        return returnString
     }
     
     

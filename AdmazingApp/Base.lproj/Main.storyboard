@@ -781,7 +781,7 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="fa7-Mr-jVm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuario" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubn-gr-3UK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre de Usurio:" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubn-gr-3UK">
                                 <rect key="frame" x="9" y="127" width="271" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -856,10 +856,16 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hi7-BL-fkW">
-                                <rect key="frame" x="160" y="631" width="54" height="30"/>
+                                <rect key="frame" x="148" y="631" width="78" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="Aceptar"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9p-Qd-mdi">
+                                <rect key="frame" x="148" y="631" width="78" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="Aceptar"/>
                                 <connections>
-                                    <action selector="selectionDone:" destination="I5G-7I-gHi" eventType="touchUpInside" id="yyu-ko-DaW"/>
+                                    <action selector="managePreferences:" destination="I5G-7I-gHi" eventType="touchUpInside" id="KRg-oe-nIp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -868,11 +874,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="categoryPreferencesTable" destination="wpp-XA-Hpc" id="9gN-UC-YiS"/>
+                        <segue destination="qN5-X9-2vP" kind="show" identifier="goSettings" id="tYY-T7-71n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2c-bH-CTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2056.5" y="897.5"/>
+            <point key="canvasLocation" x="2021.5" y="963.5"/>
         </scene>
     </scenes>
     <resources>
@@ -889,11 +896,12 @@
         <image name="usersprueba.png" width="559" height="189"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wYC-LZ-9ad"/>
-        <segue reference="cRK-32-h8f"/>
-        <segue reference="4Cy-zt-zDU"/>
-        <segue reference="lZV-oe-2Eh"/>
         <segue reference="rw5-3a-lDa"/>
+        <segue reference="lZV-oe-2Eh"/>
         <segue reference="e5F-Ph-fRR"/>
+        <segue reference="4Cy-zt-zDU"/>
+        <segue reference="cRK-32-h8f"/>
+        <segue reference="tYY-T7-71n"/>
+        <segue reference="9LQ-QW-XeJ"/>
     </inferredMetricsTieBreakers>
 </document>

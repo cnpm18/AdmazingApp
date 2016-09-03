@@ -1,33 +1,32 @@
 //
-//  categoryConnection.swift
+//  getAllPreferedCategoriesConnection.swift
 //  AdmazingApp
 //
-//  Created by Cristopher Nunez Del Prado on 7/07/16.
+//  Created by Cristopher Nunez Del Prado on 3/09/16.
 //  Copyright © 2016 Cristopher Nunez Del Prado. All rights reserved.
 //
 
 import Foundation
-
-
-class categoryConnection: serverConnection {
+class getAllPreferedCategoriesConnection: serverConnection {
     
-    var r_idStore: String = ""
+    
+    var r_idUser = ""
     var result: Bool = false
-    var categories: [categoryModel] = []
+    var categories: [categoryPreferenceModel] = []
     
     
     
     var idCategory: String = ""
     var nameCategory: String = ""
+    var isPrefered: Bool = false
     
     
-    func setr_idStore( idStore: String ){
-        r_idStore = idStore
-        
+    func setr_idUser(idUser:String){
+        r_idUser=idUser
     }
     func getResponse(){
         
-        let body = "<adm:getByIdCategoryRequest><idStore>\(r_idStore)</idStore></adm:getByIdCategoryRequest>"
+        let body = "<adm:getAllPreferedCategoriesRequest><idUser>\(r_idUser)</idUser></adm:getAllPreferedCategoriesRequest>"
         createConnection(body)
         
     }
@@ -40,13 +39,20 @@ class categoryConnection: serverConnection {
             self.idCategory = self.idCategory + string
             self.idCategory = removeWhitespace(self.idCategory)
             
-           
             
         case "description":
             self.nameCategory = self.nameCategory + string
-           
-            fillObject()
             
+            
+            
+        case "isPrefered":
+            if string == "true"{
+                self.isPrefered = true
+            }
+            if string == "false"{
+                self.isPrefered = false
+            }
+            fillObject()
             
         default: break
         }
@@ -56,10 +62,12 @@ class categoryConnection: serverConnection {
     }
     
     func fillObject(){
-        categories.append(categoryModel(r_idCategory: idCategory,r_nameCategory: nameCategory))
+        
+        categories.append(categoryPreferenceModel(r_idCategory: idCategory, r_nameCategory: nameCategory, r_isSelected: isPrefered))
         
         self.idCategory = ""
         self.nameCategory = ""
+        self.isPrefered = false
         
         
         
@@ -76,7 +84,7 @@ class categoryConnection: serverConnection {
         
         
     }
-    func getResult()->[categoryModel]{
+    func getResult()->[categoryPreferenceModel]{
         
         return self.categories
     }

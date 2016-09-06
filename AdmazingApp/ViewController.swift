@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             log.password=getPwdFromAct()
             log.password=log.password.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
             saveCurrentLog()
-            performSegueWithIdentifier("goMainMenu", sender: self)
+            performSegueWithIdentifier("goGPS", sender: self)
             
             
             

@@ -69,4 +69,8 @@ class Settings: UIViewController {
     }
     @IBAction func updatePreferences(sender: AnyObject) {
     }
+    
+    
+    @IBAction func updateLocation(sender: AnyObject) {
+    }
 }

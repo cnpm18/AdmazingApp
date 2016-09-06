@@ -45,8 +45,14 @@ class Stores: UIViewController , UITableViewDelegate, UITableViewDataSource{
         
         self.storesTable.rowHeight = 85
         aCell.storeName.text =  tableData[indexPath.row].nameStore
-        aCell.storeLogo.image =  UIImage(named: tableData[indexPath.row].nameStore)
+        
         aCell.icon.image = UIImage(named: "icon_arrow" ) //UIImage(named: tableData[indexPath.row])
+        
+        let imageData = NSData(base64EncodedString: tableData[indexPath.row].imageStore, options:[])
+        let image = UIImage(data: imageData!)
+        
+        aCell.storeLogo.image = image
+
 
         
         return aCell

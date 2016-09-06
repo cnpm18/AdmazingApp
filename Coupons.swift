@@ -252,6 +252,9 @@ class Coupons: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
  
  
+    @IBAction func goBack(sender: AnyObject) {
+        self.performSegueWithIdentifier("goCategory", sender: self)
+    }
 
     
 }

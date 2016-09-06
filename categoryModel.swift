@@ -11,6 +11,7 @@ class categoryModel{
     var idCategory: String
     var nameCategory: String
     
+    
     init(r_idCategory: String, r_nameCategory:String) {
         self.idCategory=r_idCategory
         self.nameCategory=r_nameCategory

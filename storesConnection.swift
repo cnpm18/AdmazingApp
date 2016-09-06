@@ -19,7 +19,7 @@ class storesConnection: serverConnection {
     var email: String = ""
     var phoneNumber: String = ""
     var idCommercialArea: String = ""
-    
+    var imageStore: String = ""
     
     
     
@@ -55,8 +55,11 @@ class storesConnection: serverConnection {
                 
             case "phoneNumber":
                 self.phoneNumber = self.phoneNumber + string
-                fillObject()
                 
+                
+            case "imageStore":
+                self.imageStore = self.imageStore + string
+                fillObject()
                 
             
             default: break
@@ -68,7 +71,7 @@ class storesConnection: serverConnection {
     
     func fillObject(){
         
-        stores.append(storeModel(r_idStore: idStore, r_idCommercialArea: idCommercialArea, r_nameStore: nameStore, r_email: email, r_phoneNumber: phoneNumber))
+        stores.append(storeModel(r_idStore: idStore, r_idCommercialArea: idCommercialArea, r_nameStore: nameStore, r_email: email, r_phoneNumber: phoneNumber, r_imageStore: imageStore))
        
         
         self.idStore=""
@@ -76,6 +79,7 @@ class storesConnection: serverConnection {
         self.email=""
         self.phoneNumber=""
         self.idCommercialArea=""
+        self.imageStore=""
         
     }
     

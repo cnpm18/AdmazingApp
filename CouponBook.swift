@@ -70,6 +70,9 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource 
     }
     
     
+    
+    //----
+    
     func loadCurrentLog(){
         
         var storeDataEncoded: [NSData] = userDefaults.objectForKey("currentLog") as! [NSData]

@@ -119,7 +119,7 @@
 		F9BCC92D1D2F399E00D41030 /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCC92C1D2F399E00D41030 /* userModel.swift */; };
 		F9BCC92F1D2F39AC00D41030 /* storeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCC92E1D2F39AC00D41030 /* storeModel.swift */; };
 		F9BCC9311D2F3A2700D41030 /* commercialAreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCC9301D2F3A2700D41030 /* commercialAreaModel.swift */; };
-		F9D08C5C1D7DD63900F9C773 /* CouponBookV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D08C5B1D7DD63900F9C773 /* CouponBookV.swift */; };
+		F9D08C5C1D7DD63900F9C773 /* CouponBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D08C5B1D7DD63900F9C773 /* CouponBook.swift */; };
 		F9D08C5E1D7DD65000F9C773 /* CouponBookedShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D08C5D1D7DD65000F9C773 /* CouponBookedShow.swift */; };
 		F9D08C601D7DD66100F9C773 /* CouponUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D08C5F1D7DD66100F9C773 /* CouponUse.swift */; };
 		F9D08C621D7DDFA600F9C773 /* couponBookRequestConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D08C611D7DDFA600F9C773 /* couponBookRequestConnection.swift */; };
@@ -265,7 +265,7 @@
 		F9BCC92C1D2F399E00D41030 /* userModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
 		F9BCC92E1D2F39AC00D41030 /* storeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storeModel.swift; sourceTree = "<group>"; };
 		F9BCC9301D2F3A2700D41030 /* commercialAreaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commercialAreaModel.swift; sourceTree = "<group>"; };
-		F9D08C5B1D7DD63900F9C773 /* CouponBookV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponBookV.swift; sourceTree = "<group>"; };
+		F9D08C5B1D7DD63900F9C773 /* CouponBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponBook.swift; sourceTree = "<group>"; };
 		F9D08C5D1D7DD65000F9C773 /* CouponBookedShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponBookedShow.swift; sourceTree = "<group>"; };
 		F9D08C5F1D7DD66100F9C773 /* CouponUse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponUse.swift; sourceTree = "<group>"; };
 		F9D08C611D7DDFA600F9C773 /* couponBookRequestConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = couponBookRequestConnection.swift; sourceTree = "<group>"; };
@@ -439,7 +439,7 @@
 				F91FABAE1D1880230096937A /* Category.swift */,
 				F91FABB41D1880A70096937A /* Coupons.swift */,
 				F91FABB61D1880D10096937A /* CouponShow.swift */,
-				F9D08C5B1D7DD63900F9C773 /* CouponBookV.swift */,
+				F9D08C5B1D7DD63900F9C773 /* CouponBook.swift */,
 				F9D08C5D1D7DD65000F9C773 /* CouponBookedShow.swift */,
 				F9D08C5F1D7DD66100F9C773 /* CouponUse.swift */,
 				F98BDB811D74B1080052A6B4 /* Settings.swift */,
@@ -783,7 +783,7 @@
 				F98267F61D2EC89100245A22 /* categoryConnection.swift in Sources */,
 				F9D08C5E1D7DD65000F9C773 /* CouponBookedShow.swift in Sources */,
 				F91FABB51D1880A70096937A /* Coupons.swift in Sources */,
-				F9D08C5C1D7DD63900F9C773 /* CouponBookV.swift in Sources */,
+				F9D08C5C1D7DD63900F9C773 /* CouponBook.swift in Sources */,
 				F9090BF81D415FD7002A4F3A /* productModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

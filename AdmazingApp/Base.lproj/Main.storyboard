@@ -708,16 +708,17 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="couponsTable" destination="HiC-ZY-d5U" id="xAa-Cs-PEc"/>
+                        <segue destination="TUe-gM-wU1" kind="show" identifier="goCouponShow" id="iSH-eq-Zcn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhM-ze-3QC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="796.5" y="953.5"/>
         </scene>
-        <!--Coupon Show-->
+        <!--Coupon Booked Show-->
         <scene sceneID="bmV-9t-o0K">
             <objects>
-                <viewController id="TUe-gM-wU1" customClass="CouponShow" customModule="AdmazingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TUe-gM-wU1" customClass="CouponBookedShow" customModule="AdmazingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oel-AP-1vN"/>
                         <viewControllerLayoutGuide type="bottom" id="wt9-3I-sxo"/>
@@ -740,7 +741,7 @@
                                 <rect key="frame" x="7" y="29" width="45" height="45"/>
                                 <state key="normal" backgroundImage="back.png"/>
                                 <connections>
-                                    <action selector="goCoupons:" destination="TUe-gM-wU1" eventType="touchUpInside" id="tvU-k5-WQy"/>
+                                    <action selector="goBack:" destination="TUe-gM-wU1" eventType="touchUpInside" id="NU8-gn-dwj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Descripción del Producto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0U-dr-mMb">
@@ -755,13 +756,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afn-pg-VxG">
-                                <rect key="frame" x="122" y="629" width="126" height="30"/>
-                                <state key="normal" title="Utilizar Promoción"/>
-                                <connections>
-                                    <action selector="addCouponToBook:" destination="TUe-gM-wU1" eventType="touchUpInside" id="MxX-84-FH7"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="2X1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFh-tF-NEc">
                                 <rect key="frame" x="20" y="594" width="29" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -800,12 +794,28 @@
                                     <constraint firstAttribute="width" constant="375" id="xS8-k5-7sl"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G01-sk-sNW">
+                                <rect key="frame" x="127" y="637" width="121" height="30"/>
+                                <state key="normal" title="Borrar Promoción">
+                                    <color key="titleColor" red="1" green="0.44188198070000001" blue="0.43635973389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteCoupon:" destination="TUe-gM-wU1" eventType="touchUpInside" id="4a4-vv-U5m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afn-pg-VxG">
+                                <rect key="frame" x="121" y="609" width="126" height="30"/>
+                                <state key="normal" title="Utilizar Promoción"/>
+                                <connections>
+                                    <action selector="useCoupon:" destination="TUe-gM-wU1" eventType="touchUpInside" id="Kal-L2-m6E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jfs-H6-wAG" firstAttribute="top" secondItem="g0U-dr-mMb" secondAttribute="bottom" constant="3" id="Fxs-hM-17M"/>
                             <constraint firstItem="afn-pg-VxG" firstAttribute="top" secondItem="QFh-tF-NEc" secondAttribute="bottom" constant="14" id="RFL-hP-Hgi"/>
                             <constraint firstItem="QFh-tF-NEc" firstAttribute="top" secondItem="CIR-U0-hRS" secondAttribute="bottom" constant="8" id="Sgl-QN-d70"/>
+                            <constraint firstItem="jfs-H6-wAG" firstAttribute="top" secondItem="g0U-dr-mMb" secondAttribute="bottom" id="XfZ-uE-xzj"/>
                             <constraint firstItem="g0U-dr-mMb" firstAttribute="top" secondItem="EQG-qw-Biv" secondAttribute="bottom" constant="8" id="bGE-LZ-YB5"/>
                             <constraint firstItem="zul-At-zQ2" firstAttribute="top" secondItem="jfs-H6-wAG" secondAttribute="bottom" constant="10" id="hh2-i5-0Ng"/>
                             <constraint firstItem="EQG-qw-Biv" firstAttribute="top" secondItem="67t-ID-Ymk" secondAttribute="bottom" constant="15" id="jBi-fI-uuM"/>
@@ -815,22 +825,24 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="couponDescription" destination="EQG-qw-Biv" id="koh-FA-r46"/>
-                        <outlet property="couponEndDate" destination="CIR-U0-hRS" id="cW3-34-sVx"/>
-                        <outlet property="couponImage" destination="67t-ID-Ymk" id="aSQ-DD-3zQ"/>
-                        <outlet property="productDescription" destination="jfs-H6-wAG" id="P0E-F1-dlS"/>
-                        <outlet property="productPrice" destination="zul-At-zQ2" id="PS8-4u-wZZ"/>
-                        <outlet property="typePromotion" destination="QFh-tF-NEc" id="Po2-F0-x65"/>
+                        <outlet property="couponDescription" destination="EQG-qw-Biv" id="K5T-TO-A9j"/>
+                        <outlet property="couponEndDate" destination="CIR-U0-hRS" id="5Tc-0B-VVM"/>
+                        <outlet property="couponImage" destination="67t-ID-Ymk" id="H1m-I9-krS"/>
+                        <outlet property="productDescription" destination="jfs-H6-wAG" id="H9b-UK-mK6"/>
+                        <outlet property="productPrice" destination="zul-At-zQ2" id="Gya-xF-h1H"/>
+                        <outlet property="typePromotion" destination="QFh-tF-NEc" id="P8e-uh-cpX"/>
+                        <segue destination="zAY-fB-LZh" kind="show" identifier="goCouponBook" id="EPZ-vz-ImG"/>
+                        <segue destination="2sh-YM-nDS" kind="show" identifier="goCouponUse" id="MIR-uS-aNb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rtv-Ej-HO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816.5" y="1795.5"/>
+            <point key="canvasLocation" x="796.5" y="1761.5"/>
         </scene>
-        <!--Coupon Show-->
+        <!--View Controller-->
         <scene sceneID="vNg-GI-W4f">
             <objects>
-                <viewController id="2sh-YM-nDS" customClass="CouponShow" customModule="AdmazingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2sh-YM-nDS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MMS-gv-7TL"/>
                         <viewControllerLayoutGuide type="bottom" id="vuz-L5-afb"/>
@@ -863,7 +875,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5Y-ec-9cU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816.5" y="2595.5"/>
+            <point key="canvasLocation" x="796.5" y="2541.5"/>
         </scene>
     </scenes>
     <resources>
@@ -880,11 +892,12 @@
         <image name="usersprueba.png" width="559" height="189"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RO6-Bk-9Oq"/>
-        <segue reference="rw5-3a-lDa"/>
-        <segue reference="ypz-Em-8i9"/>
+        <segue reference="5sh-62-r1d"/>
+        <segue reference="nTP-d8-miX"/>
+        <segue reference="EPZ-vz-ImG"/>
         <segue reference="FGs-XW-Blu"/>
         <segue reference="tYY-T7-71n"/>
-        <segue reference="5sh-62-r1d"/>
+        <segue reference="RO6-Bk-9Oq"/>
+        <segue reference="rw5-3a-lDa"/>
     </inferredMetricsTieBreakers>
 </document>

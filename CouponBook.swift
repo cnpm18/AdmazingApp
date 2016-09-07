@@ -50,7 +50,7 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource 
         }
         else{
             
-            alert = UIAlertController(title: ":(", message: "Lo sentimos, esta categoría aún no cuenta con promociones", preferredStyle: UIAlertControllerStyle.Alert)
+            alert = UIAlertController(title: ":(", message: "Lo sentimos, usted no cuenta con promociones de esta zona comercial en su cuponera", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in self.performSegueWithIdentifier("goMenu", sender: self)}))
             
             

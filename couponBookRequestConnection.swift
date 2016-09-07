@@ -154,7 +154,8 @@ class couponBookRequestConnection: serverConnection {
         
     }
     func getResult()->[promotionModel]{
-        
+        print("nro promociones")
+        print(promotions.count)
         return self.promotions
     }
     

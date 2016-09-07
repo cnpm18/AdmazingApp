@@ -27,7 +27,7 @@ class saveCouponConnection: serverConnection {
     func getResponse(){
         r_idUser = substractOptional(r_idUser)
         r_idPromotion = substractOptional(r_idPromotion)
-        var body = "<adm:savePreferenceRequest><idUser>\(r_idUser)</idUser><idPromotion>\(r_idPromotion)</idPromotion></adm:savePreferenceRequest>"
+        var body = "<adm:saveCouponBookRequest><idUser>\(r_idUser)</idUser><idPromotion>\(r_idPromotion)</idPromotion></adm:saveCouponBookRequest>"
         createConnection(body)
         
     }

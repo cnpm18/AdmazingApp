@@ -839,10 +839,10 @@
             </objects>
             <point key="canvasLocation" x="796.5" y="1761.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Coupon Use-->
         <scene sceneID="vNg-GI-W4f">
             <objects>
-                <viewController id="2sh-YM-nDS" sceneMemberID="viewController">
+                <viewController id="2sh-YM-nDS" customClass="couponUse" customModule="AdmazingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MMS-gv-7TL"/>
                         <viewControllerLayoutGuide type="bottom" id="vuz-L5-afb"/>
@@ -857,25 +857,46 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoadmazingtrans.png" translatesAutoresizingMaskIntoConstraints="NO" id="hxq-fb-yQs">
                                 <rect key="frame" x="110" y="27" width="154" height="50"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emJ-kw-jW3">
-                                <rect key="frame" x="325" y="29" width="45" height="45"/>
-                                <state key="normal" backgroundImage="settings.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fll-s7-n5A">
-                                <rect key="frame" x="7" y="29" width="45" height="45"/>
-                                <state key="normal" backgroundImage="home.png"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jp0-UD-3nm">
+                                <rect key="frame" x="89" y="235" width="197" height="197"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FI6-RW-pmr">
+                                <rect key="frame" x="152" y="505" width="70" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Listo!"/>
                                 <connections>
-                                    <action selector="goCoupons:" destination="2sh-YM-nDS" eventType="touchUpInside" id="rfI-YU-yFd"/>
+                                    <action selector="usePromotion:" destination="2sh-YM-nDS" eventType="touchUpInside" id="EsA-Uv-Xid"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Por favor, escanear el siguiente código QR en la tienda antes de realizar su pago" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skN-wG-MqM">
+                                <rect key="frame" x="20" y="126" width="335" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mD8-It-4Eo">
+                                <rect key="frame" x="145" y="570" width="85" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" red="0.96470588235294119" green="0.35686274509803922" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="2sh-YM-nDS" eventType="touchUpInside" id="OAB-bt-yl2"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="qrImageView" destination="Jp0-UD-3nm" id="kiJ-lA-diF"/>
+                        <segue destination="zAY-fB-LZh" kind="show" identifier="goCouponBook" id="br8-7B-Ehc"/>
+                        <segue destination="TUe-gM-wU1" kind="show" identifier="goCouponBookedShow" id="AfE-HO-rc2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5Y-ec-9cU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796.5" y="2541.5"/>
+            <point key="canvasLocation" x="796.5" y="2550.5"/>
         </scene>
     </scenes>
     <resources>
@@ -892,11 +913,12 @@
         <image name="usersprueba.png" width="559" height="189"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="tYY-T7-71n"/>
+        <segue reference="FGs-XW-Blu"/>
         <segue reference="5sh-62-r1d"/>
         <segue reference="nTP-d8-miX"/>
-        <segue reference="EPZ-vz-ImG"/>
-        <segue reference="FGs-XW-Blu"/>
-        <segue reference="tYY-T7-71n"/>
+        <segue reference="br8-7B-Ehc"/>
+        <segue reference="AfE-HO-rc2"/>
         <segue reference="RO6-Bk-9Oq"/>
         <segue reference="rw5-3a-lDa"/>
     </inferredMetricsTieBreakers>

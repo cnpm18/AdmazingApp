@@ -35,6 +35,7 @@
 		F9145AA81D7B49080038CA06 /* categoryPreferenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9145AA71D7B49080038CA06 /* categoryPreferenceModel.swift */; };
 		F9145AAA1D7B54D20038CA06 /* categoryByPreferenceConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9145AA91D7B54D20038CA06 /* categoryByPreferenceConnection.swift */; };
 		F916E4991D77CCB800981870 /* saveCouponConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F916E4981D77CCB800981870 /* saveCouponConnection.swift */; };
+		F9190E5B1D81EE6A00816DAF /* savePromotionUseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9190E5A1D81EE6A00816DAF /* savePromotionUseConnection.swift */; };
 		F91E95C91D4033440053B951 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E95C81D4033440053B951 /* QRView.swift */; };
 		F91FAB381D18785D0096937A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FAB371D18785D0096937A /* AppDelegate.swift */; };
 		F91FAB3A1D18785D0096937A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FAB391D18785D0096937A /* ViewController.swift */; };
@@ -193,6 +194,7 @@
 		F9145AA71D7B49080038CA06 /* categoryPreferenceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryPreferenceModel.swift; sourceTree = "<group>"; };
 		F9145AA91D7B54D20038CA06 /* categoryByPreferenceConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryByPreferenceConnection.swift; sourceTree = "<group>"; };
 		F916E4981D77CCB800981870 /* saveCouponConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = saveCouponConnection.swift; sourceTree = "<group>"; };
+		F9190E5A1D81EE6A00816DAF /* savePromotionUseConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = savePromotionUseConnection.swift; sourceTree = "<group>"; };
 		F91E95C81D4033440053B951 /* QRView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		F91FAB341D18785D0096937A /* AdmazingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdmazingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91FAB371D18785D0096937A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 				F9910F2D1D7A56C20050F682 /* savePreferencesConnection.swift */,
 				F9D08C611D7DDFA600F9C773 /* couponBookRequestConnection.swift */,
 				F9E306D61D7FA1680034E59E /* deleteCouponConnection.swift */,
+				F9190E5A1D81EE6A00816DAF /* savePromotionUseConnection.swift */,
 			);
 			name = Connection;
 			sourceTree = "<group>";
@@ -770,6 +773,7 @@
 				F9A296F21D2D76C200603AE4 /* storesConnection.swift in Sources */,
 				F91FABB31D1880310096937A /* Stores.swift in Sources */,
 				F91FABB21D1880310096937A /* GPS.swift in Sources */,
+				F9190E5B1D81EE6A00816DAF /* savePromotionUseConnection.swift in Sources */,
 				F91FABAB1D187D4E0096937A /* storeCell.swift in Sources */,
 				F91FAB8E1D187BBC0096937A /* currentLog.swift in Sources */,
 				F990DDBD1D22E2AB0000E3EE /* serverConnection.swift in Sources */,

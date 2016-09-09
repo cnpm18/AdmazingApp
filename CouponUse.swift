@@ -28,6 +28,7 @@ class couponUse: UIViewController {
         messageQR = "Send to server Coupon with Id: \(coupon.idPromotion) and IdUser: \(log.userName)"
         //messageQR = "www.google.com"
         fillQrImage()
+        print(messageQR)
     }
     
     

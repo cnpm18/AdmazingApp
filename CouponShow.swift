@@ -36,7 +36,7 @@ class CouponShow: UIViewController  {
         couponImage.image = image
         
         couponDescription.text=coupon.promodescription
-        productDescription.text=product.productDescription
+        productDescription.text=productDescription.text!+"\r\n"+product.productDescription
         productPrice.text=productPrice.text!+product.price
         couponEndDate.text=couponEndDate.text!+coupon.endDate
         typePromotion.text=coupon.idTypePromotion

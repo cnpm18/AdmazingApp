@@ -313,43 +313,36 @@
                                     <action selector="goCoupons:" destination="TxG-nk-I3o" eventType="touchUpInside" id="UcS-iN-WOE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Descripción del Producto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyN-3m-vwa">
-                                <rect key="frame" x="20" y="409" width="198" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Descripción del Producto:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyN-3m-vwa">
+                                <rect key="frame" x="20" y="409" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="UK0-1D-rh5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Valido hasta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJS-x8-vvT">
-                                <rect key="frame" x="20" y="565" width="98" height="21"/>
+                                <rect key="frame" x="20" y="542" width="98" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atK-Je-tkE">
-                                <rect key="frame" x="108" y="629" width="153" height="30"/>
+                                <rect key="frame" x="108" y="591" width="153" height="30"/>
                                 <state key="normal" title="Agregar a la Cuponera"/>
                                 <connections>
                                     <action selector="addCouponToBook:" destination="TxG-nk-I3o" eventType="touchUpInside" id="nRs-QT-jXk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="2X1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pH-Jb-chk">
-                                <rect key="frame" x="20" y="594" width="29" height="21"/>
+                                <rect key="frame" x="23" y="571" width="29" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.44188198070000001" blue="0.43635973389999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yA2-lI-6yb">
-                                <rect key="frame" x="20" y="438" width="329" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="329" id="AqQ-Kh-70y"/>
-                                    <constraint firstAttribute="width" constant="329" id="Osh-Hd-JxB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Precio Original: S/." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ss2-Ca-Y8Y">
-                                <rect key="frame" x="20" y="530" width="141" height="21"/>
+                                <rect key="frame" x="20" y="513" width="141" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -370,14 +363,23 @@
                                     <constraint firstAttribute="height" constant="244" id="nhh-Dn-JsK"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIE-kF-jw8">
+                                <rect key="frame" x="133" y="623" width="108" height="30"/>
+                                <state key="normal" title="Ir a la Cuponera">
+                                    <color key="titleColor" red="0.15294117647058825" green="0.66274509803921566" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zAY-fB-LZh" kind="show" id="o0U-E9-Fq6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="atK-Je-tkE" firstAttribute="top" secondItem="4pH-Jb-chk" secondAttribute="bottom" constant="14" id="APD-3H-b5P"/>
+                            <constraint firstItem="atK-Je-tkE" firstAttribute="top" secondItem="4pH-Jb-chk" secondAttribute="bottom" constant="8" id="APD-3H-b5P"/>
                             <constraint firstItem="eJS-x8-vvT" firstAttribute="top" secondItem="ss2-Ca-Y8Y" secondAttribute="bottom" constant="8" id="FKj-LM-kva"/>
-                            <constraint firstItem="yA2-lI-6yb" firstAttribute="top" secondItem="KyN-3m-vwa" secondAttribute="bottom" constant="3" id="LAB-V3-D5U"/>
                             <constraint firstItem="KyN-3m-vwa" firstAttribute="top" secondItem="8oH-3l-SpG" secondAttribute="bottom" constant="8" id="Qbx-a3-W6d"/>
-                            <constraint firstItem="ss2-Ca-Y8Y" firstAttribute="top" secondItem="yA2-lI-6yb" secondAttribute="bottom" constant="10" id="b47-fK-jNe"/>
+                            <constraint firstItem="ss2-Ca-Y8Y" firstAttribute="top" secondItem="KyN-3m-vwa" secondAttribute="bottom" constant="6" id="Tvm-ej-nsv"/>
+                            <constraint firstItem="mIE-kF-jw8" firstAttribute="top" secondItem="atK-Je-tkE" secondAttribute="bottom" constant="2" id="VFP-dP-RKT"/>
                             <constraint firstItem="8oH-3l-SpG" firstAttribute="top" secondItem="IBf-pY-ADp" secondAttribute="bottom" constant="15" id="m2u-JG-7bT"/>
                             <constraint firstItem="4pH-Jb-chk" firstAttribute="top" secondItem="eJS-x8-vvT" secondAttribute="bottom" constant="8" id="uzc-KL-eW0"/>
                             <constraint firstItem="KyN-3m-vwa" firstAttribute="top" secondItem="8oH-3l-SpG" secondAttribute="bottom" constant="1" id="ztf-kX-hTq"/>
@@ -388,7 +390,7 @@
                         <outlet property="couponDescription" destination="8oH-3l-SpG" id="WyC-81-h4x"/>
                         <outlet property="couponEndDate" destination="eJS-x8-vvT" id="z05-lu-m68"/>
                         <outlet property="couponImage" destination="IBf-pY-ADp" id="LAG-wH-dkJ"/>
-                        <outlet property="productDescription" destination="yA2-lI-6yb" id="uVC-UA-JoC"/>
+                        <outlet property="productDescription" destination="KyN-3m-vwa" id="lTc-ht-2Og"/>
                         <outlet property="productPrice" destination="ss2-Ca-Y8Y" id="1ti-Ig-Mbt"/>
                         <outlet property="typePromotion" destination="4pH-Jb-chk" id="Wcj-8o-4eI"/>
                         <segue destination="S7V-LG-QFZ" kind="show" identifier="goCoupons" id="RO6-Bk-9Oq"/>
@@ -396,7 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NBA-R6-8X9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884.5" y="2641.5"/>
+            <point key="canvasLocation" x="1952.5" y="2505.5"/>
         </scene>
         <!--Title-->
         <scene sceneID="TkR-eH-Z6A">
@@ -744,38 +746,25 @@
                                     <action selector="goBack:" destination="TUe-gM-wU1" eventType="touchUpInside" id="NU8-gn-dwj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Descripción del Producto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0U-dr-mMb">
-                                <rect key="frame" x="20" y="409" width="198" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Valido hasta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIR-U0-hRS">
-                                <rect key="frame" x="20" y="565" width="98" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="2X1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFh-tF-NEc">
-                                <rect key="frame" x="20" y="594" width="29" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.44188198070000001" blue="0.43635973389999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfs-H6-wAG">
-                                <rect key="frame" x="20" y="438" width="329" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Descripción del Producto:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0U-dr-mMb">
+                                <rect key="frame" x="20" y="409" width="335" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="329" id="J4R-pl-Z0B"/>
-                                    <constraint firstAttribute="width" constant="329" id="Mr3-SS-UNA"/>
+                                    <constraint firstAttribute="width" constant="335" id="pUA-72-eh5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Precio Original: S/." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zul-At-zQ2">
-                                <rect key="frame" x="20" y="530" width="141" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Valido hasta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIR-U0-hRS">
+                                <rect key="frame" x="20" y="509" width="98" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="2X1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFh-tF-NEc">
+                                <rect key="frame" x="20" y="548" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.44188198070000001" blue="0.43635973389999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Oferta Televisor Sony 32&quot; LED solo por hoy " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQG-qw-Biv">
@@ -795,7 +784,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G01-sk-sNW">
-                                <rect key="frame" x="127" y="637" width="121" height="30"/>
+                                <rect key="frame" x="124" y="623" width="121" height="30"/>
                                 <state key="normal" title="Borrar Promoción">
                                     <color key="titleColor" red="1" green="0.44188198070000001" blue="0.43635973389999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -804,23 +793,28 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afn-pg-VxG">
-                                <rect key="frame" x="121" y="609" width="126" height="30"/>
+                                <rect key="frame" x="121" y="591" width="126" height="30"/>
                                 <state key="normal" title="Utilizar Promoción"/>
                                 <connections>
                                     <action selector="useCoupon:" destination="TUe-gM-wU1" eventType="touchUpInside" id="Kal-L2-m6E"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Precio Original: S/." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zul-At-zQ2">
+                                <rect key="frame" x="20" y="472" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="afn-pg-VxG" firstAttribute="top" secondItem="QFh-tF-NEc" secondAttribute="bottom" constant="14" id="RFL-hP-Hgi"/>
                             <constraint firstItem="QFh-tF-NEc" firstAttribute="top" secondItem="CIR-U0-hRS" secondAttribute="bottom" constant="8" id="Sgl-QN-d70"/>
-                            <constraint firstItem="jfs-H6-wAG" firstAttribute="top" secondItem="g0U-dr-mMb" secondAttribute="bottom" id="XfZ-uE-xzj"/>
                             <constraint firstItem="g0U-dr-mMb" firstAttribute="top" secondItem="EQG-qw-Biv" secondAttribute="bottom" constant="8" id="bGE-LZ-YB5"/>
-                            <constraint firstItem="zul-At-zQ2" firstAttribute="top" secondItem="jfs-H6-wAG" secondAttribute="bottom" constant="10" id="hh2-i5-0Ng"/>
                             <constraint firstItem="EQG-qw-Biv" firstAttribute="top" secondItem="67t-ID-Ymk" secondAttribute="bottom" constant="15" id="jBi-fI-uuM"/>
                             <constraint firstItem="CIR-U0-hRS" firstAttribute="top" secondItem="zul-At-zQ2" secondAttribute="bottom" constant="8" id="pgt-Ur-JLU"/>
                             <constraint firstItem="g0U-dr-mMb" firstAttribute="top" secondItem="EQG-qw-Biv" secondAttribute="bottom" constant="1" id="tlx-yE-v9s"/>
+                            <constraint firstItem="zul-At-zQ2" firstAttribute="top" secondItem="g0U-dr-mMb" secondAttribute="bottom" constant="42" id="xQQ-ff-uiv"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -828,7 +822,7 @@
                         <outlet property="couponDescription" destination="EQG-qw-Biv" id="K5T-TO-A9j"/>
                         <outlet property="couponEndDate" destination="CIR-U0-hRS" id="5Tc-0B-VVM"/>
                         <outlet property="couponImage" destination="67t-ID-Ymk" id="H1m-I9-krS"/>
-                        <outlet property="productDescription" destination="jfs-H6-wAG" id="H9b-UK-mK6"/>
+                        <outlet property="productDescription" destination="g0U-dr-mMb" id="fbL-Cz-Sap"/>
                         <outlet property="productPrice" destination="zul-At-zQ2" id="Gya-xF-h1H"/>
                         <outlet property="typePromotion" destination="QFh-tF-NEc" id="P8e-uh-cpX"/>
                         <segue destination="zAY-fB-LZh" kind="show" identifier="goCouponBook" id="EPZ-vz-ImG"/>
@@ -871,7 +865,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Por favor, escanear el siguiente código QR en la tienda antes de realizar su pago" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skN-wG-MqM">
                                 <rect key="frame" x="20" y="126" width="335" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mD8-It-4Eo">
@@ -913,13 +907,13 @@
         <image name="usersprueba.png" width="559" height="189"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tYY-T7-71n"/>
         <segue reference="FGs-XW-Blu"/>
-        <segue reference="5sh-62-r1d"/>
-        <segue reference="nTP-d8-miX"/>
-        <segue reference="br8-7B-Ehc"/>
-        <segue reference="AfE-HO-rc2"/>
-        <segue reference="RO6-Bk-9Oq"/>
+        <segue reference="tYY-T7-71n"/>
         <segue reference="rw5-3a-lDa"/>
+        <segue reference="RO6-Bk-9Oq"/>
+        <segue reference="nTP-d8-miX"/>
+        <segue reference="EPZ-vz-ImG"/>
+        <segue reference="AfE-HO-rc2"/>
+        <segue reference="5sh-62-r1d"/>
     </inferredMetricsTieBreakers>
 </document>

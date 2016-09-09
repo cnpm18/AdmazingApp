@@ -18,8 +18,8 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Falabella" translatesAutoresizingMaskIntoConstraints="NO" id="1cD-mJ-y2u">
                         <rect key="frame" x="8" y="0.0" width="43" height="43"/>
                         <constraints>
+                            <constraint firstAttribute="width" constant="60" id="X6L-dM-ZSg"/>
                             <constraint firstAttribute="height" constant="43" id="bs2-pu-3Ke"/>
-                            <constraint firstAttribute="width" constant="50" id="oDl-5w-N5X"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="ECf-Gc-mjc">

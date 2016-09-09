@@ -29,10 +29,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Promo1" translatesAutoresizingMaskIntoConstraints="NO" id="BW3-IF-E0Z">
-                        <rect key="frame" x="21" y="51" width="261" height="123"/>
+                        <rect key="frame" x="20" y="45" width="261" height="123"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="218" id="Oyg-ge-8Ur"/>
-                            <constraint firstAttribute="height" constant="108" id="ape-Uy-Dkb"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="218" id="Oyg-ge-8Ur"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="108" id="ape-Uy-Dkb"/>
                         </constraints>
                     </imageView>
                 </subviews>

@@ -12,13 +12,14 @@ class serverConnection: NSObject, NSURLConnectionDelegate, NSXMLParserDelegate {
     
     var mutableData:NSMutableData  = NSMutableData()
     var currentElementName:NSString = ""
-    
-    
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    var log = currentLog(r_userName: "",r_password: "")
     
     
     func setMessage(body: String)->String{
+        loadCurrentLog()
         
-        let soapMessage = "<?xml version='1.0' encoding='utf-8'?><soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:adm='http://admazing.com/'><soapenv:Header/><soapenv:Body>\(body)</soapenv:Body></soapenv:Envelope>"
+        let soapMessage = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:adm=\"http://admazing.com/\"><soapenv:Header><wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" soapenv:mustUnderstand=\"1\"><wsse:UsernameToken xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:Username xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\">\(log.userName)</wsse:Username><wsse:Password xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\">\(log.password)</wsse:Password></wsse:UsernameToken></wsse:Security></soapenv:Header><soapenv:Body>\(body)</soapenv:Body></soapenv:Envelope>"
         
         print(soapMessage)
         return soapMessage
@@ -83,4 +84,20 @@ class serverConnection: NSObject, NSURLConnectionDelegate, NSXMLParserDelegate {
     
     func parser(parser: NSXMLParser, foundCharacters string: String) {
             }
+    
+    func loadCurrentLog(){
+        
+        var logDataEncoded: [NSData] = userDefaults.objectForKey("currentLog") as! [NSData]
+        
+        var unpackedUserName: String = NSKeyedUnarchiver.unarchiveObjectWithData(logDataEncoded[0] as NSData) as! String
+        var unpackedPassword: String = NSKeyedUnarchiver.unarchiveObjectWithData(logDataEncoded[1] as NSData) as! String
+        
+        unpackedUserName=unpackedUserName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        unpackedPassword=unpackedPassword.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        log.setUserName(unpackedUserName)
+        log.setPassword(unpackedPassword)
+        
+        
+    }
 }

@@ -149,10 +149,10 @@ class Stores: UIViewController , UITableViewDelegate, UITableViewDataSource{
     
     func loadCurrentLog(){
         
-        var storeDataEncoded: [NSData] = userDefaults.objectForKey("currentLog") as! [NSData]
+        var logDataEncoded: [NSData] = userDefaults.objectForKey("currentLog") as! [NSData]
         
-        var unpackedUserName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[0] as NSData) as! String
-        var unpackedPassword: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[1] as NSData) as! String
+        var unpackedUserName: String = NSKeyedUnarchiver.unarchiveObjectWithData(logDataEncoded[0] as NSData) as! String
+        var unpackedPassword: String = NSKeyedUnarchiver.unarchiveObjectWithData(logDataEncoded[1] as NSData) as! String
         
         unpackedUserName=unpackedUserName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         unpackedPassword=unpackedPassword.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)

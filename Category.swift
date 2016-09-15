@@ -8,11 +8,15 @@
 
 import UIKit
 
-class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
+import MapKit
+
+class Category: UIViewController , UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, CLLocationManagerDelegate {
 
     
     @IBOutlet weak var welcomeLabel: UITextField!
     @IBOutlet weak var categoriesTable: UITableView!
+    @IBOutlet weak var floorLabel: UILabel!
+    @IBOutlet var storeLocationMapView: MKMapView!
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var store = currentStore(r_currentStoreId: "", r_currentStoreName: "",r_currentStoreIconName: "",r_currentStoreIndex: 0)
     var log = currentLog(r_userName: "",r_password: "")
@@ -27,6 +31,7 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         loadCurrentStore()
         loadCurrentLog()
+        setMapLocation()
         welcomeLabel.text = "Categorías dentro de  \(store.currentStoreName):"
         if sendToServer(){
             //self.fillArray()
@@ -43,6 +48,37 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource {
         else{
             goStores(categoriesTable)
         }
+        
+    }
+    func setMapLocation(){
+        
+        let storeLocation = CLLocationCoordinate2DMake(-16.391053, -71.550520)
+        let storePin = MKPointAnnotation()
+        storePin.coordinate = storeLocation
+        storePin.title = "The Store"
+        storeLocationMapView.addAnnotation(storePin)
+        
+        let latitude:CLLocationDegrees = -16.390553
+        
+        let longitude:CLLocationDegrees = -71.550312
+        
+        let latDelta:CLLocationDegrees = 0.005
+        
+        let lonDelta:CLLocationDegrees = 0.005
+        
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+        
+        let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        
+        storeLocationMapView.setRegion(region, animated: false)
+        
+        storeLocationMapView.showsUserLocation = true
+        storeLocationMapView.mapType = MKMapType(rawValue: 0)!
+        storeLocationMapView.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
+        
+        
         
     }
 

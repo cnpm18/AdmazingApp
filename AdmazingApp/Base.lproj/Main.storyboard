@@ -163,20 +163,20 @@
                                 <rect key="frame" x="323" y="29" width="45" height="45"/>
                                 <state key="normal" image="settings.png"/>
                                 <connections>
-                                    <action selector="goSettings:" destination="Xdv-7n-9SO" eventType="touchUpInside" id="1nk-gl-BOc"/>
+                                    <segue destination="qN5-X9-2vP" kind="show" id="ckL-ho-MIW"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoadmazingtrans.png" translatesAutoresizingMaskIntoConstraints="NO" id="GSP-pd-Ryc">
                                 <rect key="frame" x="110" y="27" width="154" height="50"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Categorías dentro de &quot;&quot;:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r5b-xA-R6u">
-                                <rect key="frame" x="0.0" y="82" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="283" width="375" height="30"/>
                                 <color key="textColor" red="0.1647058824" green="0.71764705880000002" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cVD-qX-XnP">
-                                <rect key="frame" x="0.0" y="112" width="375" height="555"/>
+                                <rect key="frame" x="0.0" y="312" width="375" height="355"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ccell" rowHeight="83" id="Dn7-Cc-Ss7">
@@ -200,6 +200,21 @@
                                     <action selector="goStores:" destination="Xdv-7n-9SO" eventType="touchUpInside" id="qXX-fV-Yrg"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yxA-Lb-7uK">
+                                <rect key="frame" x="0.0" y="117" width="375" height="165"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ubicación de esta tienda:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Y6-cC-9Ki">
+                                <rect key="frame" x="8" y="92" width="194" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Piso: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rik-5T-dHa">
+                                <rect key="frame" x="297" y="92" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -207,6 +222,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="categoriesTable" destination="cVD-qX-XnP" id="zi3-lv-Gql"/>
+                        <outlet property="floorLabel" destination="rik-5T-dHa" id="ucc-8d-KyM"/>
+                        <outlet property="storeLocationMapView" destination="yxA-Lb-7uK" id="sed-ym-CaX"/>
                         <outlet property="welcomeLabel" destination="r5b-xA-R6u" id="EYo-Yl-1r0"/>
                         <segue destination="3VC-fg-oEF" kind="show" identifier="goStores" id="e5F-Ph-fRR"/>
                         <segue destination="S7V-LG-QFZ" kind="show" identifier="goCoupons" id="lZV-oe-2Eh"/>
@@ -243,6 +260,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uam-yN-wzb">
                                 <rect key="frame" x="325" y="29" width="45" height="45"/>
                                 <state key="normal" backgroundImage="settings.png"/>
+                                <connections>
+                                    <segue destination="qN5-X9-2vP" kind="show" id="EAa-xq-i2a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7N-ii-2dA">
                                 <rect key="frame" x="7" y="29" width="45" height="45"/>
@@ -305,6 +325,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gs8-Av-eaz">
                                 <rect key="frame" x="325" y="29" width="45" height="45"/>
                                 <state key="normal" backgroundImage="settings.png"/>
+                                <connections>
+                                    <segue destination="qN5-X9-2vP" kind="show" id="CbZ-9S-Mel"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISC-Yi-Pra">
                                 <rect key="frame" x="7" y="29" width="45" height="45"/>
@@ -318,13 +341,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="335" id="UK0-1D-rh5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Valido hasta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJS-x8-vvT">
-                                <rect key="frame" x="20" y="542" width="98" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -343,7 +360,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Precio Original: S/." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ss2-Ca-Y8Y">
                                 <rect key="frame" x="20" y="513" width="141" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -372,6 +389,12 @@
                                     <segue destination="zAY-fB-LZh" kind="show" id="o0U-E9-Fq6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Válido hasta: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJS-x8-vvT">
+                                <rect key="frame" x="20" y="542" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -426,7 +449,7 @@
                                 <rect key="frame" x="323" y="29" width="45" height="45"/>
                                 <state key="normal" image="settings.png"/>
                                 <connections>
-                                    <action selector="goSettings:" destination="3VC-fg-oEF" eventType="touchUpInside" id="cgy-9y-Egu"/>
+                                    <segue destination="qN5-X9-2vP" kind="show" id="8zK-Pd-YaE"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoadmazingtrans.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jno-NX-B8g">
@@ -568,7 +591,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7a-G0-0pE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1863.5" y="-680.5"/>
+            <point key="canvasLocation" x="2039.5" y="-616.5"/>
         </scene>
         <!--Preferences Manager-->
         <scene sceneID="hX1-KH-rjY">
@@ -595,6 +618,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBf-me-qds">
                                 <rect key="frame" x="323" y="29" width="45" height="45"/>
                                 <state key="normal" image="settings.png"/>
+                                <connections>
+                                    <segue destination="qN5-X9-2vP" kind="show" id="big-Id-8YG"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoadmazingtrans.png" translatesAutoresizingMaskIntoConstraints="NO" id="H7x-f1-ahd">
                                 <rect key="frame" x="110" y="27" width="154" height="50"/>
@@ -676,6 +702,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcd-PD-43k">
                                 <rect key="frame" x="325" y="29" width="45" height="45"/>
                                 <state key="normal" backgroundImage="settings.png"/>
+                                <connections>
+                                    <segue destination="qN5-X9-2vP" kind="show" id="sSt-Wx-DDx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIj-zE-ZZp">
                                 <rect key="frame" x="7" y="29" width="45" height="45"/>
@@ -738,6 +767,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNU-nd-3P4">
                                 <rect key="frame" x="325" y="29" width="45" height="45"/>
                                 <state key="normal" backgroundImage="settings.png"/>
+                                <connections>
+                                    <segue destination="qN5-X9-2vP" kind="show" id="sdb-Mz-8Q2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoN-oz-9Qi">
                                 <rect key="frame" x="7" y="29" width="45" height="45"/>
@@ -751,13 +783,13 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="335" id="pUA-72-eh5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Valido hasta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIR-U0-hRS">
-                                <rect key="frame" x="20" y="509" width="98" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Válido hasta: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIR-U0-hRS">
+                                <rect key="frame" x="20" y="509" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -801,7 +833,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Precio Original: S/." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zul-At-zQ2">
                                 <rect key="frame" x="20" y="472" width="141" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -907,13 +939,13 @@
         <image name="usersprueba.png" width="559" height="189"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ckL-ho-MIW"/>
+        <segue reference="8B8-qQ-ckN"/>
+        <segue reference="e5F-Ph-fRR"/>
+        <segue reference="Vdb-88-1Aw"/>
+        <segue reference="lZV-oe-2Eh"/>
+        <segue reference="o0U-E9-Fq6"/>
+        <segue reference="iSH-eq-Zcn"/>
         <segue reference="FGs-XW-Blu"/>
-        <segue reference="tYY-T7-71n"/>
-        <segue reference="rw5-3a-lDa"/>
-        <segue reference="RO6-Bk-9Oq"/>
-        <segue reference="nTP-d8-miX"/>
-        <segue reference="EPZ-vz-ImG"/>
-        <segue reference="AfE-HO-rc2"/>
-        <segue reference="5sh-62-r1d"/>
     </inferredMetricsTieBreakers>
 </document>

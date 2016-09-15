@@ -20,6 +20,10 @@ class storesConnection: serverConnection {
     var phoneNumber: String = ""
     var idCommercialArea: String = ""
     var imageStore: String = ""
+    var latitude: String = ""
+    var longitude: String = ""
+    var floor: String = ""
+    
     
     
     
@@ -59,7 +63,22 @@ class storesConnection: serverConnection {
                 
             case "imageStore":
                 self.imageStore = self.imageStore + string
+                
+                
+            case "level":
+                self.floor = self.floor + string
+                
+                
+            case "longitude":
+                self.longitude = self.longitude + string
+                
+                
+            case "latitude":
+                self.latitude = self.latitude + string
                 fillObject()
+                
+                
+            
                 
             
             default: break
@@ -71,15 +90,19 @@ class storesConnection: serverConnection {
     
     func fillObject(){
         
-        stores.append(storeModel(r_idStore: idStore, r_idCommercialArea: idCommercialArea, r_nameStore: nameStore, r_email: email, r_phoneNumber: phoneNumber, r_imageStore: imageStore))
-       
+        stores.append(storeModel(r_idStore: idStore, r_idCommercialArea: idCommercialArea, r_nameStore: nameStore, r_email: email, r_phoneNumber: phoneNumber, r_imageStore: imageStore,  r_longitude: longitude, r_latitude: latitude, r_floor: floor))
         
+       
+        print(stores)
         self.idStore=""
         self.nameStore=""
         self.email=""
         self.phoneNumber=""
         self.idCommercialArea=""
         self.imageStore=""
+        self.latitude=""
+        self.longitude=""
+        self.floor=""
         
     }
     
@@ -95,7 +118,7 @@ class storesConnection: serverConnection {
         
     }
     func getResult()->[storeModel]{
-        
+        print(stores)
         return self.stores
     }
     

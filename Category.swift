@@ -18,7 +18,7 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource, M
     @IBOutlet weak var floorLabel: UILabel!
     @IBOutlet var storeLocationMapView: MKMapView!
     let userDefaults = NSUserDefaults.standardUserDefaults()
-    var store = currentStore(r_currentStoreId: "", r_currentStoreName: "",r_currentStoreIconName: "",r_currentStoreIndex: 0)
+    var store = currentStore(r_currentStoreId: "", r_currentStoreName: "", r_currentStoreIconName: "", r_currentStoreLatitude: "", r_currentStoreLongitude: "", r_currentStoreFloor: "", r_currentStoreIndex: 0)
     var log = currentLog(r_userName: "",r_password: "")
     var category = currentCategory(r_currentCategoryID: "", r_currentCategoryName: "",r_currentCategoryIconName: "",r_currentCategoryIndex: 0)
     @IBAction func goStores(sender: AnyObject) {
@@ -31,7 +31,7 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource, M
         super.viewDidLoad()
         loadCurrentStore()
         loadCurrentLog()
-        setMapLocation()
+        
         welcomeLabel.text = "Categorías dentro de  \(store.currentStoreName):"
         if sendToServer(){
             //self.fillArray()
@@ -40,8 +40,9 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource, M
             self.categoriesTable.registerNib(nib, forCellReuseIdentifier: "ccell")
             
             loadCurrentStore()
+            floorLabel.text=floorLabel.text!+store.currentStoreFloor
             //currentStore.removeAtIndex(currentStore.endIndex.predecessor())
-            
+            setMapLocation()
             
             // Do any additional setup after loading the view.
         }
@@ -52,15 +53,35 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource, M
     }
     func setMapLocation(){
         
-        let storeLocation = CLLocationCoordinate2DMake(-16.391053, -71.550520)
+        let longitude: CLLocationDegrees
+        let latitude: CLLocationDegrees
+        let storeLocation: CLLocationCoordinate2D
+        //let storeLocation = CLLocationCoordinate2DMake(-16.391053, -71.550520)
+        if store.currentStoreLongitude == "" || store.currentStoreLatitude == "" {
+             storeLocation = CLLocationCoordinate2DMake(-16.391053, -71.550520)
+             latitude = -16.390553
+             longitude = -71.550312
+        }
+        else{
+             storeLocation = CLLocationCoordinate2DMake(Double(store.currentStoreLatitude)!, Double(store.currentStoreLongitude)!)
+            
+            
+            //let latitude:CLLocationDegrees = -16.390553
+            
+            //let longitude:CLLocationDegrees = -71.550312
+            print("--\(store.currentStoreLongitude)")
+            print("-->\(store.currentStoreLatitude)")
+            
+             latitude = Double(store.currentStoreLatitude)!
+            
+             longitude = Double(store.currentStoreLongitude)!
+
+            
+        }
         let storePin = MKPointAnnotation()
         storePin.coordinate = storeLocation
-        storePin.title = "The Store"
+        storePin.title = store.currentStoreName
         storeLocationMapView.addAnnotation(storePin)
-        
-        let latitude:CLLocationDegrees = -16.390553
-        
-        let longitude:CLLocationDegrees = -71.550312
         
         let latDelta:CLLocationDegrees = 0.005
         
@@ -105,17 +126,26 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource, M
         var unpackedId: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[0] as NSData) as! String
         var unpackedName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[1] as NSData) as! String
         var unpackediconName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[2] as NSData) as! String
-        var unpackedindex: Int = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[3] as NSData) as! Int
+        var unpackedLongitude: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[3] as NSData) as! String
+        var unpackedLatitude: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[4] as NSData) as! String
+        var unpackedFloor: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[5] as NSData) as! String
+        var unpackedindex: Int = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[6] as NSData) as! Int
         
         unpackedId=unpackedId.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
 
         unpackedName=unpackedName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         unpackediconName=unpackediconName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        unpackedLongitude=unpackedLongitude.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        unpackedLatitude=unpackedLatitude.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        unpackedFloor=unpackedFloor.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         
         store.setCurrentStoreId(unpackedId)
         store.setCurrentStoreName(unpackedName)
         store.setCurrentStoreIconName(unpackediconName)
         store.setCurrentStoreIndex(unpackedindex)
+        store.currentStoreLatitude = unpackedLatitude
+        store.currentStoreLongitude = unpackedLongitude
         
     }
     func loadCurrentLog(){

@@ -939,12 +939,12 @@
         <image name="usersprueba.png" width="559" height="189"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ckL-ho-MIW"/>
         <segue reference="8B8-qQ-ckN"/>
         <segue reference="e5F-Ph-fRR"/>
-        <segue reference="Vdb-88-1Aw"/>
         <segue reference="lZV-oe-2Eh"/>
         <segue reference="o0U-E9-Fq6"/>
+        <segue reference="sSt-Wx-DDx"/>
+        <segue reference="nTP-d8-miX"/>
         <segue reference="iSH-eq-Zcn"/>
         <segue reference="FGs-XW-Blu"/>
     </inferredMetricsTieBreakers>

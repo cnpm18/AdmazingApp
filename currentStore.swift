@@ -11,13 +11,19 @@ class currentStore{
     var currentStoreId: String
     var  currentStoreName: String
     var currentStoreIconName: String
+    var currentStoreLatitude: String
+    var currentStoreLongitude: String
+    var currentStoreFloor: String
     var currentStoreIndex: Int
-    init(r_currentStoreId: String, r_currentStoreName: String, r_currentStoreIconName: String,r_currentStoreIndex: Int )
+    init(r_currentStoreId: String, r_currentStoreName: String, r_currentStoreIconName: String,r_currentStoreLatitude:String,r_currentStoreLongitude:String,r_currentStoreFloor:String,r_currentStoreIndex: Int )
     {
         self.currentStoreId = r_currentStoreId
         self.currentStoreName = r_currentStoreName
         self.currentStoreIconName = r_currentStoreIconName
         self.currentStoreIndex = r_currentStoreIndex
+        self.currentStoreLatitude = r_currentStoreLatitude
+        self.currentStoreLongitude = r_currentStoreLongitude
+        self.currentStoreFloor = r_currentStoreFloor
     }
     
     
@@ -56,6 +62,11 @@ class currentStore{
         self.currentStoreName = aDecoder.decodeObjectForKey("currentStoreName") as! String
         self.currentStoreIconName = aDecoder.decodeObjectForKey("currentStoreIconName") as! String
         self.currentStoreIndex = aDecoder.decodeObjectForKey("currentStoreIndex") as! Int
+        
+        
+        self.currentStoreLatitude = aDecoder.decodeObjectForKey("currentStoreLatitude") as! String
+        self.currentStoreLongitude = aDecoder.decodeObjectForKey("currentStoreLongitude") as! String
+        self.currentStoreFloor = aDecoder.decodeObjectForKey("currentStoreFloor") as! String
     }
     
     func initWithCoder(aDecoder: NSCoder) -> currentStore {
@@ -63,6 +74,10 @@ class currentStore{
         self.currentStoreName = aDecoder.decodeObjectForKey("currentStoreName") as! String
         self.currentStoreIconName = aDecoder.decodeObjectForKey("currentStoreIconName") as! String
         self.currentStoreIndex = aDecoder.decodeObjectForKey("currentStoreIndex") as! Int
+        
+        self.currentStoreLatitude = aDecoder.decodeObjectForKey("currentStoreLatitude") as! String
+        self.currentStoreLongitude = aDecoder.decodeObjectForKey("currentStoreLongitude") as! String
+        self.currentStoreFloor = aDecoder.decodeObjectForKey("currentStoreFloor") as! String
         return self
     }
     
@@ -71,6 +86,10 @@ class currentStore{
         aCoder.encodeObject(currentStoreName, forKey: "currentStoreName")
         aCoder.encodeObject(currentStoreIconName, forKey: "currentStoreIconName")
         aCoder.encodeObject(currentStoreIndex, forKey: "currentStoreIndex")
+        
+        aCoder.encodeObject(currentStoreLatitude, forKey: "currentStoreLatitude")
+        aCoder.encodeObject(currentStoreLongitude, forKey: "currentStoreLongitude")
+        aCoder.encodeObject(currentStoreFloor, forKey: "currentStoreFloor")
     }
 
 

@@ -18,7 +18,8 @@ class Coupons: UIViewController , UITableViewDelegate, UITableViewDataSource {
     var coupon = currentCoupon()
     var product = currentProduct()
     var category = currentCategory(r_currentCategoryID: "", r_currentCategoryName: "",r_currentCategoryIconName: "",r_currentCategoryIndex: 0)
-    var store = currentStore(r_currentStoreId: "", r_currentStoreName: "",r_currentStoreIconName: "",r_currentStoreIndex: 0)
+    
+    var store = currentStore(r_currentStoreId: "", r_currentStoreName: "", r_currentStoreIconName: "", r_currentStoreLatitude: "", r_currentStoreLongitude: "", r_currentStoreFloor: "", r_currentStoreIndex: 0)
     var confirmation = false
     var  alert = UIAlertController()
     override func viewDidLoad() {
@@ -98,20 +99,28 @@ class Coupons: UIViewController , UITableViewDelegate, UITableViewDataSource {
         var unpackedId: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[0] as NSData) as! String
         var unpackedName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[1] as NSData) as! String
         var unpackediconName: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[2] as NSData) as! String
-        var unpackedindex: Int = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[3] as NSData) as! Int
+        var unpackedLongitude: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[3] as NSData) as! String
+        var unpackedLatitude: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[4] as NSData) as! String
+        var unpackedFloor: String = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[5] as NSData) as! String
+        var unpackedindex: Int = NSKeyedUnarchiver.unarchiveObjectWithData(storeDataEncoded[6] as NSData) as! Int
         
         unpackedId=unpackedId.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         
         unpackedName=unpackedName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         unpackediconName=unpackediconName.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        unpackedLongitude=unpackedLongitude.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        unpackedLatitude=unpackedLatitude.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        unpackedFloor=unpackedFloor.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         
         store.setCurrentStoreId(unpackedId)
         store.setCurrentStoreName(unpackedName)
         store.setCurrentStoreIconName(unpackediconName)
         store.setCurrentStoreIndex(unpackedindex)
+        store.currentStoreLatitude = unpackedLatitude
+        store.currentStoreLongitude = unpackedLongitude
         
     }
-
 
     func tableView(couponsTable: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.tableData.count

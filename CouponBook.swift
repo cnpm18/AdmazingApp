@@ -7,11 +7,17 @@
 //
 
 import UIKit
-class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource {
+
+import MapKit
+class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, CLLocationManagerDelegate {
     
     var tableData = [promotionModel]()
     var productData = [productModel]()
     @IBOutlet weak var couponsTable: UITableView!
+    @IBOutlet weak var floorLabel: UILabel!
+    @IBOutlet var storeLocationMapView: MKMapView!
+    //var store = currentStore(r_currentStoreId: "", r_currentStoreName: "", r_currentStoreIconName: "", r_currentStoreLatitude: "", r_currentStoreLongitude: "", r_currentStoreFloor: "", r_currentStoreIndex: 0)
+    var store = storeModel(r_idStore: "", r_idCommercialArea: "", r_nameStore: "", r_email: "", r_phoneNumber: "", r_imageStore: "", r_longitude: "", r_latitude: "", r_floor: "")
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var log = currentLog(r_userName: "",r_password: "")
@@ -20,13 +26,14 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource 
     var product = currentProduct()
     var confirmation = false
     var  alert = UIAlertController()
+    var currentCell = 100
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCurrentLog()
         confirmation=sendToServer()
         fillTable(confirmation)
         
-        
+        currentCell = 100
         
         //currentStore.removeAtIndex(currentStore.endIndex.predecessor())
         
@@ -123,18 +130,86 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource 
     }
     func tableView(couponsTable: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        fillCurrentCoupon(indexPath.row)
-        saveCurrentCoupon()
-        performSegueWithIdentifier("goCouponShow", sender: self)
         
-        //NSUserDefaults.standardUserDefaults().setObject(tableData[indexPath.row], forKey: "currentCategory")
-        //performSegueWithIdentifier("goCoupons", sender: self)
+        if currentCell == indexPath.row{
+            fillCurrentCoupon(indexPath.row)
+            saveCurrentCoupon()
+            performSegueWithIdentifier("goCouponShow", sender: self)
+            
+            
+        }
+        else{
+            fillCurrentCoupon(indexPath.row)
+            currentCell = indexPath.row
+            getStoreInformation()
+            setMapLocation()
+            
+        }
+        
         
         
         
     }
     
+    func setMapLocation(){
+        
+        let longitude: CLLocationDegrees
+        let latitude: CLLocationDegrees
+        let storeLocation: CLLocationCoordinate2D
+        //let storeLocation = CLLocationCoordinate2DMake(-16.391053, -71.550520)
+        if store.longitude == "" || store.latitude == "" {
+            storeLocation = CLLocationCoordinate2DMake(-16.391053, -71.550520)
+            latitude = -16.390553
+            longitude = -71.550312
+        }
+        else{
+            storeLocation = CLLocationCoordinate2DMake(Double(store.latitude)!, Double(store.longitude)!)
+            
+            
+            //let latitude:CLLocationDegrees = -16.390553
+            
+            //let longitude:CLLocationDegrees = -71.550312
+            print("--\(store.longitude)")
+            print("-->\(store.latitude)")
+            
+            latitude = Double(store.latitude)!
+            
+            longitude = Double(store.longitude)!
+            
+            
+        }
+        let storePin = MKPointAnnotation()
+        storePin.coordinate = storeLocation
+        storePin.title = store.nameStore
+        storeLocationMapView.addAnnotation(storePin)
+        
+        let latDelta:CLLocationDegrees = 0.005
+        
+        let lonDelta:CLLocationDegrees = 0.005
+        
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+        
+        let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        
+        storeLocationMapView.setRegion(region, animated: false)
+        
+        storeLocationMapView.showsUserLocation = true
+        storeLocationMapView.mapType = MKMapType(rawValue: 0)!
+        storeLocationMapView.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
+        
+        
+        
+    }
     
+    func getStoreInformation(){
+        var connection = storesByIdConnection()
+        connection.setr_idStore(coupon.idStore)
+        connection.getResponse()
+        store=connection.getResult()
+        
+    }
     
     func sendToServer()->Bool{
         

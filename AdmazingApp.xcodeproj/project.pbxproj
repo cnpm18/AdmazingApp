@@ -116,6 +116,7 @@
 		F99497371D18A7D90007FE29 /* usersprueba.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB731D187B3F0096937A /* usersprueba.png */; };
 		F99497391D18A9770007FE29 /* GPSWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99497381D18A9770007FE29 /* GPSWatch.swift */; };
 		F9A296F21D2D76C200603AE4 /* storesConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A296F11D2D76C200603AE4 /* storesConnection.swift */; };
+		F9BB19F91D8B70030043C8AF /* storeByIdConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BB19F81D8B70030043C8AF /* storeByIdConnection.swift */; };
 		F9BCC9291D2F343800D41030 /* couponBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCC9281D2F343800D41030 /* couponBookModel.swift */; };
 		F9BCC92D1D2F399E00D41030 /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCC92C1D2F399E00D41030 /* userModel.swift */; };
 		F9BCC92F1D2F39AC00D41030 /* storeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCC92E1D2F39AC00D41030 /* storeModel.swift */; };
@@ -264,6 +265,7 @@
 		F994971C1D18A40F0007FE29 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		F99497381D18A9770007FE29 /* GPSWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSWatch.swift; sourceTree = "<group>"; };
 		F9A296F11D2D76C200603AE4 /* storesConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storesConnection.swift; sourceTree = "<group>"; };
+		F9BB19F81D8B70030043C8AF /* storeByIdConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storeByIdConnection.swift; sourceTree = "<group>"; };
 		F9BCC9281D2F343800D41030 /* couponBookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = couponBookModel.swift; sourceTree = "<group>"; };
 		F9BCC92C1D2F399E00D41030 /* userModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
 		F9BCC92E1D2F39AC00D41030 /* storeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storeModel.swift; sourceTree = "<group>"; };
@@ -481,6 +483,7 @@
 				F9D08C611D7DDFA600F9C773 /* couponBookRequestConnection.swift */,
 				F9E306D61D7FA1680034E59E /* deleteCouponConnection.swift */,
 				F9190E5A1D81EE6A00816DAF /* savePromotionUseConnection.swift */,
+				F9BB19F81D8B70030043C8AF /* storeByIdConnection.swift */,
 			);
 			name = Connection;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 				F9145AA61D7B46F90038CA06 /* getAllPreferedCategoriesConnection.swift in Sources */,
 				F96DEF991D7650CE00763C8F /* categoryPreferencesCell.swift in Sources */,
 				F98BDB821D74B1080052A6B4 /* Settings.swift in Sources */,
+				F9BB19F91D8B70030043C8AF /* storeByIdConnection.swift in Sources */,
 				F91FAB3A1D18785D0096937A /* ViewController.swift in Sources */,
 				F9090BF71D415FC7002A4F3A /* promotionModel.swift in Sources */,
 				F9D08C601D7DD66100F9C773 /* CouponUse.swift in Sources */,

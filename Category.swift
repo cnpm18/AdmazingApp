@@ -75,6 +75,8 @@ class Category: UIViewController , UITableViewDelegate, UITableViewDataSource, M
              latitude = Double(store.currentStoreLatitude)!
             
              longitude = Double(store.currentStoreLongitude)!
+            
+            
 
             
         }

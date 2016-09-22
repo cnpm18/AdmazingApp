@@ -200,7 +200,7 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource,
         storeLocationMapView.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
         
         storeLocationMapView.regionThatFits(region)
-        
+        self.floorLabel.text =  "Piso: " + store.floor
     }
     
     func getStoreInformation(){
@@ -208,6 +208,7 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource,
         connection.setr_idStore(coupon.idStore)
         connection.getResponse()
         store=connection.getResult()
+        
         
     }
     

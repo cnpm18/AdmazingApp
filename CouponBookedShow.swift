@@ -8,13 +8,15 @@
 
 import Foundation
 import UIKit
-
+import Social
 class CouponBookedShow: UIViewController  {
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var coupon = currentCoupon()
     var product = currentProduct()
+    var closeMall=""
     
     var log = currentLog(r_userName: "",r_password: "")
+    var store = storeModel(r_idStore: "", r_idCommercialArea: "", r_nameStore: "", r_email: "", r_phoneNumber: "", r_imageStore: "", r_longitude: "", r_latitude: "", r_floor: "")
     @IBOutlet weak var couponImage: UIImageView!
     @IBOutlet weak var couponDescription: UILabel!
     @IBOutlet weak var productDescription: UILabel!
@@ -40,6 +42,8 @@ class CouponBookedShow: UIViewController  {
         productPrice.text=productPrice.text!+product.price
         couponEndDate.text=couponEndDate.text!+coupon.endDate
         typePromotion.text=coupon.idTypePromotion
+        getStoreInformation()
+        closeMall=NSUserDefaults.standardUserDefaults().stringForKey("closeMall")!
         
         
     }
@@ -167,5 +171,46 @@ class CouponBookedShow: UIViewController  {
         response = connection.getResult()
         performSegueWithIdentifier("goCouponBook", sender: self)
     }
+    func getStoreInformation(){
+        var connection = storesByIdConnection()
+        connection.setr_idStore(coupon.idStore)
+        connection.getResponse()
+        store=connection.getResult()
+        
+        
+    }
     
+    @IBAction func shareCouponFacebook(sender: AnyObject) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
+            var facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            facebookSheet.setInitialText("Les invito a usar esta promoción en la aplicación Admazing! \n\n \(coupon.promodescription)  \n Disponible en la tienda \(store.nameStore) del centro comercial \(closeMall) \n Precio Original: S/.\(product.price)  \n Valido hasta: \(coupon.endDate) ")
+            facebookSheet.addImage(self.couponImage.image)
+            //-->store name and commercial area left
+            self.presentViewController(facebookSheet, animated: true, completion: nil)
+        } else {
+            var alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func shareCouponTwitter(sender: AnyObject) {
+        
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            
+            var tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            tweetShare.setInitialText("Les invito a usar esta promoción en la aplicación Admazing! \n\n \(coupon.promodescription)")
+            tweetShare.addImage(self.couponImage.image)
+            
+            self.presentViewController(tweetShare, animated: true, completion: nil)
+            
+        } else {
+            
+            var alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to tweet.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
 }

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -85,22 +85,25 @@
                                     <segue destination="3VC-fg-oEF" kind="show" id="5sh-62-r1d"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nH5-u7-KQ6">
-                                <rect key="frame" x="-18" y="177" width="410" height="164"/>
-                                <state key="normal" title="Button" image="couponsprueba.png"/>
-                                <connections>
-                                    <segue destination="zAY-fB-LZh" kind="show" id="Shy-tN-7Sb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejg-21-dwS">
-                                <rect key="frame" x="-18" y="341" width="410" height="164"/>
-                                <state key="normal" title="Button" image="usersprueba.png"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYC-XT-4r1">
-                                <rect key="frame" x="-18" y="503" width="410" height="164"/>
+                                <rect key="frame" x="-11" y="503" width="410" height="164"/>
                                 <state key="normal" title="Button" image="settingsprueba.png"/>
                                 <connections>
                                     <segue destination="qN5-X9-2vP" kind="show" id="eQ3-pr-Jpo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejg-21-dwS">
+                                <rect key="frame" x="-27" y="341" width="403" height="164"/>
+                                <state key="normal" title="Button" image="Users"/>
+                                <connections>
+                                    <segue destination="e5w-2x-nzH" kind="show" id="8hj-xf-590"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nH5-u7-KQ6">
+                                <rect key="frame" x="-27" y="177" width="410" height="164"/>
+                                <state key="normal" title="Button" image="Coupons"/>
+                                <connections>
+                                    <segue destination="zAY-fB-LZh" kind="show" id="Shy-tN-7Sb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3y-Ee-GHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796.5" y="189.5"/>
+            <point key="canvasLocation" x="780.5" y="121.5"/>
         </scene>
         <!--Title-->
         <scene sceneID="AEQ-r8-Khc">
@@ -210,7 +213,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Piso: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rik-5T-dHa">
-                                <rect key="frame" x="297" y="92" width="49" height="21"/>
+                                <rect key="frame" x="282" y="92" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -741,8 +744,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Piso: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdv-9L-mHm">
-                                <rect key="frame" x="296" y="92" width="49" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Piso: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdv-9L-mHm">
+                                <rect key="frame" x="287" y="91" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -833,7 +836,8 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G01-sk-sNW">
-                                <rect key="frame" x="124" y="623" width="121" height="30"/>
+                                <rect key="frame" x="218" y="585" width="137" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Borrar Promoción">
                                     <color key="titleColor" red="1" green="0.44188198070000001" blue="0.43635973389999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -842,7 +846,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afn-pg-VxG">
-                                <rect key="frame" x="121" y="591" width="126" height="30"/>
+                                <rect key="frame" x="16" y="585" width="149" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Utilizar Promoción"/>
                                 <connections>
                                     <action selector="useCoupon:" destination="TUe-gM-wU1" eventType="touchUpInside" id="Kal-L2-m6E"/>
@@ -854,6 +859,20 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcz-YE-WdW">
+                                <rect key="frame" x="64" y="629" width="80" height="23"/>
+                                <state key="normal" backgroundImage="shareFacebook"/>
+                                <connections>
+                                    <action selector="shareCouponFacebook:" destination="TUe-gM-wU1" eventType="touchUpInside" id="Uwb-Zd-tEU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Res-x7-apI">
+                                <rect key="frame" x="227" y="618" width="97" height="44"/>
+                                <state key="normal" image="shareTwitter"/>
+                                <connections>
+                                    <action selector="shareCouponTwitter:" destination="TUe-gM-wU1" eventType="touchUpInside" id="tgc-sh-QKv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -880,7 +899,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rtv-Ej-HO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796.5" y="1761.5"/>
+            <point key="canvasLocation" x="832.5" y="1782.5"/>
         </scene>
         <!--Coupon Use-->
         <scene sceneID="vNg-GI-W4f">
@@ -939,30 +958,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5Y-ec-9cU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796.5" y="2550.5"/>
+            <point key="canvasLocation" x="832.5" y="2552.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Coupons" width="558" height="189"/>
         <image name="Promo1" width="843" height="403"/>
+        <image name="Users" width="559" height="189"/>
         <image name="back.png" width="142" height="142"/>
         <image name="background.png" width="900" height="506"/>
-        <image name="couponsprueba.png" width="558" height="189"/>
         <image name="gps_green.png" width="621" height="938"/>
         <image name="home.png" width="142" height="142"/>
         <image name="logoadmazing.png" width="522" height="181"/>
         <image name="logoadmazingtrans.png" width="1747" height="768"/>
         <image name="settings.png" width="142" height="142"/>
         <image name="settingsprueba.png" width="559" height="189"/>
-        <image name="usersprueba.png" width="559" height="189"/>
+        <image name="shareFacebook" width="300" height="73"/>
+        <image name="shareTwitter" width="404" height="198"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8B8-qQ-ckN"/>
-        <segue reference="e5F-Ph-fRR"/>
         <segue reference="lZV-oe-2Eh"/>
-        <segue reference="o0U-E9-Fq6"/>
-        <segue reference="sSt-Wx-DDx"/>
+        <segue reference="8B8-qQ-ckN"/>
+        <segue reference="5sh-62-r1d"/>
         <segue reference="nTP-d8-miX"/>
-        <segue reference="iSH-eq-Zcn"/>
-        <segue reference="FGs-XW-Blu"/>
+        <segue reference="Shy-tN-7Sb"/>
+        <segue reference="8hj-xf-590"/>
+        <segue reference="eQ3-pr-Jpo"/>
+        <segue reference="AfE-HO-rc2"/>
     </inferredMetricsTieBreakers>
 </document>

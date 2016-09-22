@@ -130,7 +130,7 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource,
     }
     func tableView(couponsTable: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        
+        storeLocationMapView.removeAnnotations(storeLocationMapView.annotations)
         if currentCell == indexPath.row{
             fillCurrentCoupon(indexPath.row)
             saveCurrentCoupon()
@@ -199,7 +199,7 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource,
         storeLocationMapView.mapType = MKMapType(rawValue: 0)!
         storeLocationMapView.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
         
-        
+        storeLocationMapView.regionThatFits(region)
         
     }
     

@@ -209,13 +209,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ubicación de esta tienda:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Y6-cC-9Ki">
                                 <rect key="frame" x="8" y="92" width="194" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Piso: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rik-5T-dHa">
                                 <rect key="frame" x="282" y="92" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -495,7 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5GO-Kz-5Xm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1309.5" y="522.5"/>
+            <point key="canvasLocation" x="1295.5" y="126.5"/>
         </scene>
         <!--Settings-->
         <scene sceneID="qo9-UJ-fef">
@@ -528,9 +528,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wxq-J8-8Cw">
-                                <rect key="frame" x="299" y="204" width="51" height="31"/>
-                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bss-oZ-0dt">
                                 <rect key="frame" x="9" y="386" width="158" height="30"/>
                                 <state key="normal" title="Actualizar Preferencias"/>
@@ -562,7 +559,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre de Usuario:" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubn-gr-3UK">
-                                <rect key="frame" x="9" y="127" width="271" height="20"/>
+                                <rect key="frame" x="9" y="127" width="360" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -581,20 +578,26 @@
                                     <segue destination="e5w-2x-nzH" kind="show" id="FGs-XW-Blu"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wxq-J8-8Cw">
+                                <rect key="frame" x="299" y="204" width="51" height="31"/>
+                                <connections>
+                                    <action selector="useAlerts:" destination="qN5-X9-2vP" eventType="valueChanged" id="rqG-AT-Heh"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="tOU-xU-JmP"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="switchAletsView" destination="wxq-J8-8Cw" id="bAr-AD-PgW"/>
+                        <outlet property="switchAletsView" destination="wxq-J8-8Cw" id="TS3-ES-oS2"/>
                         <outlet property="switchPreferencesView" destination="jn0-hy-BCu" id="jRB-vg-EDX"/>
                         <outlet property="userTextView" destination="Ubn-gr-3UK" id="hS1-MI-co3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7a-G0-0pE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2039.5" y="-616.5"/>
+            <point key="canvasLocation" x="2033.5" y="-626.5"/>
         </scene>
         <!--Preferences Manager-->
         <scene sceneID="hX1-KH-rjY">
@@ -741,13 +744,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ubicación de esta tienda:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LL2-Ay-UQM">
                                 <rect key="frame" x="7" y="92" width="194" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Piso: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdv-9L-mHm">
                                 <rect key="frame" x="287" y="91" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -977,13 +980,13 @@
         <image name="shareTwitter" width="404" height="198"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lZV-oe-2Eh"/>
-        <segue reference="8B8-qQ-ckN"/>
+        <segue reference="8zK-Pd-YaE"/>
         <segue reference="5sh-62-r1d"/>
-        <segue reference="nTP-d8-miX"/>
-        <segue reference="Shy-tN-7Sb"/>
-        <segue reference="8hj-xf-590"/>
-        <segue reference="eQ3-pr-Jpo"/>
+        <segue reference="l33-as-AiQ"/>
+        <segue reference="8B8-qQ-ckN"/>
+        <segue reference="lZV-oe-2Eh"/>
+        <segue reference="FGs-XW-Blu"/>
+        <segue reference="br8-7B-Ehc"/>
         <segue reference="AfE-HO-rc2"/>
     </inferredMetricsTieBreakers>
 </document>

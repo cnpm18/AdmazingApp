@@ -13,6 +13,7 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource,
     
     var tableData = [promotionModel]()
     var productData = [productModel]()
+    var location = currentLocation(r_latitude: "",r_longitude: "")
     @IBOutlet weak var couponsTable: UITableView!
     @IBOutlet weak var floorLabel: UILabel!
     @IBOutlet var storeLocationMapView: MKMapView!
@@ -26,6 +27,7 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource,
     var product = currentProduct()
     var confirmation = false
     var  alert = UIAlertController()
+    var  datealert = UIAlertController()
     var currentCell = 100
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +38,23 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource,
         currentCell = 100
         
         //currentStore.removeAtIndex(currentStore.endIndex.predecessor())
+        tableData[0].endDate="2016-11-16"
+        
         
     }
     override func viewDidAppear(true: Bool) {
         if confirmation == false{
             showAlert(alert)
         }
+        var useAlerts  = userDefaults.boolForKey("useAlerts")
+        if useAlerts==true{
+            var key = searchEndDate()
+            if key != 50{
+                
+                showAlert(datealert)
+            }
+        }
+        
         
         
     }
@@ -150,13 +163,71 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource,
         
         
     }
+    func searchEndDate()->Int{
+        
+        var year:Int
+        var month:Int
+        var day:Int
+        var date:String
+        var currentyear=0
+        var currentmonth=0
+        var currentday=0
+        func getDate(){
+            
+            let date = NSDate()
+            let calendar = NSCalendar.currentCalendar()
+            let components = calendar.components([.Day , .Month , .Year], fromDate: date)
+            
+            let year =  components.year
+            let month = components.month
+            let day = components.day
+            currentyear = year
+            currentmonth = month
+            currentday = day
+           
+        }
+        getDate()
+        
+        
+        for (index, promotion) in tableData.enumerate() {
+            
+            /*Same thing, this is going to look at each item in the people array
+             and call each one 'person' within this loop*/
+            
+            date = promotion.endDate
+            year = Int(date.substringWithRange(Range<String.Index>(start: date.startIndex.advancedBy(0), end: date.startIndex.advancedBy(4))))!
+            month = Int(date.substringWithRange(Range<String.Index>(start: date.startIndex.advancedBy(5), end: date.startIndex.advancedBy(7))))!
+            day = Int(date.substringWithRange(Range<String.Index>(start: date.startIndex.advancedBy(8), end: date.startIndex.advancedBy(10))))!
+            
+            //11/02/2016  10/02/2016
+            //27/02/2016  1/03/2016
+            
+            var firstValue = ((currentmonth-1)*30)+currentday
+            var secondValue = ((month-1)*30)+day
+            var difference = secondValue-firstValue
+            var differenceyears=year-currentyear
+            if differenceyears>0{
+                difference=difference*(-1)
+            }
+            if difference<=5&&(secondValue>firstValue){
+                datealert = UIAlertController(title: "Alerta", message: "El cupón: \(tableData[index].promodescription) caducará en \(difference) dia(s)", preferredStyle: UIAlertControllerStyle.Alert)
+                datealert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                return Int(index)
+                
+            }
+            
+            
+
+        }
+        
+        return 50
+    }
     
     func setMapLocation(){
         
         let longitude: CLLocationDegrees
         let latitude: CLLocationDegrees
         let storeLocation: CLLocationCoordinate2D
-        //let storeLocation = CLLocationCoordinate2DMake(-16.391053, -71.550520)
         if store.longitude == "" || store.latitude == "" {
             storeLocation = CLLocationCoordinate2DMake(-16.391053, -71.550520)
             latitude = -16.390553
@@ -201,7 +272,9 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource,
         
         storeLocationMapView.regionThatFits(region)
         self.floorLabel.text =  "Piso: " + store.floor
-    }
+        
+        
+            }
     
     func getStoreInformation(){
         var connection = storesByIdConnection()
@@ -211,7 +284,7 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource,
         
         
     }
-    
+        
     func sendToServer()->Bool{
         
         var connection = couponBookRequestConnection()
@@ -230,6 +303,23 @@ class CouponBook: UIViewController , UITableViewDelegate, UITableViewDataSource,
         
         
     }
+    func loadCurrentLocation(){
+        
+        var locationDataEncoded: [NSData] = userDefaults.objectForKey("currentLocation") as! [NSData]
+        
+        var unpackedLatitude: String = NSKeyedUnarchiver.unarchiveObjectWithData(locationDataEncoded[0] as NSData) as! String
+        var unpackedLongitude: String = NSKeyedUnarchiver.unarchiveObjectWithData(locationDataEncoded[1] as NSData) as! String
+        
+        unpackedLatitude=unpackedLatitude.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        unpackedLongitude=unpackedLongitude.stringByReplacingOccurrencesOfString("Optional(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        
+        
+        location.setLatitude(unpackedLatitude)
+        location.setLongitude(unpackedLongitude)
+        
+    }
+
     
     
     func saveCurrentCoupon(){

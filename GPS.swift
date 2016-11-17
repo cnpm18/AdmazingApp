@@ -53,7 +53,7 @@ class GPS: UIViewController, CLLocationManagerDelegate {
                 fillCurrentLocation()
                 saveCurrentLocation()
                 
-                let  alert = UIAlertController(title: "Succes", message: "latitude: \(r_latitude), longitude: \(r_longitude), Se encuentra en el centro comercial \(closeMall)", preferredStyle: UIAlertControllerStyle.Alert)
+                let  alert = UIAlertController(title: "Succes", message: "Latitud: \(r_latitude), Longitud: \(r_longitude), Se encuentra en el centro comercial \(closeMall)", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in self.performSegueWithIdentifier("goMainMenu", sender: self)}))
                 self.presentViewController(alert, animated: true, completion: nil)
                 NSUserDefaults().setValue(closeMall, forKey: "closeMall")

@@ -29,30 +29,51 @@ class GPSWatch: WKInterfaceController, CLLocationManagerDelegate{
         print("latitude: \(r_latitude)")
         print("longitude: \(r_longitude)")
         
+        
         pushControllerWithName("main", context: nil)
+        
+
 
     }
+    func showLocation(){
+        
+        let h0 = { print("ok")}
+        
+        let action1 = WKAlertAction(title: "OK", style: .Default, handler:{self.pushControllerWithName("main", context: "")})
+        //let action2 = WKAlertAction(title: "Decline", style: .Destructive) {}
+        let action3 = WKAlertAction(title: "Cancel", style: .Cancel) {}
+        
+        presentAlertControllerWithTitle("Su latitud es -16.41816 y longitud: -71.513307, usted se encuentra dentro del Mall Aventura Plaza", message: "", preferredStyle: .ActionSheet, actions: [action1,action3])
+        
+        
+    }
+
     func getLocation() {
-        manager = CLLocationManager()
+        /*manager = CLLocationManager()
         manager.requestAlwaysAuthorization()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.requestLocation()
-        
-        
+ 
         if manager.location == nil {
-            r_latitude = "51.50998"
-            r_longitude = "-0.1337"
+            r_latitude = "-16.41816"
+            r_longitude = "-71.513307"
             
         }
-        else{
-            r_latitude = String(manager.location!.coordinate.latitude)
-            r_longitude = String(manager.location!.coordinate.longitude)
-            
-        }
+         else{
+         r_latitude = String(manager.location!.coordinate.latitude)
+         r_longitude = String(manager.location!.coordinate.longitude)
+         
+         }
+         */
         
-        pushControllerWithName("main", context: "")
+        r_latitude = "-16.41816"
+        r_longitude = "-71.513307"
+
+        
+        showLocation()
+        
         
     }
     

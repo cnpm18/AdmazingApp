@@ -31,6 +31,7 @@
 		F9090C0A1D415FF9002A4F3A /* categoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98267F71D2ED70D00245A22 /* categoryModel.swift */; };
 		F9090C0B1D415FFA002A4F3A /* categoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98267F71D2ED70D00245A22 /* categoryModel.swift */; };
 		F9090C0C1D415FFB002A4F3A /* categoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98267F71D2ED70D00245A22 /* categoryModel.swift */; };
+		F90A0F611DDBAD59004FFB4A /* currentLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FAB881D187BBC0096937A /* currentLog.swift */; };
 		F9145AA61D7B46F90038CA06 /* getAllPreferedCategoriesConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9145AA51D7B46F90038CA06 /* getAllPreferedCategoriesConnection.swift */; };
 		F9145AA81D7B49080038CA06 /* categoryPreferenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9145AA71D7B49080038CA06 /* categoryPreferenceModel.swift */; };
 		F9145AAA1D7B54D20038CA06 /* categoryByPreferenceConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9145AA91D7B54D20038CA06 /* categoryByPreferenceConnection.swift */; };
@@ -75,6 +76,7 @@
 		F91FABBF1D1881430096937A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91FABBE1D1881430096937A /* CoreLocation.framework */; };
 		F91FABC21D189FA60096937A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91FABC01D189FA60096937A /* Main.storyboard */; };
 		F94CB4DA1D2C28ED00C84DD9 /* gpsConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94CB4D91D2C28ED00C84DD9 /* gpsConnection.swift */; };
+		F95335061DDCD1A600C5AD3C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F994971C1D18A40F0007FE29 /* CoreLocation.framework */; };
 		F96DEF971D764F9600763C8F /* categoryPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96DEF961D764F9600763C8F /* categoryPreferencesView.xib */; };
 		F96DEF991D7650CE00763C8F /* categoryPreferencesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96DEF981D7650CE00763C8F /* categoryPreferencesCell.swift */; };
 		F96DEF9D1D76528400763C8F /* PreferencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96DEF9C1D76528400763C8F /* PreferencesManager.swift */; };
@@ -93,7 +95,6 @@
 		F994970D1D18A3F80007FE29 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F994970C1D18A3F80007FE29 /* NotificationController.swift */; };
 		F994970F1D18A3F80007FE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F994970E1D18A3F80007FE29 /* Assets.xcassets */; };
 		F99497131D18A3F80007FE29 /* AdmazingWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F99496F51D18A3F80007FE29 /* AdmazingWatch.app */; };
-		F994971D1D18A40F0007FE29 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F994971C1D18A40F0007FE29 /* CoreLocation.framework */; };
 		F994971E1D18A7D80007FE29 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB661D187B3F0096937A /* back.png */; };
 		F994971F1D18A7D80007FE29 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB671D187B3F0096937A /* background.png */; };
 		F99497201D18A7D80007FE29 /* couponsprueba.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAB691D187B3F0096937A /* couponsprueba.png */; };
@@ -307,7 +308,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F994971D1D18A40F0007FE29 /* CoreLocation.framework in Frameworks */,
+				F95335061DDCD1A600C5AD3C /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,11 +478,11 @@
 				F9145AA91D7B54D20038CA06 /* categoryByPreferenceConnection.swift */,
 				F9EDE6D01D6557A00026A9C8 /* couponsConnection.swift */,
 				F916E4981D77CCB800981870 /* saveCouponConnection.swift */,
+				F9E306D61D7FA1680034E59E /* deleteCouponConnection.swift */,
+				F9910F2D1D7A56C20050F682 /* savePreferencesConnection.swift */,
 				F9910F2F1D7A73CD0050F682 /* deletePreferenceConnection.swift */,
 				F9145AA51D7B46F90038CA06 /* getAllPreferedCategoriesConnection.swift */,
-				F9910F2D1D7A56C20050F682 /* savePreferencesConnection.swift */,
 				F9D08C611D7DDFA600F9C773 /* couponBookRequestConnection.swift */,
-				F9E306D61D7FA1680034E59E /* deleteCouponConnection.swift */,
 				F9190E5A1D81EE6A00816DAF /* savePromotionUseConnection.swift */,
 				F9BB19F81D8B70030043C8AF /* storeByIdConnection.swift */,
 			);
@@ -836,6 +837,7 @@
 			files = (
 				F9090BE61D415915002A4F3A /* productModel.swift in Sources */,
 				F9090C091D415FF7002A4F3A /* couponBookModel.swift in Sources */,
+				F90A0F611DDBAD59004FFB4A /* currentLog.swift in Sources */,
 				F9090C061D415FF3002A4F3A /* storeModel.swift in Sources */,
 				F994970D1D18A3F80007FE29 /* NotificationController.swift in Sources */,
 				F9090BF31D415FAE002A4F3A /* promotionModel.swift in Sources */,

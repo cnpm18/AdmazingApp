@@ -46,12 +46,21 @@ class Settings: UIViewController {
         userTextView.text = userTextView.text! + " " + log.getUserName()
         
         var usePreferences  = userDefaults.boolForKey("usePreferences")
+        var useAlerts  = userDefaults.boolForKey("useAlerts")
         if usePreferences == true{
             switchPreferencesView.setOn(true, animated: true)
         }
         else{
             //Nothing stored in NSUserDefaults yet. Set a value.
             switchPreferencesView.setOn(false, animated: true)
+        }
+        
+        if useAlerts == true{
+            switchAletsView.setOn(true, animated: true)
+        }
+        else{
+            //Nothing stored in NSUserDefaults yet. Set a value.
+            switchAletsView.setOn(false, animated: true)
         }
         
         
@@ -64,6 +73,16 @@ class Settings: UIViewController {
                     }
         else{
             userDefaults.setValue(false, forKey: "usePreferences")
+            
+        }
+    }
+    
+    @IBAction func useAlerts(sender: AnyObject) {
+        if switchAletsView.on{
+            userDefaults.setValue(true, forKey: "useAlerts")
+        }
+        else{
+            userDefaults.setValue(false, forKey: "useAlerts")
             
         }
     }

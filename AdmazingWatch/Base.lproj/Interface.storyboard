@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ncT-Uv-Pac">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ncT-Uv-Pac">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
@@ -35,6 +35,9 @@
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <color key="backgroundColor" red="0.82373708769999998" green="0.83225995990000001" blue="0.83994391030000004" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="boldSystem" pointSize="15"/>
+                            <connections>
+                                <segue destination="ABo-vd-QAh" kind="push" id="GqN-cD-1ea"/>
+                            </connections>
                         </button>
                     </items>
                 </controller>
@@ -166,6 +169,23 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="742" y="396.25"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="U5b-qE-yiK">
+            <objects>
+                <controller id="ABo-vd-QAh">
+                    <items>
+                        <label alignment="left" text="Configuraciones" id="jEv-Fn-Jbg"/>
+                        <switch width="1" alignment="left" value="YES" title="Alertas" id="opD-PN-EAP">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </switch>
+                        <switch width="1" alignment="left" value="YES" title="Preferencias" id="YSN-8r-Wu2">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </switch>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="742" y="691"/>
         </scene>
     </scenes>
 </document>

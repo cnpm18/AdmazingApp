@@ -980,13 +980,13 @@
         <image name="shareTwitter" width="404" height="198"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8zK-Pd-YaE"/>
-        <segue reference="5sh-62-r1d"/>
-        <segue reference="l33-as-AiQ"/>
-        <segue reference="8B8-qQ-ckN"/>
-        <segue reference="lZV-oe-2Eh"/>
-        <segue reference="FGs-XW-Blu"/>
-        <segue reference="br8-7B-Ehc"/>
         <segue reference="AfE-HO-rc2"/>
+        <segue reference="sdb-Mz-8Q2"/>
+        <segue reference="EPZ-vz-ImG"/>
+        <segue reference="FGs-XW-Blu"/>
+        <segue reference="l33-as-AiQ"/>
+        <segue reference="5sh-62-r1d"/>
+        <segue reference="8B8-qQ-ckN"/>
+        <segue reference="RO6-Bk-9Oq"/>
     </inferredMetricsTieBreakers>
 </document>

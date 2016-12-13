@@ -9,7 +9,13 @@
 import Foundation
 import UIKit
 import Social
-class CouponBookedShow: UIViewController  {
+import WatchConnectivity
+
+class CouponBookedShow: UIViewController , WCSessionDelegate  {
+    var session : WCSession!
+    
+    
+    
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var coupon = currentCoupon()
     var product = currentProduct()
@@ -25,6 +31,16 @@ class CouponBookedShow: UIViewController  {
     @IBOutlet weak var typePromotion: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //---
+        
+        if (WCSession.isSupported()) {
+            session = WCSession.defaultSession()
+            session.delegate = self;
+            session.activateSession()
+        }
+
+        //---
         
         loadCurrentCoupon()
         loadCurrentProduct()
@@ -46,6 +62,9 @@ class CouponBookedShow: UIViewController  {
         closeMall=NSUserDefaults.standardUserDefaults().stringForKey("closeMall")!
         
         
+    }
+    override func viewDidAppear(animated: Bool) {
+        shareWatch()
     }
     
     @IBAction func useCoupon(sender: AnyObject) {
@@ -212,5 +231,32 @@ class CouponBookedShow: UIViewController  {
             
             self.presentViewController(alert, animated: true, completion: nil)
         }
+    }
+    
+    func sendMessage(message: [String]) {
+        let applicationDict = ["message":message]
+        do {
+            try session.updateApplicationContext(applicationDict)
+        } catch {
+            print("error")
+        }
+    }
+    
+     func shareWatch() {
+        var data = [String]()
+        data.append(self.coupon.imagePromotion)
+        data.append(self.coupon.promodescription)
+        data.append(self.product.productDescription)
+        data.append(self.coupon.endDate)
+        data.append(self.product.price)
+        data.append(self.coupon.idTypePromotion)
+        print (data)
+        /*data[0]=coupon.imagePromotion
+        data[1]=coupon.promodescription
+        data[2]=product.productDescription
+        data[3]=coupon.endDate
+        data[4]=product.price
+        data[5]=coupon.idTypePromotion*/
+        sendMessage(data)
     }
 }

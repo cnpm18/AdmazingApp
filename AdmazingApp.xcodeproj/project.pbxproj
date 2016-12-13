@@ -75,6 +75,8 @@
 		F91FABB71D1880D10096937A /* CouponShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FABB61D1880D10096937A /* CouponShow.swift */; };
 		F91FABBF1D1881430096937A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91FABBE1D1881430096937A /* CoreLocation.framework */; };
 		F91FABC21D189FA60096937A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91FABC01D189FA60096937A /* Main.storyboard */; };
+		F937EE111DFF8F6600F778B1 /* currentCoupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91FAB851D187BBC0096937A /* currentCoupon.swift */; };
+		F937EE121DFF8F6A00F778B1 /* currentProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DA57BC1D68133E0024E143 /* currentProduct.swift */; };
 		F94CB4DA1D2C28ED00C84DD9 /* gpsConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94CB4D91D2C28ED00C84DD9 /* gpsConnection.swift */; };
 		F95335061DDCD1A600C5AD3C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F994971C1D18A40F0007FE29 /* CoreLocation.framework */; };
 		F96DEF971D764F9600763C8F /* categoryPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96DEF961D764F9600763C8F /* categoryPreferencesView.xib */; };
@@ -840,6 +842,7 @@
 				F90A0F611DDBAD59004FFB4A /* currentLog.swift in Sources */,
 				F9090C061D415FF3002A4F3A /* storeModel.swift in Sources */,
 				F994970D1D18A3F80007FE29 /* NotificationController.swift in Sources */,
+				F937EE111DFF8F6600F778B1 /* currentCoupon.swift in Sources */,
 				F9090BF31D415FAE002A4F3A /* promotionModel.swift in Sources */,
 				F994970B1D18A3F80007FE29 /* ExtensionDelegate.swift in Sources */,
 				F99497391D18A9770007FE29 /* GPSWatch.swift in Sources */,
@@ -847,6 +850,7 @@
 				F9090C001D415FE2002A4F3A /* commercialAreaModel.swift in Sources */,
 				F9090C0C1D415FFB002A4F3A /* categoryModel.swift in Sources */,
 				F9090C031D415FEC002A4F3A /* userModel.swift in Sources */,
+				F937EE121DFF8F6A00F778B1 /* currentProduct.swift in Sources */,
 				F91E95C91D4033440053B951 /* QRView.swift in Sources */,
 				F9090BE41D415822002A4F3A /* promoViewWatch.swift in Sources */,
 				F99497091D18A3F80007FE29 /* InterfaceController.swift in Sources */,
